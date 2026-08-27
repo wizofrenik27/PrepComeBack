@@ -37,8 +37,6 @@
             margin: auto;
         }
 
-        /* NAVIGATION */
-
         nav {
             position: sticky;
             top: 0;
@@ -83,8 +81,6 @@
             padding: 11px 18px;
             border-radius: 10px;
         }
-
-        /* HERO */
 
         .hero {
             padding: 110px 0 90px;
@@ -154,8 +150,6 @@
             background: #1d4ed8;
         }
 
-        /* STATS */
-
         .stats {
             padding: 35px 0;
             background: white;
@@ -180,8 +174,6 @@
             font-size: 14px;
         }
 
-        /* SECTIONS */
-
         section {
             padding: 90px 0;
         }
@@ -201,8 +193,6 @@
             color: #64748b;
             font-size: 17px;
         }
-
-        /* CARDS */
 
         .cards {
             display: grid;
@@ -237,8 +227,6 @@
             color: #64748b;
         }
 
-        /* ABOUT */
-
         .about {
             background: white;
         }
@@ -272,8 +260,6 @@
             margin-bottom: 12px;
         }
 
-        /* JOIN */
-
         .join {
             background: #0f172a;
             color: white;
@@ -304,8 +290,6 @@
             font-size: 14px;
         }
 
-        /* FOOTER */
-
         footer {
             background: #020617;
             color: #cbd5e1;
@@ -329,8 +313,6 @@
             display: flex;
             gap: 20px;
         }
-
-        /* MOBILE */
 
         @media (max-width: 800px) {
 
@@ -367,17 +349,15 @@
 
 <body>
 
-<!-- NAVIGATION -->
-
 <nav>
     <div class="container nav-inner">
 
-        <a href="#home" class="logo">
+        <a href="index.html" class="logo">
             Prep<span>ComeBack</span>
         </a>
 
         <div class="nav-links">
-            <a href="#opportunities">Opportunities</a>
+            <a href="opportunities.html">Opportunities</a>
             <a href="#resources">Resources</a>
             <a href="#about">About</a>
             <a href="#team">Team</a>
@@ -387,8 +367,6 @@
     </div>
 </nav>
 
-
-<!-- HERO -->
 
 <header class="hero" id="home">
 
@@ -414,7 +392,9 @@
 
             <div class="buttons">
 
-                <a href="#opportunities" class="primary">
+                <!-- THIS BUTTON NOW OPENS THE OPPORTUNITIES PAGE -->
+
+                <a href="opportunities.html" class="primary">
                     Explore Opportunities
                 </a>
 
@@ -430,8 +410,6 @@
 
 </header>
 
-
-<!-- STATS -->
 
 <div class="stats">
 
@@ -462,8 +440,6 @@
 </div>
 
 
-<!-- OPPORTUNITIES -->
-
 <section id="opportunities">
 
     <div class="container">
@@ -485,86 +461,57 @@
         <div class="cards">
 
             <div class="card">
-
                 <div class="icon">🎓</div>
-
                 <h3>Scholarships</h3>
-
                 <p>
                     Discover scholarships and financial
                     opportunities for students around the world.
                 </p>
-
             </div>
 
-
             <div class="card">
-
                 <div class="icon">🔬</div>
-
                 <h3>Research</h3>
-
                 <p>
                     Explore research programs, projects,
                     mentors and academic opportunities.
                 </p>
-
             </div>
 
-
             <div class="card">
-
                 <div class="icon">🏆</div>
-
                 <h3>Competitions</h3>
-
                 <p>
                     Find olympiads, competitions and challenges
-                    where you can develop and demonstrate your skills.
+                    where you can develop your skills.
                 </p>
-
             </div>
 
-
             <div class="card">
-
                 <div class="icon">🌎</div>
-
                 <h3>Programs</h3>
-
                 <p>
-                    Discover summer schools, international programs
-                    and educational experiences.
+                    Discover summer schools, international
+                    programs and educational experiences.
                 </p>
-
             </div>
 
-
             <div class="card">
-
                 <div class="icon">💼</div>
-
                 <h3>Experience</h3>
-
                 <p>
                     Explore internships, volunteering and
                     projects that help you gain experience.
                 </p>
-
             </div>
 
-
             <div class="card">
-
                 <div class="icon">🤝</div>
-
                 <h3>Community</h3>
-
                 <p>
                     Connect with students who share your
                     interests, goals and ambitions.
                 </p>
-
             </div>
 
         </div>
@@ -573,8 +520,6 @@
 
 </section>
 
-
-<!-- RESOURCES -->
 
 <section id="resources" style="background:#f1f5f9;">
 
@@ -605,7 +550,6 @@
                 </p>
             </div>
 
-
             <div class="card">
                 <div class="icon">📝</div>
                 <h3>SAT & English</h3>
@@ -614,7 +558,6 @@
                     and English-language preparation.
                 </p>
             </div>
-
 
             <div class="card">
                 <div class="icon">🚀</div>
@@ -631,8 +574,6 @@
 
 </section>
 
-
-<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -678,8 +619,6 @@
 </section>
 
 
-<!-- TEAM -->
-
 <section id="team">
 
     <div class="container">
@@ -702,8 +641,6 @@
 
 </section>
 
-
-<!-- JOIN -->
 
 <section class="join" id="join">
 
@@ -742,9 +679,7 @@
 
             </div>
 
-            <a
-                href="mailto:YOUR_EMAIL@example.com"
-                class="primary">
+            <a href="#join" class="primary">
                 Apply to Join
             </a>
 
@@ -754,8 +689,6 @@
 
 </section>
 
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -778,7 +711,7 @@
         <div class="footer-links">
 
             <a href="#about">About</a>
-            <a href="#opportunities">Opportunities</a>
+            <a href="opportunities.html">Opportunities</a>
             <a href="#join">Join Us</a>
 
         </div>
@@ -786,7 +719,6 @@
     </div>
 
 </footer>
-
 
 </body>
 </html>

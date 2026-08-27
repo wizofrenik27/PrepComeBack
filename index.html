@@ -7,7 +7,7 @@
     <title>PrepComeBack — Your Future Starts Here</title>
 
     <meta name="description"
-          content="PrepComeBack is a free global platform helping students discover opportunities, resources and build their future.">
+          content="PrepComeBack is a free global platform helping students discover opportunities, access resources and build their future.">
 
     <style>
         * {
@@ -37,20 +37,23 @@
             margin: auto;
         }
 
+        /* NAVIGATION */
+
         nav {
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: rgba(255,255,255,0.95);
-            backdrop-filter: blur(12px);
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(10px);
             border-bottom: 1px solid #e2e8f0;
         }
 
         .nav-inner {
-            height: 72px;
+            min-height: 72px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 20px;
         }
 
         .logo {
@@ -65,8 +68,8 @@
 
         .nav-links {
             display: flex;
-            gap: 28px;
             align-items: center;
+            gap: 25px;
             font-size: 15px;
             font-weight: 600;
         }
@@ -78,9 +81,11 @@
         .nav-button {
             background: #2563eb;
             color: white !important;
-            padding: 11px 18px;
-            border-radius: 10px;
+            padding: 10px 17px;
+            border-radius: 9px;
         }
+
+        /* HERO */
 
         .hero {
             padding: 110px 0 90px;
@@ -91,7 +96,7 @@
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 820px;
         }
 
         .badge {
@@ -117,7 +122,7 @@
         }
 
         .hero p {
-            max-width: 680px;
+            max-width: 700px;
             font-size: 20px;
             color: #475569;
             margin-bottom: 34px;
@@ -130,6 +135,7 @@
         }
 
         .primary {
+            display: inline-block;
             background: #2563eb;
             color: white;
             padding: 14px 22px;
@@ -138,6 +144,7 @@
         }
 
         .secondary {
+            display: inline-block;
             border: 1px solid #cbd5e1;
             background: white;
             padding: 14px 22px;
@@ -149,6 +156,8 @@
         .nav-button:hover {
             background: #1d4ed8;
         }
+
+        /* STATS */
 
         .stats {
             padding: 35px 0;
@@ -174,12 +183,14 @@
             font-size: 14px;
         }
 
+        /* GENERAL SECTIONS */
+
         section {
             padding: 90px 0;
         }
 
         .section-heading {
-            max-width: 700px;
+            max-width: 720px;
             margin-bottom: 45px;
         }
 
@@ -193,6 +204,8 @@
             color: #64748b;
             font-size: 17px;
         }
+
+        /* CARDS */
 
         .cards {
             display: grid;
@@ -227,6 +240,14 @@
             color: #64748b;
         }
 
+        /* RESOURCES */
+
+        .resources-section {
+            background: #f1f5f9;
+        }
+
+        /* ABOUT */
+
         .about {
             background: white;
         }
@@ -250,15 +271,23 @@
             margin-bottom: 16px;
         }
 
-        .problem-box {
+        .mission-box {
             background: #eff6ff;
             border-radius: 22px;
             padding: 35px;
         }
 
-        .problem-box h3 {
+        .mission-box h3 {
             margin-bottom: 12px;
         }
+
+        /* TEAM */
+
+        .team-section {
+            background: #f8fafc;
+        }
+
+        /* JOIN */
 
         .join {
             background: #0f172a;
@@ -290,6 +319,8 @@
             font-size: 14px;
         }
 
+        /* FOOTER */
+
         footer {
             background: #020617;
             color: #cbd5e1;
@@ -307,12 +338,20 @@
             color: white;
             font-size: 22px;
             font-weight: 800;
+            margin-bottom: 5px;
         }
 
         .footer-links {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* MOBILE */
 
         @media (max-width: 800px) {
 
@@ -349,7 +388,10 @@
 
 <body>
 
+<!-- NAVIGATION -->
+
 <nav>
+
     <div class="container nav-inner">
 
         <a href="index.html" class="logo">
@@ -357,16 +399,39 @@
         </a>
 
         <div class="nav-links">
-            <a href="opportunities.html">Opportunities</a>
-            <a href="#resources">Resources</a>
-            <a href="#about">About</a>
-            <a href="#team">Team</a>
-            <a href="#join" class="nav-button">Join Us</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="join.html" class="nav-button">
+                Join Us
+            </a>
+
         </div>
 
     </div>
+
 </nav>
 
+
+<!-- HERO -->
 
 <header class="hero" id="home">
 
@@ -386,19 +451,21 @@
 
             <p>
                 PrepComeBack helps students discover opportunities,
-                access free resources, build their skills and connect
+                access free resources, build skills and connect
                 with a global community.
             </p>
 
             <div class="buttons">
 
-                <!-- THIS BUTTON NOW OPENS THE OPPORTUNITIES PAGE -->
+                <!-- CORRECT LINK -->
 
                 <a href="opportunities.html" class="primary">
                     Explore Opportunities
                 </a>
 
-                <a href="#join" class="secondary">
+                <!-- CORRECT LINK -->
+
+                <a href="join.html" class="secondary">
                     Join PrepComeBack
                 </a>
 
@@ -410,6 +477,8 @@
 
 </header>
 
+
+<!-- STATS -->
 
 <div class="stats">
 
@@ -440,6 +509,8 @@
 </div>
 
 
+<!-- OPPORTUNITIES -->
+
 <section id="opportunities">
 
     <div class="container">
@@ -451,8 +522,9 @@
             </h2>
 
             <p>
-                Find opportunities that can help you grow,
-                learn and take the next step toward your goals.
+                Find scholarships, research programs,
+                competitions, internships and other
+                opportunities for students.
             </p>
 
         </div>
@@ -461,58 +533,108 @@
         <div class="cards">
 
             <div class="card">
+
                 <div class="icon">🎓</div>
-                <h3>Scholarships</h3>
+
+                <h3>
+                    Scholarships
+                </h3>
+
                 <p>
                     Discover scholarships and financial
                     opportunities for students around the world.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="icon">🔬</div>
-                <h3>Research</h3>
+
+                <h3>
+                    Research
+                </h3>
+
                 <p>
                     Explore research programs, projects,
                     mentors and academic opportunities.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="icon">🏆</div>
-                <h3>Competitions</h3>
+
+                <h3>
+                    Competitions
+                </h3>
+
                 <p>
                     Find olympiads, competitions and challenges
                     where you can develop your skills.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="icon">🌎</div>
-                <h3>Programs</h3>
+
+                <h3>
+                    Programs
+                </h3>
+
                 <p>
-                    Discover summer schools, international
-                    programs and educational experiences.
+                    Discover summer schools and international
+                    educational programs.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="icon">💼</div>
-                <h3>Experience</h3>
+
+                <h3>
+                    Internships
+                </h3>
+
                 <p>
-                    Explore internships, volunteering and
-                    projects that help you gain experience.
+                    Find ways to gain experience through
+                    internships and projects.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="icon">🤝</div>
-                <h3>Community</h3>
+
+                <h3>
+                    Community
+                </h3>
+
                 <p>
                     Connect with students who share your
-                    interests, goals and ambitions.
+                    interests and ambitions.
                 </p>
+
             </div>
+
+        </div>
+
+
+        <div style="margin-top:35px;">
+
+            <a href="opportunities.html" class="primary">
+                View All Opportunities →
+            </a>
 
         </div>
 
@@ -521,7 +643,9 @@
 </section>
 
 
-<section id="resources" style="background:#f1f5f9;">
+<!-- RESOURCES -->
+
+<section class="resources-section" id="resources">
 
     <div class="container">
 
@@ -532,8 +656,8 @@
             </h2>
 
             <p>
-                Everything students need to learn, prepare
-                and build their future — in one place.
+                Resources to help students prepare,
+                learn and build their future.
             </p>
 
         </div>
@@ -542,31 +666,60 @@
         <div class="cards">
 
             <div class="card">
+
                 <div class="icon">📚</div>
-                <h3>University Applications</h3>
+
+                <h3>
+                    University Applications
+                </h3>
+
                 <p>
-                    Guides and resources for planning your
-                    university application.
+                    Guides and resources for planning
+                    university applications.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="icon">📝</div>
-                <h3>SAT & English</h3>
+
+                <h3>
+                    SAT & English
+                </h3>
+
                 <p>
-                    Free resources for standardized tests
-                    and English-language preparation.
+                    Free resources for SAT and English
+                    proficiency test preparation.
                 </p>
+
             </div>
 
+
             <div class="card">
+
                 <div class="icon">🚀</div>
-                <h3>Projects & Skills</h3>
+
+                <h3>
+                    Projects & Skills
+                </h3>
+
                 <p>
-                    Learn how to build projects, develop skills
-                    and create your own opportunities.
+                    Learn skills and build meaningful
+                    projects for your future.
                 </p>
+
             </div>
+
+        </div>
+
+
+        <div style="margin-top:35px;">
+
+            <a href="resources.html" class="primary">
+                Explore Resources →
+            </a>
 
         </div>
 
@@ -574,6 +727,8 @@
 
 </section>
 
+
+<!-- ABOUT -->
 
 <section class="about" id="about">
 
@@ -586,30 +741,30 @@
             </h2>
 
             <p>
-                Millions of talented students around the world
-                have the motivation to achieve more, but many
-                simply do not know where to find opportunities.
+                Millions of talented students have the motivation
+                to achieve more, but many do not know where to
+                find opportunities.
             </p>
 
             <p>
-                PrepComeBack was created to make discovering
-                opportunities, learning and connecting with
-                other students easier and more accessible.
+                PrepComeBack aims to make discovering opportunities,
+                learning and connecting with other students easier
+                and more accessible.
             </p>
 
         </div>
 
 
-        <div class="problem-box">
+        <div class="mission-box">
 
             <h3>
                 Our mission
             </h3>
 
             <p>
-                Build a free global ecosystem where students
-                can discover opportunities, access resources,
-                connect with people and create their own future.
+                Build a free global ecosystem where students can
+                discover opportunities, access resources, connect
+                with people and create their own future.
             </p>
 
         </div>
@@ -619,7 +774,9 @@
 </section>
 
 
-<section id="team">
+<!-- TEAM -->
+
+<section class="team-section" id="team">
 
     <div class="container">
 
@@ -630,17 +787,23 @@
             </h2>
 
             <p>
-                PrepComeBack is being built by students and
-                young people who believe that education and
-                opportunities should be more accessible.
+                PrepComeBack is being built by students and young
+                people who want to make opportunities more accessible.
             </p>
 
         </div>
+
+
+        <a href="team.html" class="primary">
+            Meet the Team →
+        </a>
 
     </div>
 
 </section>
 
+
+<!-- JOIN -->
 
 <section class="join" id="join">
 
@@ -666,21 +829,44 @@
                 Current team opportunities
             </h3>
 
+
             <div class="roles">
 
-                <span class="role">SMM</span>
-                <span class="role">Marketing</span>
-                <span class="role">UI/UX Design</span>
-                <span class="role">Frontend Development</span>
-                <span class="role">Backend Development</span>
-                <span class="role">Content</span>
-                <span class="role">Research</span>
-                <span class="role">Community</span>
+                <span class="role">
+                    SMM
+                </span>
+
+                <span class="role">
+                    Marketing
+                </span>
+
+                <span class="role">
+                    UI/UX Design
+                </span>
+
+                <span class="role">
+                    Development
+                </span>
+
+                <span class="role">
+                    Content
+                </span>
+
+                <span class="role">
+                    Research
+                </span>
+
+                <span class="role">
+                    Community
+                </span>
 
             </div>
 
-            <a href="#join" class="primary">
-                Apply to Join
+
+            <!-- CORRECT LINK -->
+
+            <a href="join.html" class="primary">
+                Apply to Join →
             </a>
 
         </div>
@@ -689,6 +875,8 @@
 
 </section>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -710,9 +898,25 @@
 
         <div class="footer-links">
 
-            <a href="#about">About</a>
-            <a href="opportunities.html">Opportunities</a>
-            <a href="#join">Join Us</a>
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="join.html">
+                Join Us
+            </a>
 
         </div>
 

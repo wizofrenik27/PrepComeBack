@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Opportunities — PrepComeBack</title>
+
+    <meta name="description"
+          content="Discover free scholarships, competitions, research programs, summer schools and other opportunities with PrepComeBack.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .nav-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* HEADER */
+
+        .page-header {
+            padding: 75px 0 45px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .page-header p {
+            max-width: 700px;
+            color: #64748b;
+            font-size: 18px;
+        }
+
+        /* SEARCH */
+
+        .search-box {
+            background: white;
+            padding: 22px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+
+        #search {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #search:focus {
+            border-color: #2563eb;
+        }
+
+        /* FILTERS */
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filter {
+            border: 1px solid #cbd5e1;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .filter.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        /* CARDS */
+
+        .opportunities {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: 80px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 5px 9px;
+            border-radius: 999px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #64748b;
+            margin-bottom: 18px;
+        }
+
+        .details {
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 18px;
+        }
+
+        .details div {
+            margin-bottom: 5px;
+        }
+
+        .learn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 9px;
+            font-weight: 700;
+        }
+
+        /* EMPTY */
+
+        .empty {
+            display: none;
+            padding: 40px;
+            text-align: center;
+            color: #64748b;
+            grid-column: 1 / -1;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .opportunities {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container nav-inner">
+
+        <a href="index.html" class="logo">
+            Prep<span>ComeBack</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="index.html#resources">Resources</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#join">Join Us</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<main>
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>Discover opportunities.</h1>
+
+            <p>
+                Find scholarships, competitions, research programs,
+                summer schools, internships and other opportunities
+                designed to help students grow.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search opportunities..."
+                >
+
+            </div>
+
+
+            <div class="filters">
+
+                <button class="filter active" data-category="all">
+                    All
+                </button>
+
+                <button class="filter" data-category="Scholarship">
+                    Scholarships
+                </button>
+
+                <button class="filter" data-category="Research">
+                    Research
+                </button>
+
+                <button class="filter" data-category="Competition">
+                    Competitions
+                </button>
+
+                <button class="filter" data-category="Program">
+                    Programs
+                </button>
+
+                <button class="filter" data-category="Internship">
+                    Internships
+                </button>
+
+            </div>
+
+
+            <div class="opportunities" id="opportunities">
+
+
+                <!-- OPPORTUNITY 1 -->
+
+                <article class="card" data-category="Scholarship">
+
+                    <span class="tag">
+                        Scholarship
+                    </span>
+
+                    <h2>
+                        Example Global Scholarship
+                    </h2>
+
+                    <p>
+                        A placeholder scholarship opportunity.
+                        We will replace this with verified opportunities.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Global</div>
+                        <div>💰 Funding: Fully funded</div>
+                        <div>🎓 Students: High school</div>
+                        <div>📅 Deadline: Coming soon</div>
+
+                    </div>
+
+                    <a href="#" class="learn">
+                        Learn More →
+                    </a>
+
+                </article>
+
+
+                <!-- OPPORTUNITY 2 -->
+
+                <article class="card" data-category="Research">
+
+                    <span class="tag">
+                        Research
+                    </span>
+
+                    <h2>
+                        Example Research Program
+                    </h2>
+
+                    <p>
+                        A placeholder research opportunity.
+                        Verified programs will be added here.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Online</div>
+                        <div>💰 Cost: Free</div>
+                        <div>🔬 Field: Research</div>
+                        <div>📅 Deadline: Coming soon</div>
+
+                    </div>
+
+                    <a href="#" class="learn">
+                        Learn More →
+                    </a>
+
+                </article>
+
+
+                <!-- OPPORTUNITY 3 -->
+
+                <article class="card" data-category="Competition">
+
+                    <span class="tag">
+                        Competition
+                    </span>
+
+                    <h2>
+                        Example Student Competition
+                    </h2>
+
+                    <p>
+                        A placeholder competition.
+                        Real opportunities will be verified before publishing.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Global</div>
+                        <div>💰 Cost: Free</div>
+                        <div>🏆 Type: Competition</div>
+                        <div>📅 Deadline: Coming soon</div>
+
+                    </div>
+
+                    <a href="#" class="learn">
+                        Learn More →
+                    </a>
+
+                </article>
+
+
+                <!-- OPPORTUNITY 4 -->
+
+                <article class="card" data-category="Program">
+
+                    <span class="tag">
+                        Program
+                    </span>
+
+                    <h2>
+                        Example Summer Program
+                    </h2>
+
+                    <p>
+                        A placeholder educational program.
+                        More verified programs will be added.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: International</div>
+                        <div>💰 Cost: Free</div>
+                        <div>🎓 Students: High school</div>
+                        <div>📅 Deadline: Coming soon</div>
+
+                    </div>
+
+                    <a href="#" class="learn">
+                        Learn More →
+                    </a>
+
+                </article>
+
+
+                <!-- OPPORTUNITY 5 -->
+
+                <article class="card" data-category="Internship">
+
+                    <span class="tag">
+                        Internship
+                    </span>
+
+                    <h2>
+                        Example Student Internship
+                    </h2>
+
+                    <p>
+                        A placeholder internship opportunity
+                        for students looking to gain experience.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Online</div>
+                        <div>💰 Cost: Free</div>
+                        <div>💼 Type: Internship</div>
+                        <div>📅 Deadline: Coming soon</div>
+
+                    </div>
+
+                    <a href="#" class="learn">
+                        Learn More →
+                    </a>
+
+                </article>
+
+
+                <div class="empty" id="empty">
+                    No opportunities found.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+    const searchInput = document.getElementById("search");
+    const filters = document.querySelectorAll(".filter");
+    const cards = document.querySelectorAll(".card");
+    const empty = document.getElementById("empty");
+
+    let currentCategory = "all";
+
+    function updateResults() {
+
+        const searchText =
+            searchInput.value.toLowerCase().trim();
+
+        let visible = 0;
+
+        cards.forEach(card => {
+
+            const category =
+                card.dataset.category;
+
+            const text =
+                card.innerText.toLowerCase();
+
+            const categoryMatch =
+                currentCategory === "all" ||
+                category === currentCategory;
+
+            const searchMatch =
+                text.includes(searchText);
+
+            if (categoryMatch && searchMatch) {
+
+                card.style.display = "block";
+                visible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+        empty.style.display =
+            visible === 0 ? "block" : "none";
+    }
+
+
+    filters.forEach(filter => {
+
+        filter.addEventListener("click", () => {
+
+            filters.forEach(item =>
+                item.classList.remove("active")
+            );
+
+            filter.classList.add("active");
+
+            currentCategory =
+                filter.dataset.category;
+
+            updateResults();
+
+        });
+
+    });
+
+
+    searchInput.addEventListener(
+        "input",
+        updateResults
+    );
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resources — PrepComeBack</title>
+
+    <meta name="description"
+          content="Free resources for students: university applications, SAT, English tests, research, competitions and skills.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .nav-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* HEADER */
+
+        .page-header {
+            padding: 75px 0 45px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .page-header p {
+            max-width: 700px;
+            color: #64748b;
+            font-size: 18px;
+        }
+
+        /* SEARCH */
+
+        .search-box {
+            background: white;
+            padding: 22px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            margin-bottom: 25px;
+        }
+
+        #search {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        #search:focus {
+            border-color: #2563eb;
+        }
+
+        /* FILTERS */
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filter {
+            border: 1px solid #cbd5e1;
+            background: white;
+            padding: 10px 15px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .filter.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        /* RESOURCE GRID */
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: 80px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 25px;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .category {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 5px 9px;
+            border-radius: 999px;
+            margin-bottom: 15px;
+        }
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #64748b;
+            margin-bottom: 18px;
+        }
+
+        .free {
+            font-size: 13px;
+            font-weight: 700;
+            color: #15803d;
+            margin-bottom: 15px;
+        }
+
+        .visit {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 9px;
+            font-weight: 700;
+        }
+
+        .empty {
+            display: none;
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 40px;
+            color: #64748b;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .resources {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container nav-inner">
+
+        <a href="index.html" class="logo">
+            Prep<span>ComeBack</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="resources.html">Resources</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#join">Join Us</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<main>
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>Free resources.</h1>
+
+            <p>
+                Carefully selected resources to help students
+                prepare for university, develop skills and
+                create new opportunities.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search resources..."
+                >
+
+            </div>
+
+
+            <div class="filters">
+
+                <button class="filter active" data-category="all">
+                    All
+                </button>
+
+                <button class="filter" data-category="University">
+                    University
+                </button>
+
+                <button class="filter" data-category="SAT">
+                    SAT
+                </button>
+
+                <button class="filter" data-category="English">
+                    English
+                </button>
+
+                <button class="filter" data-category="Research">
+                    Research
+                </button>
+
+                <button class="filter" data-category="Competitions">
+                    Competitions
+                </button>
+
+                <button class="filter" data-category="Skills">
+                    Skills
+                </button>
+
+            </div>
+
+
+            <div class="resources">
+
+
+                <article class="card" data-category="University">
+
+                    <span class="category">
+                        University
+                    </span>
+
+                    <h2>
+                        University Applications
+                    </h2>
+
+                    <p>
+                        Guides and tools for planning your
+                        university application.
+                    </p>
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+                    <a href="#" class="visit">
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+                <article class="card" data-category="SAT">
+
+                    <span class="category">
+                        SAT
+                    </span>
+
+                    <h2>
+                        SAT Preparation
+                    </h2>
+
+                    <p>
+                        Free practice materials and preparation
+                        resources for the Digital SAT.
+                    </p>
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+                    <a href="#" class="visit">
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+                <article class="card" data-category="English">
+
+                    <span class="category">
+                        English
+                    </span>
+
+                    <h2>
+                        English Test Preparation
+                    </h2>
+
+                    <p>
+                        Free resources for IELTS, TOEFL and
+                        other English proficiency tests.
+                    </p>
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+                    <a href="#" class="visit">
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+                <article class="card" data-category="Research">
+
+                    <span class="category">
+                        Research
+                    </span>
+
+                    <h2>
+                        Research Resources
+                    </h2>
+
+                    <p>
+                        Learn how to find research opportunities,
+                        papers and academic resources.
+                    </p>
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+                    <a href="#" class="visit">
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+                <article class="card" data-category="Competitions">
+
+                    <span class="category">
+                        Competitions
+                    </span>
+
+                    <h2>
+                        Olympiads & Competitions
+                    </h2>
+
+                    <p>
+                        Discover resources for academic competitions
+                        and olympiads.
+                    </p>
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+                    <a href="#" class="visit">
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+                <article class="card" data-category="Skills">
+
+                    <span class="category">
+                        Skills
+                    </span>
+
+                    <h2>
+                        Skills & Projects
+                    </h2>
+
+                    <p>
+                        Free resources for learning useful skills
+                        and building meaningful projects.
+                    </p>
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+                    <a href="#" class="visit">
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+                <div class="empty" id="empty">
+                    No resources found.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+    const searchInput =
+        document.getElementById("search");
+
+    const filters =
+        document.querySelectorAll(".filter");
+
+    const cards =
+        document.querySelectorAll(".card");
+
+    const empty =
+        document.getElementById("empty");
+
+    let currentCategory = "all";
+
+
+    function updateResults() {
+
+        const searchText =
+            searchInput.value.toLowerCase().trim();
+
+        let visible = 0;
+
+
+        cards.forEach(card => {
+
+            const category =
+                card.dataset.category;
+
+            const text =
+                card.innerText.toLowerCase();
+
+            const categoryMatch =
+                currentCategory === "all" ||
+                category === currentCategory;
+
+            const searchMatch =
+                text.includes(searchText);
+
+
+            if (categoryMatch && searchMatch) {
+
+                card.style.display = "block";
+
+                visible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        empty.style.display =
+            visible === 0 ? "block" : "none";
+    }
+
+
+    filters.forEach(filter => {
+
+        filter.addEventListener("click", () => {
+
+            filters.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            filter.classList.add("active");
+
+            currentCategory =
+                filter.dataset.category;
+
+            updateResults();
+
+        });
+
+    });
+
+
+    searchInput.addEventListener(
+        "input",
+        updateResults
+    );
+
+</script>
+
+</body>
+</html>

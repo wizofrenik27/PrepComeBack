@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Team — PrepComeBack</title>
+
+    <meta name="description"
+          content="Meet the students and young people building PrepComeBack, a free global platform for students.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .nav-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .page-header {
+            padding: 75px 0 45px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .page-header p {
+            max-width: 720px;
+            color: #64748b;
+            font-size: 18px;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: 80px;
+        }
+
+        .member {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 28px;
+        }
+
+        .avatar {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: #dbeafe;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+            font-weight: 800;
+            color: #1d4ed8;
+            margin-bottom: 18px;
+        }
+
+        .member h2 {
+            font-size: 21px;
+            margin-bottom: 4px;
+        }
+
+        .role {
+            color: #2563eb;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
+
+        .member p {
+            color: #64748b;
+            margin-bottom: 15px;
+        }
+
+        .profile {
+            color: #2563eb;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .join-section {
+            background: #0f172a;
+            color: white;
+            padding: 80px 0;
+        }
+
+        .join-section h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .join-section p {
+            color: #cbd5e1;
+            max-width: 650px;
+            margin-bottom: 25px;
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .role-tag {
+            background: #334155;
+            padding: 8px 13px;
+            border-radius: 999px;
+            font-size: 14px;
+        }
+
+        .join-button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+
+        footer {
+            background: #020617;
+            color: #cbd5e1;
+            padding: 45px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            color: white;
+            font-size: 22px;
+            font-weight: 800;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header {
+                padding: 60px 0 35px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container nav-inner">
+
+        <a href="index.html" class="logo">
+            Prep<span>ComeBack</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="resources.html">Resources</a>
+            <a href="team.html">Team</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#join">Join Us</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<main>
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>Meet the team.</h1>
+
+            <p>
+                PrepComeBack is being built by students and young
+                people who want to make opportunities more accessible
+                to students around the world.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+            <div class="team-grid">
+
+
+                <!-- FOUNDER -->
+
+                <article class="member">
+
+                    <div class="avatar">
+                        F
+                    </div>
+
+                    <h2>
+                        Founder
+                    </h2>
+
+                    <div class="role">
+                        Founder & Project Lead
+                    </div>
+
+                    <p>
+                        Leading the vision, development and growth
+                        of PrepComeBack.
+                    </p>
+
+                </article>
+
+
+                <!-- FUTURE MEMBER -->
+
+                <article class="member">
+
+                    <div class="avatar">
+                        +
+                    </div>
+
+                    <h2>
+                        Your name here
+                    </h2>
+
+                    <div class="role">
+                        SMM / Marketing
+                    </div>
+
+                    <p>
+                        Help build the PrepComeBack community,
+                        content and social media presence.
+                    </p>
+
+                </article>
+
+
+                <!-- FUTURE MEMBER -->
+
+                <article class="member">
+
+                    <div class="avatar">
+                        +
+                    </div>
+
+                    <h2>
+                        Your name here
+                    </h2>
+
+                    <div class="role">
+                        Design / Development
+                    </div>
+
+                    <p>
+                        Help design and build the digital products
+                        behind PrepComeBack.
+                    </p>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="join-section">
+
+        <div class="container">
+
+            <h2>
+                Want to build with us?
+            </h2>
+
+            <p>
+                We are looking for motivated students and young people
+                from around the world who want to contribute their
+                skills and help build PrepComeBack.
+            </p>
+
+
+            <div class="roles">
+
+                <span class="role-tag">SMM</span>
+                <span class="role-tag">Marketing</span>
+                <span class="role-tag">UI/UX Design</span>
+                <span class="role-tag">Development</span>
+                <span class="role-tag">Content</span>
+                <span class="role-tag">Research</span>
+                <span class="role-tag">Community</span>
+
+            </div>
+
+
+            <a href="index.html#join" class="join-button">
+                Apply to Join →
+            </a>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <div class="footer-logo">
+                PrepComeBack
+            </div>
+
+            <p>
+                Your opportunities. Your future.
+                Your comeback.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">Home</a>
+            <a href="opportunities.html">Opportunities</a>
+            <a href="resources.html">Resources</a>
+            <a href="index.html#join">Join Us</a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

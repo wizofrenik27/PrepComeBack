@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +24,7 @@
             background: #f8fafc;
             color: #0f172a;
             line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         a {
@@ -35,11 +37,14 @@
             margin: auto;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             background: white;
             border-bottom: 1px solid #e2e8f0;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .nav-inner {
@@ -69,7 +74,9 @@
             color: #2563eb;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         .header {
             padding: 75px 0 45px;
@@ -85,9 +92,12 @@
             max-width: 700px;
             color: #64748b;
             font-size: 18px;
+            transition: color 0.3s ease;
         }
 
-        /* FORM */
+        /* =========================
+           FORM
+        ========================= */
 
         .form-card {
             background: white;
@@ -95,6 +105,9 @@
             border-radius: 20px;
             padding: 35px;
             margin-bottom: 80px;
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease;
         }
 
         .field {
@@ -122,6 +135,11 @@
             font-size: 16px;
             outline: none;
             background: white;
+            color: #0f172a;
+            transition:
+                background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
         }
 
         input:focus,
@@ -141,7 +159,9 @@
             margin-top: 6px;
         }
 
-        /* CHECKBOX */
+        /* =========================
+           CHECKBOX
+        ========================= */
 
         .checkbox-wrapper {
             display: flex;
@@ -162,7 +182,9 @@
             margin: 0;
         }
 
-        /* BUTTON */
+        /* =========================
+           BUTTON
+        ========================= */
 
         button {
             width: 100%;
@@ -180,7 +202,9 @@
             background: #1d4ed8;
         }
 
-        /* NOTE */
+        /* =========================
+           NOTE
+        ========================= */
 
         .note {
             margin-top: 20px;
@@ -189,9 +213,14 @@
             background: #eff6ff;
             color: #1e40af;
             font-size: 14px;
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #020617;
@@ -213,7 +242,54 @@
             margin-bottom: 5px;
         }
 
-        /* MOBILE */
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        body.dark {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark nav {
+            background: #0f172a;
+            border-bottom-color: #334155;
+        }
+
+        body.dark .header p {
+            color: #94a3b8;
+        }
+
+        body.dark .form-card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark input,
+        body.dark select,
+        body.dark textarea {
+            background: #0f172a;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+
+        body.dark input::placeholder,
+        body.dark textarea::placeholder {
+            color: #64748b;
+        }
+
+        body.dark .help {
+            color: #94a3b8;
+        }
+
+        body.dark .note {
+            background: #172554;
+            color: #bfdbfe;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 700px) {
 
@@ -235,7 +311,9 @@
 <body>
 
 
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
@@ -270,7 +348,9 @@
 </nav>
 
 
-<!-- MAIN -->
+<!-- =========================
+     MAIN
+========================= -->
 
 <main>
 
@@ -350,10 +430,8 @@
                 <div class="field">
 
                     <label for="name">
-
                         Full name
                         <span class="required">*</span>
-
                     </label>
 
                     <input
@@ -373,10 +451,8 @@
                 <div class="field">
 
                     <label for="email">
-
                         Email
                         <span class="required">*</span>
-
                     </label>
 
                     <input
@@ -396,10 +472,8 @@
                 <div class="field">
 
                     <label for="role">
-
                         What would you like to do?
                         <span class="required">*</span>
-
                     </label>
 
                     <select
@@ -454,10 +528,8 @@
                 <div class="field">
 
                     <label for="experience">
-
                         Tell us about yourself
                         <span class="required">*</span>
-
                     </label>
 
                     <textarea
@@ -497,10 +569,8 @@
                 <div class="field">
 
                     <label for="motivation">
-
                         Why do you want to join PrepComeBack?
                         <span class="required">*</span>
-
                     </label>
 
                     <textarea
@@ -561,7 +631,9 @@
 </main>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -594,6 +666,23 @@
 </footer>
 
 
+<!-- =========================
+     THEME SYNC
+========================= -->
+
+<script>
+
+    const savedTheme =
+        localStorage.getItem("prepcomeback-theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+</script>
+
+
 </body>
 
 </html>
+```

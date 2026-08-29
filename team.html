@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
           content="Meet the students and young people building PrepComeBack, a free global platform for students.">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -21,6 +23,7 @@
             background: #f8fafc;
             color: #0f172a;
             line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         a {
@@ -33,9 +36,14 @@
             margin: auto;
         }
 
+        /* =========================
+           NAVIGATION
+        ========================= */
+
         nav {
             background: white;
             border-bottom: 1px solid #e2e8f0;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .nav-inner {
@@ -66,6 +74,10 @@
             color: #2563eb;
         }
 
+        /* =========================
+           HEADER
+        ========================= */
+
         .page-header {
             padding: 75px 0 45px;
         }
@@ -80,7 +92,12 @@
             max-width: 720px;
             color: #64748b;
             font-size: 18px;
+            transition: color 0.3s ease;
         }
+
+        /* =========================
+           TEAM
+        ========================= */
 
         .team-grid {
             display: grid;
@@ -94,6 +111,13 @@
             border: 1px solid #e2e8f0;
             border-radius: 18px;
             padding: 28px;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease,
+                        box-shadow 0.2s ease;
+        }
+
+        .member:hover {
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
         }
 
         .avatar {
@@ -125,6 +149,7 @@
         .member p {
             color: #64748b;
             margin-bottom: 15px;
+            transition: color 0.3s ease;
         }
 
         .profile {
@@ -132,6 +157,10 @@
             font-weight: 700;
             font-size: 14px;
         }
+
+        /* =========================
+           JOIN SECTION
+        ========================= */
 
         .join-section {
             background: #0f172a;
@@ -173,6 +202,10 @@
             font-weight: 700;
         }
 
+        /* =========================
+           FOOTER
+        ========================= */
+
         footer {
             background: #020617;
             color: #cbd5e1;
@@ -195,7 +228,44 @@
         .footer-links {
             display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
+
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        body.dark {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark nav {
+            background: #0f172a;
+            border-bottom-color: #334155;
+        }
+
+        body.dark .page-header p {
+            color: #94a3b8;
+        }
+
+        body.dark .member {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark .member p {
+            color: #94a3b8;
+        }
+
+        body.dark .avatar {
+            background: #1e3a8a;
+            color: #bfdbfe;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -210,13 +280,23 @@
             .page-header {
                 padding: 60px 0 35px;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
+
     <div class="container nav-inner">
 
         <a href="index.html" class="logo">
@@ -224,17 +304,41 @@
         </a>
 
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="opportunities.html">Opportunities</a>
-            <a href="resources.html">Resources</a>
-            <a href="team.html">Team</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#join">Join Us</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#join">
+                Join Us
+            </a>
+
         </div>
 
     </div>
+
 </nav>
 
+
+<!-- =========================
+     MAIN
+========================= -->
 
 <main>
 
@@ -242,7 +346,9 @@
 
         <div class="container">
 
-            <h1>Meet the team.</h1>
+            <h1>
+                Meet the team.
+            </h1>
 
             <p>
                 PrepComeBack is being built by students and young
@@ -341,6 +447,10 @@
     </section>
 
 
+    <!-- =========================
+         JOIN
+    ========================= -->
+
     <section class="join-section">
 
         <div class="container">
@@ -358,13 +468,33 @@
 
             <div class="roles">
 
-                <span class="role-tag">SMM</span>
-                <span class="role-tag">Marketing</span>
-                <span class="role-tag">UI/UX Design</span>
-                <span class="role-tag">Development</span>
-                <span class="role-tag">Content</span>
-                <span class="role-tag">Research</span>
-                <span class="role-tag">Community</span>
+                <span class="role-tag">
+                    SMM
+                </span>
+
+                <span class="role-tag">
+                    Marketing
+                </span>
+
+                <span class="role-tag">
+                    UI/UX Design
+                </span>
+
+                <span class="role-tag">
+                    Development
+                </span>
+
+                <span class="role-tag">
+                    Content
+                </span>
+
+                <span class="role-tag">
+                    Research
+                </span>
+
+                <span class="role-tag">
+                    Community
+                </span>
 
             </div>
 
@@ -379,6 +509,10 @@
 
 </main>
 
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
@@ -400,10 +534,21 @@
 
         <div class="footer-links">
 
-            <a href="index.html">Home</a>
-            <a href="opportunities.html">Opportunities</a>
-            <a href="resources.html">Resources</a>
-            <a href="index.html#join">Join Us</a>
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="index.html#join">
+                Join Us
+            </a>
 
         </div>
 
@@ -411,5 +556,23 @@
 
 </footer>
 
+
+<!-- =========================
+     THEME SYNC
+========================= -->
+
+<script>
+
+    const savedTheme =
+        localStorage.getItem("prepcomeback-theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+</script>
+
+
 </body>
 </html>
+```

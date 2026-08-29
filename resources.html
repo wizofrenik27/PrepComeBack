@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
           content="Free resources for students: university applications, SAT, English tests, research, competitions and skills.">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -21,6 +23,7 @@
             background: #f8fafc;
             color: #0f172a;
             line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         a {
@@ -33,11 +36,14 @@
             margin: auto;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             background: white;
             border-bottom: 1px solid #e2e8f0;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .nav-inner {
@@ -68,7 +74,9 @@
             color: #2563eb;
         }
 
-        /* HEADER */
+        /* =========================
+           HEADER
+        ========================= */
 
         .page-header {
             padding: 75px 0 45px;
@@ -84,9 +92,12 @@
             max-width: 700px;
             color: #64748b;
             font-size: 18px;
+            transition: color 0.3s ease;
         }
 
-        /* SEARCH */
+        /* =========================
+           SEARCH
+        ========================= */
 
         .search-box {
             background: white;
@@ -94,6 +105,7 @@
             border: 1px solid #e2e8f0;
             border-radius: 16px;
             margin-bottom: 25px;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         #search {
@@ -103,13 +115,20 @@
             border-radius: 10px;
             font-size: 16px;
             outline: none;
+            background: white;
+            color: #0f172a;
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
         }
 
         #search:focus {
             border-color: #2563eb;
         }
 
-        /* FILTERS */
+        /* =========================
+           FILTERS
+        ========================= */
 
         .filters {
             display: flex;
@@ -121,10 +140,14 @@
         .filter {
             border: 1px solid #cbd5e1;
             background: white;
+            color: #0f172a;
             padding: 10px 15px;
             border-radius: 999px;
             cursor: pointer;
             font-weight: 600;
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
         }
 
         .filter.active {
@@ -133,7 +156,9 @@
             border-color: #2563eb;
         }
 
-        /* RESOURCE GRID */
+        /* =========================
+           RESOURCE GRID
+        ========================= */
 
         .resources {
             display: grid;
@@ -147,6 +172,9 @@
             border: 1px solid #e2e8f0;
             border-radius: 18px;
             padding: 25px;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease,
+                        box-shadow 0.2s ease;
         }
 
         .card:hover {
@@ -172,6 +200,7 @@
         .card p {
             color: #64748b;
             margin-bottom: 18px;
+            transition: color 0.3s ease;
         }
 
         .free {
@@ -198,7 +227,67 @@
             color: #64748b;
         }
 
-        /* MOBILE */
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        body.dark {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark nav {
+            background: #0f172a;
+            border-bottom-color: #334155;
+        }
+
+        body.dark .page-header p {
+            color: #94a3b8;
+        }
+
+        body.dark .search-box {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark #search {
+            background: #0f172a;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+
+        body.dark #search::placeholder {
+            color: #64748b;
+        }
+
+        body.dark .filter {
+            background: #1e293b;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+
+        body.dark .filter.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        body.dark .card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark .card p {
+            color: #94a3b8;
+        }
+
+        body.dark .empty {
+            color: #94a3b8;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -209,13 +298,23 @@
             .resources {
                 grid-template-columns: 1fr;
             }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
 <nav>
+
     <div class="container nav-inner">
 
         <a href="index.html" class="logo">
@@ -223,16 +322,37 @@
         </a>
 
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="opportunities.html">Opportunities</a>
-            <a href="resources.html">Resources</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#join">Join Us</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#join">
+                Join Us
+            </a>
+
         </div>
 
     </div>
+
 </nav>
 
+
+<!-- =========================
+     MAIN
+========================= -->
 
 <main>
 
@@ -240,7 +360,9 @@
 
         <div class="container">
 
-            <h1>Free resources.</h1>
+            <h1>
+                Free resources.
+            </h1>
 
             <p>
                 Carefully selected resources to help students
@@ -473,6 +595,10 @@
 </main>
 
 
+<!-- =========================
+     SEARCH & FILTERS
+========================= -->
+
 <script>
 
     const searchInput =
@@ -531,6 +657,7 @@
 
         empty.style.display =
             visible === 0 ? "block" : "none";
+
     }
 
 
@@ -561,5 +688,23 @@
 
 </script>
 
+
+<!-- =========================
+     THEME SYNC
+========================= -->
+
+<script>
+
+    const savedTheme =
+        localStorage.getItem("prepcomeback-theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+    }
+
+</script>
+
+
 </body>
 </html>
+```

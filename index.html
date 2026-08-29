@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +26,7 @@
             background: #f8fafc;
             color: #0f172a;
             line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
         }
 
         a {
@@ -37,7 +39,9 @@
             margin: auto;
         }
 
-        /* NAVIGATION */
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: sticky;
@@ -46,6 +50,7 @@
             background: rgba(255,255,255,0.96);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid #e2e8f0;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .nav-inner {
@@ -85,7 +90,32 @@
             border-radius: 9px;
         }
 
-        /* HERO */
+        /* =========================
+           THEME BUTTON
+        ========================= */
+
+        .theme-toggle {
+            width: 42px;
+            height: 42px;
+            border: 1px solid #cbd5e1;
+            background: white;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 19px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.25s ease;
+        }
+
+        .theme-toggle:hover {
+            transform: scale(1.08);
+            border-color: #2563eb;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             padding: 110px 0 90px;
@@ -93,6 +123,7 @@
                 radial-gradient(circle at top right, #dbeafe, transparent 35%),
                 radial-gradient(circle at bottom left, #e0e7ff, transparent 30%),
                 #f8fafc;
+            transition: background 0.3s ease;
         }
 
         .hero-content {
@@ -150,6 +181,7 @@
             padding: 14px 22px;
             border-radius: 11px;
             font-weight: 700;
+            transition: 0.3s ease;
         }
 
         .primary:hover,
@@ -157,13 +189,16 @@
             background: #1d4ed8;
         }
 
-        /* STATS */
+        /* =========================
+           STATS
+        ========================= */
 
         .stats {
             padding: 35px 0;
             background: white;
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
 
         .stats-grid {
@@ -183,7 +218,9 @@
             font-size: 14px;
         }
 
-        /* GENERAL SECTIONS */
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
 
         section {
             padding: 90px 0;
@@ -205,7 +242,9 @@
             font-size: 17px;
         }
 
-        /* CARDS */
+        /* =========================
+           CARDS
+        ========================= */
 
         .cards {
             display: grid;
@@ -240,16 +279,22 @@
             color: #64748b;
         }
 
-        /* RESOURCES */
+        /* =========================
+           RESOURCES
+        ========================= */
 
         .resources-section {
             background: #f1f5f9;
+            transition: background 0.3s ease;
         }
 
-        /* ABOUT */
+        /* =========================
+           ABOUT
+        ========================= */
 
         .about {
             background: white;
+            transition: background 0.3s ease;
         }
 
         .about-grid {
@@ -275,19 +320,25 @@
             background: #eff6ff;
             border-radius: 22px;
             padding: 35px;
+            transition: background 0.3s ease;
         }
 
         .mission-box h3 {
             margin-bottom: 12px;
         }
 
-        /* TEAM */
+        /* =========================
+           TEAM
+        ========================= */
 
         .team-section {
             background: #f8fafc;
+            transition: background 0.3s ease;
         }
 
-        /* JOIN */
+        /* =========================
+           JOIN
+        ========================= */
 
         .join {
             background: #0f172a;
@@ -319,7 +370,9 @@
             font-size: 14px;
         }
 
-        /* FOOTER */
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
             background: #020617;
@@ -351,7 +404,93 @@
             color: white;
         }
 
-        /* MOBILE */
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        body.dark {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark nav {
+            background: rgba(15,23,42,0.96);
+            border-bottom-color: #334155;
+        }
+
+        body.dark .theme-toggle {
+            background: #1e293b;
+            border-color: #475569;
+            color: white;
+        }
+
+        body.dark .hero {
+            background:
+                radial-gradient(circle at top right, #1e3a8a, transparent 35%),
+                radial-gradient(circle at bottom left, #312e81, transparent 30%),
+                #0f172a;
+        }
+
+        body.dark .hero p {
+            color: #cbd5e1;
+        }
+
+        body.dark .badge {
+            background: #1e3a8a;
+            color: #bfdbfe;
+        }
+
+        body.dark .secondary {
+            background: #1e293b;
+            border-color: #475569;
+            color: #f8fafc;
+        }
+
+        body.dark .stats {
+            background: #111827;
+            border-color: #334155;
+        }
+
+        body.dark .stat span {
+            color: #94a3b8;
+        }
+
+        body.dark .section-heading p {
+            color: #94a3b8;
+        }
+
+        body.dark .card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark .card p {
+            color: #94a3b8;
+        }
+
+        body.dark .resources-section {
+            background: #111827;
+        }
+
+        body.dark .about {
+            background: #0f172a;
+        }
+
+        body.dark .about p {
+            color: #94a3b8;
+        }
+
+        body.dark .mission-box {
+            background: #172554;
+        }
+
+        body.dark .team-section {
+            background: #111827;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
 
         @media (max-width: 800px) {
 
@@ -424,6 +563,15 @@
                 Join Us
             </a>
 
+            <!-- DARK / LIGHT MODE -->
+            <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle dark mode"
+                title="Toggle dark mode">
+                🌙
+            </button>
+
         </div>
 
     </div>
@@ -457,13 +605,9 @@
 
             <div class="buttons">
 
-                <!-- CORRECT LINK -->
-
                 <a href="opportunities.html" class="primary">
                     Explore Opportunities
                 </a>
-
-                <!-- CORRECT LINK -->
 
                 <a href="join.html" class="secondary">
                     Join PrepComeBack
@@ -863,8 +1007,6 @@
             </div>
 
 
-            <!-- CORRECT LINK -->
-
             <a href="join.html" class="primary">
                 Apply to Join →
             </a>
@@ -924,5 +1066,49 @@
 
 </footer>
 
+
+<!-- DARK MODE SCRIPT -->
+
+<script>
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    // Check saved theme
+    const savedTheme = localStorage.getItem("prepcomeback-theme");
+
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
+        themeToggle.textContent = "☀️";
+        themeToggle.setAttribute("aria-label", "Switch to light mode");
+        themeToggle.setAttribute("title", "Switch to light mode");
+    }
+
+    // Toggle theme
+    themeToggle.addEventListener("click", function () {
+
+        document.body.classList.toggle("dark");
+
+        if (document.body.classList.contains("dark")) {
+
+            themeToggle.textContent = "☀️";
+            themeToggle.setAttribute("aria-label", "Switch to light mode");
+            themeToggle.setAttribute("title", "Switch to light mode");
+
+            localStorage.setItem("prepcomeback-theme", "dark");
+
+        } else {
+
+            themeToggle.textContent = "🌙";
+            themeToggle.setAttribute("aria-label", "Switch to dark mode");
+            themeToggle.setAttribute("title", "Switch to dark mode");
+
+            localStorage.setItem("prepcomeback-theme", "light");
+        }
+
+    });
+
+</script>
+
 </body>
 </html>
+```

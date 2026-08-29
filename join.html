@@ -11,6 +11,7 @@
           content="Join PrepComeBack and help build a global student-led platform.">
 
     <style>
+
         * {
             box-sizing: border-box;
             margin: 0;
@@ -33,6 +34,8 @@
             width: min(900px, 92%);
             margin: auto;
         }
+
+        /* NAVIGATION */
 
         nav {
             background: white;
@@ -66,6 +69,8 @@
             color: #2563eb;
         }
 
+        /* HEADER */
+
         .header {
             padding: 75px 0 45px;
         }
@@ -81,6 +86,8 @@
             color: #64748b;
             font-size: 18px;
         }
+
+        /* FORM */
 
         .form-card {
             background: white;
@@ -114,6 +121,7 @@
             font-family: inherit;
             font-size: 16px;
             outline: none;
+            background: white;
         }
 
         input:focus,
@@ -133,29 +141,35 @@
             margin-top: 6px;
         }
 
-        .checkbox {
+        /* CHECKBOX */
+
+        .checkbox-wrapper {
             display: flex;
             gap: 10px;
             align-items: flex-start;
             margin-bottom: 25px;
         }
 
-        .checkbox input {
-            width: auto;
-            margin-top: 5px;
+        .checkbox-wrapper input {
+            width: 18px;
+            height: 18px;
+            margin-top: 4px;
+            flex-shrink: 0;
         }
 
-        .checkbox label {
+        .checkbox-wrapper label {
             font-weight: 400;
             margin: 0;
         }
+
+        /* BUTTON */
 
         button {
             width: 100%;
             border: none;
             background: #2563eb;
             color: white;
-            padding: 14px 20px;
+            padding: 15px 20px;
             border-radius: 10px;
             font-size: 16px;
             font-weight: 700;
@@ -166,6 +180,8 @@
             background: #1d4ed8;
         }
 
+        /* NOTE */
+
         .note {
             margin-top: 20px;
             padding: 15px;
@@ -174,6 +190,8 @@
             color: #1e40af;
             font-size: 14px;
         }
+
+        /* FOOTER */
 
         footer {
             background: #020617;
@@ -192,7 +210,10 @@
             color: white;
             font-size: 21px;
             font-weight: 800;
+            margin-bottom: 5px;
         }
+
+        /* MOBILE */
 
         @media (max-width: 700px) {
 
@@ -203,11 +224,18 @@
             .form-card {
                 padding: 23px;
             }
+
         }
+
     </style>
+
 </head>
 
+
 <body>
+
+
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -242,7 +270,12 @@
 </nav>
 
 
+<!-- MAIN -->
+
 <main>
+
+
+    <!-- HEADER -->
 
     <section class="header">
 
@@ -263,11 +296,11 @@
     </section>
 
 
+    <!-- APPLICATION FORM -->
+
     <section>
 
         <div class="container">
-
-            <!-- REAL FORM SUBMISSION -->
 
             <form
                 class="form-card"
@@ -275,7 +308,7 @@
                 method="POST"
             >
 
-                <!-- FormSubmit settings -->
+                <!-- FORMSUBMIT SETTINGS -->
 
                 <input
                     type="hidden"
@@ -291,18 +324,20 @@
 
                 <input
                     type="hidden"
-                    name="_next"
-                    value="https://wizofrenik27.github.io/PrepComeBack/join.html"
-                >
-
-                <input
-                    type="hidden"
                     name="_captcha"
                     value="true"
                 >
 
                 <input
                     type="hidden"
+                    name="_next"
+                    value="https://wizofrenik27.github.io/PrepComeBack/join.html"
+                >
+
+                <!-- ANTI-SPAM HONEYPOT -->
+
+                <input
+                    type="text"
                     name="_honey"
                     style="display:none"
                     tabindex="-1"
@@ -315,8 +350,10 @@
                 <div class="field">
 
                     <label for="name">
+
                         Full name
                         <span class="required">*</span>
+
                     </label>
 
                     <input
@@ -324,6 +361,7 @@
                         id="name"
                         name="name"
                         placeholder="Your name"
+                        autocomplete="name"
                         required
                     >
 
@@ -335,8 +373,10 @@
                 <div class="field">
 
                     <label for="email">
+
                         Email
                         <span class="required">*</span>
+
                     </label>
 
                     <input
@@ -344,6 +384,7 @@
                         id="email"
                         name="email"
                         placeholder="you@example.com"
+                        autocomplete="email"
                         required
                     >
 
@@ -355,8 +396,10 @@
                 <div class="field">
 
                     <label for="role">
+
                         What would you like to do?
                         <span class="required">*</span>
+
                     </label>
 
                     <select
@@ -393,7 +436,7 @@
                             Research
                         </option>
 
-                        <option value="Community">
+                        <option value="Community Management">
                             Community Management
                         </option>
 
@@ -411,8 +454,10 @@
                 <div class="field">
 
                     <label for="experience">
+
                         Tell us about yourself
                         <span class="required">*</span>
+
                     </label>
 
                     <textarea
@@ -452,8 +497,10 @@
                 <div class="field">
 
                     <label for="motivation">
+
                         Why do you want to join PrepComeBack?
                         <span class="required">*</span>
+
                     </label>
 
                     <textarea
@@ -468,23 +515,29 @@
 
                 <!-- AGREEMENT -->
 
-                <div class="checkbox">
+                <div class="checkbox-wrapper">
 
                     <input
                         type="checkbox"
                         id="agreement"
+                        name="agreement"
+                        value="I agree"
                         required
                     >
 
                     <label for="agreement">
+
                         I understand that PrepComeBack is a
                         student-led project and that submitting
                         this application does not guarantee
                         acceptance to the team.
+
                     </label>
 
                 </div>
 
+
+                <!-- SUBMIT -->
 
                 <button type="submit">
                     Submit Application
@@ -492,8 +545,10 @@
 
 
                 <div class="note">
+
                     Your application will be sent to the
                     PrepComeBack team for review.
+
                 </div>
 
             </form>
@@ -502,8 +557,11 @@
 
     </section>
 
+
 </main>
 
+
+<!-- FOOTER -->
 
 <footer>
 
@@ -522,6 +580,7 @@
 
         </div>
 
+
         <div>
 
             <a href="index.html">
@@ -534,5 +593,7 @@
 
 </footer>
 
+
 </body>
+
 </html>

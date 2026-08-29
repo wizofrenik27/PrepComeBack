@@ -1,1 +1,929 @@
-<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiB3aWR0aD0iMzAwIj48ZGVmcz48bGluZWFyR3JhZGllbnQgaWQ9InRvcCIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzNkNDQ1NCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzFlMjIyYiIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJsZWZ0IiB4MT0iMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzI4MmMzNyIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzBmMTExNyIvPjwvbGluZWFyR3JhZGllbnQ+PGxpbmVhckdyYWRpZW50IGlkPSJjeWFuIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjNTVkNmZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDA1NWQ0Ii8+PC9saW5lYXJHcmFkaWVudD48bGluZWFyR3JhZGllbnQgaWQ9ImJsdWUiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMDA3N2ZmIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAyYjgwIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzFkMjAyNiIgcng9IjIwIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNDAsNDApIj48cGF0aCBmaWxsPSIjMDcwOTBkIiBkPSJNIDIzMCwyMjUgTCAzNTAsMTU1 LCAzNTAsMjk1 LCAyMzAsMzY1IFoiLz48cGF0aCBmaWxsPSJ1cmwoI3RvcCkiIGQ9Ik0gMTEwLDE1NSBMIDIzMCw4NSBMIDM1MCwxNTUgTCAyMzAsMjI1IFoiLz48cGF0aCBmaWxsPSJ1cmwoI2xlZnQpIiBkPSJNIDExMCwxNTUgTCAyMzAsMjI1IEwgMjMwLDM2NSBMIDExMCwyOTUgWiIvPjxwb2x5Z29uIGZpbGw9InVybCgjYmx1ZSkiIHBvaW50cz0iMjMwLDIyNSAyNjAsMjA4IDI2MCwyMzggMjMwLDI1NSIvPjxwb2x5Z29uIGZpbGw9InVybCgjY3lhbikiIHBvaW50cz0iMjYwLDIwOCAyOTAsMTkwIDI5MCwyMjAgMjY0LDIzOCIvPjxwb2x5Z29uIGZpbGw9InVybCgjYmx1ZSkiIHBvaW50cz0iMjkwLDE5MCAzMjAsMTcyIDMyMCwyMDIgMjkwLDIyMCIvPjxwb2x5Z29uIGZpbGw9InVybCgjY3lhbikiIHBvaW50cz0iMjMwLDI1NSAyNjAsMjM4IDI2MCwyNjggMjMwLDI4NSIvPjxwb2x5Z29uIGZpbGw9InVybCgjYmx1ZSkiIHBvaW50cz0iMjYwLDIzOCAyOTAsMjIwIDI5MCwyNTAgMjYwLDI2OCIvPjxwb2x5Z29uIGZpbGw9InVybCgjY3lhbikiIHBvaW50cz0iMjkwLDIyMCAzMjAsMjAyIDMyMCwyMzIgMjkwLDI1MCIvPjxwb2x5Z29uIGZpbGw9InVybCgjYmx1ZSkiIHBvaW50cz0iMjMwLDI4NSAyNjAsMjY4IDI2MCwyOTggMjMwLDMxNSIvPjxwb2x5Z29uIGZpbGw9InVybCgjY3lhbikiIHBvaW50cz0iMjYwLDI2OCAyOTAsMjUwIDI5MCwyODAgMjYwLDI5OCIvPjxwb2x5Z29uIGZpbGw9IiM4MGU1ZmYiIHBvaW50cz0iMzMwLDE1MCAzNDIsMTQzIDM0MiwxNTMgMzMwLDE2MCIvPjxwb2x5Z29uIGZpbGw9IiM1NWQ2ZmYiIHBvaW50cz0iMzUwLDEzNSAzNTgsMTMwIDM1OCwxMzggMzUwLDE0MyIvPjxwb2x5Z29uIGZpbGw9IiMwMDc3ZmYiIHBvaW50cz0iMzM1LDE3NSAzNDUsMTY5IDM0NSwxNzcgMzM1LDE4MyIvPjwvZz48L3N2Zz4=" alt="Quantum Shift" />
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrepComeBack — Your Future Starts Here</title>
+
+    <!-- WEBSITE ICON -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <meta name="description"
+          content="PrepComeBack is a free global platform helping students discover opportunities, access resources and build their future.">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1120px, 92%);
+            margin: auto;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .nav-inner {
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .nav-button {
+            background: #2563eb;
+            color: white !important;
+            padding: 10px 17px;
+            border-radius: 9px;
+        }
+
+        /* HERO */
+
+        .hero {
+            padding: 110px 0 90px;
+            background:
+                radial-gradient(circle at top right, #dbeafe, transparent 35%),
+                radial-gradient(circle at bottom left, #e0e7ff, transparent 30%),
+                #f8fafc;
+        }
+
+        .hero-content {
+            max-width: 820px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 14px;
+            border-radius: 999px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-weight: 700;
+            font-size: 14px;
+            margin-bottom: 22px;
+        }
+
+        .hero h1 {
+            font-size: clamp(48px, 7vw, 82px);
+            line-height: 0.98;
+            letter-spacing: -4px;
+            margin-bottom: 28px;
+        }
+
+        .hero h1 span {
+            color: #2563eb;
+        }
+
+        .hero p {
+            max-width: 700px;
+            font-size: 20px;
+            color: #475569;
+            margin-bottom: 34px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+
+        .primary {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 14px 22px;
+            border-radius: 11px;
+            font-weight: 700;
+        }
+
+        .secondary {
+            display: inline-block;
+            border: 1px solid #cbd5e1;
+            background: white;
+            padding: 14px 22px;
+            border-radius: 11px;
+            font-weight: 700;
+        }
+
+        .primary:hover,
+        .nav-button:hover {
+            background: #1d4ed8;
+        }
+
+        /* STATS */
+
+        .stats {
+            padding: 35px 0;
+            background: white;
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat strong {
+            display: block;
+            font-size: 30px;
+        }
+
+        .stat span {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        /* GENERAL SECTIONS */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-heading {
+            max-width: 720px;
+            margin-bottom: 45px;
+        }
+
+        .section-heading h2 {
+            font-size: 42px;
+            line-height: 1.1;
+            margin-bottom: 14px;
+        }
+
+        .section-heading p {
+            color: #64748b;
+            font-size: 17px;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 28px;
+            transition: 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(15,23,42,0.08);
+        }
+
+        .icon {
+            font-size: 30px;
+            margin-bottom: 18px;
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #64748b;
+        }
+
+        /* RESOURCES */
+
+        .resources-section {
+            background: #f1f5f9;
+        }
+
+        /* ABOUT */
+
+        .about {
+            background: white;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 44px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            color: #64748b;
+            font-size: 17px;
+            margin-bottom: 16px;
+        }
+
+        .mission-box {
+            background: #eff6ff;
+            border-radius: 22px;
+            padding: 35px;
+        }
+
+        .mission-box h3 {
+            margin-bottom: 12px;
+        }
+
+        /* TEAM */
+
+        .team-section {
+            background: #f8fafc;
+        }
+
+        /* JOIN */
+
+        .join {
+            background: #0f172a;
+            color: white;
+        }
+
+        .join .section-heading p {
+            color: #cbd5e1;
+        }
+
+        .join-card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 20px;
+            padding: 30px;
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0 28px;
+        }
+
+        .role {
+            background: #334155;
+            padding: 8px 13px;
+            border-radius: 999px;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #020617;
+            color: #cbd5e1;
+            padding: 45px 0;
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            color: white;
+            font-size: 22px;
+            font-weight: 800;
+            margin-bottom: 5px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 75px 0;
+            }
+
+            .hero h1 {
+                letter-spacing: -2px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding: 65px 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="container nav-inner">
+
+        <a href="index.html" class="logo">
+            Prep<span>ComeBack</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="#about">
+                About
+            </a>
+
+            <a href="join.html" class="nav-button">
+                Join Us
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero" id="home">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                🌍 A free global platform for students
+            </div>
+
+            <h1>
+                Your opportunities.<br>
+                Your future.<br>
+                <span>Your comeback.</span>
+            </h1>
+
+            <p>
+                PrepComeBack helps students discover opportunities,
+                access free resources, build skills and connect
+                with a global community.
+            </p>
+
+            <div class="buttons">
+
+                <a href="opportunities.html" class="primary">
+                    Explore Opportunities
+                </a>
+
+                <a href="join.html" class="secondary">
+                    Join PrepComeBack
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- STATS -->
+
+<div class="stats">
+
+    <div class="container stats-grid">
+
+        <div class="stat">
+            <strong>100%</strong>
+            <span>Free access</span>
+        </div>
+
+        <div class="stat">
+            <strong>🌍</strong>
+            <span>Global community</span>
+        </div>
+
+        <div class="stat">
+            <strong>🎓</strong>
+            <span>Student-focused</span>
+        </div>
+
+        <div class="stat">
+            <strong>∞</strong>
+            <span>Possibilities</span>
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- OPPORTUNITIES -->
+
+<section id="opportunities">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Discover opportunities.
+            </h2>
+
+            <p>
+                Find scholarships, research programs,
+                competitions, internships and other
+                opportunities for students.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">🎓</div>
+
+                <h3>
+                    Scholarships
+                </h3>
+
+                <p>
+                    Discover scholarships and financial
+                    opportunities for students around the world.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🔬</div>
+
+                <h3>
+                    Research
+                </h3>
+
+                <p>
+                    Explore research programs, projects,
+                    mentors and academic opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🏆</div>
+
+                <h3>
+                    Competitions
+                </h3>
+
+                <p>
+                    Find olympiads, competitions and challenges
+                    where you can develop your skills.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🌎</div>
+
+                <h3>
+                    Programs
+                </h3>
+
+                <p>
+                    Discover summer schools and international
+                    educational programs.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">💼</div>
+
+                <h3>
+                    Internships
+                </h3>
+
+                <p>
+                    Find ways to gain experience through
+                    internships and projects.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🤝</div>
+
+                <h3>
+                    Community
+                </h3>
+
+                <p>
+                    Connect with students who share your
+                    interests and ambitions.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div style="margin-top:35px;">
+
+            <a href="opportunities.html" class="primary">
+                View All Opportunities →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- RESOURCES -->
+
+<section class="resources-section" id="resources">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Free resources.
+            </h2>
+
+            <p>
+                Resources to help students prepare,
+                learn and build their future.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">📚</div>
+
+                <h3>
+                    University Applications
+                </h3>
+
+                <p>
+                    Guides and resources for planning
+                    university applications.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">📝</div>
+
+                <h3>
+                    SAT & English
+                </h3>
+
+                <p>
+                    Free resources for SAT and English
+                    proficiency test preparation.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">🚀</div>
+
+                <h3>
+                    Projects & Skills
+                </h3>
+
+                <p>
+                    Learn skills and build meaningful
+                    projects for your future.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div style="margin-top:35px;">
+
+            <a href="resources.html" class="primary">
+                Explore Resources →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+
+    <div class="container about-grid">
+
+        <div>
+
+            <h2>
+                Talent should not depend on opportunity.
+            </h2>
+
+            <p>
+                Millions of talented students have the motivation
+                to achieve more, but many do not know where to
+                find opportunities.
+            </p>
+
+            <p>
+                PrepComeBack aims to make discovering opportunities,
+                learning and connecting with other students easier
+                and more accessible.
+            </p>
+
+        </div>
+
+
+        <div class="mission-box">
+
+            <h3>
+                Our mission
+            </h3>
+
+            <p>
+                Build a free global ecosystem where students can
+                discover opportunities, access resources, connect
+                with people and create their own future.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- TEAM -->
+
+<section class="team-section" id="team">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Built by students.
+            </h2>
+
+            <p>
+                PrepComeBack is being built by students and young
+                people who want to make opportunities more accessible.
+            </p>
+
+        </div>
+
+
+        <a href="team.html" class="primary">
+            Meet the Team →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- JOIN -->
+
+<section class="join" id="join">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>
+                Build it with us.
+            </h2>
+
+            <p>
+                We are looking for motivated people who want
+                to help build a global student platform.
+            </p>
+
+        </div>
+
+
+        <div class="join-card">
+
+            <h3>
+                Current team opportunities
+            </h3>
+
+
+            <div class="roles">
+
+                <span class="role">
+                    SMM
+                </span>
+
+                <span class="role">
+                    Marketing
+                </span>
+
+                <span class="role">
+                    UI/UX Design
+                </span>
+
+                <span class="role">
+                    Development
+                </span>
+
+                <span class="role">
+                    Content
+                </span>
+
+                <span class="role">
+                    Research
+                </span>
+
+                <span class="role">
+                    Community
+                </span>
+
+            </div>
+
+
+            <a href="join.html" class="primary">
+                Apply to Join →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div>
+
+            <div class="footer-logo">
+                PrepComeBack
+            </div>
+
+            <p>
+                Your opportunities. Your future.
+                Your comeback.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
+            <a href="join.html">
+                Join Us
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
+```

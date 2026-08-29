@@ -1,98 +1,60 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="top" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#3d4454"/>
-      <stop offset="100%" stop-color="#1e222b"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#20242e"/>
+      <stop offset="1" stop-color="#171a22"/>
     </linearGradient>
-
-    <linearGradient id="left" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#282c37"/>
-      <stop offset="100%" stop-color="#0f1117"/>
+    <linearGradient id="topFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3c4356"/>
+      <stop offset="1" stop-color="#262b38"/>
     </linearGradient>
-
-    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#55d6ff"/>
-      <stop offset="100%" stop-color="#0055d4"/>
+    <linearGradient id="leftFace" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#262a35"/>
+      <stop offset="1" stop-color="#0c0e13"/>
     </linearGradient>
-
-    <linearGradient id="blue" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#0077ff"/>
-      <stop offset="100%" stop-color="#002b80"/>
+    <linearGradient id="rightFace" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0c0e14"/>
+      <stop offset="0.55" stop-color="#0a0c11"/>
+      <stop offset="1" stop-color="#07080b"/>
+    </linearGradient>
+    <linearGradient id="tile1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e6fe0"/>
+      <stop offset="1" stop-color="#0f4fbd"/>
+    </linearGradient>
+    <linearGradient id="tile2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4fa3ff"/>
+      <stop offset="1" stop-color="#1f7cf0"/>
+    </linearGradient>
+    <linearGradient id="tile3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7fc4ff"/>
+      <stop offset="1" stop-color="#3a95f7"/>
+    </linearGradient>
+    <linearGradient id="sparkle" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#a9ecff"/>
+      <stop offset="1" stop-color="#4fd2ff"/>
     </linearGradient>
   </defs>
 
-  <rect width="100%" height="100%" fill="#1d2026" rx="20"/>
+  <rect x="0" y="0" width="1080" height="1080" rx="180" fill="url(#bg)"/>
 
-  <g transform="translate(40,40)">
-    <path
-      fill="#07090d"
-      d="M 230,225 L 350,155 L 350,295 L 230,365 Z"
-    />
+  <polygon points="580,295 830,440 580,585 330,440" fill="url(#topFace)"/>
+  <polygon points="330,440 580,585 580,875 330,730" fill="url(#leftFace)"/>
+  <polygon points="580,585 830,440 830,730 580,875" fill="url(#rightFace)"/>
 
-    <path
-      fill="url(#top)"
-      d="M 110,155 L 230,85 L 350,155 L 230,225 Z"
-    />
+  <g>
+    <polygon points="580,585 663,633 663,729 580,681" fill="url(#tile1)"/>
+    <polygon points="663,633 746,585 746,681 663,729" fill="url(#tile2)"/>
+    <polygon points="746,585 830,633 830,729 746,681" fill="url(#tile3)"/>
+    <polygon points="580,681 663,729 663,825 580,777" fill="url(#tile2)"/>
+    <polygon points="663,729 746,681 746,777 663,825" fill="url(#tile1)"/>
+    <polygon points="580,777 663,825 663,875 580,875" fill="url(#tile3)"/>
+    <polygon points="663,825 746,777 746,825 663,875" fill="url(#tile2)"/>
+  </g>
 
-    <path
-      fill="url(#left)"
-      d="M 110,155 L 230,225 L 230,365 L 110,295 Z"
-    />
+  <rect x="796" y="482" width="34" height="14" rx="3" fill="#1a4fb0"/>
 
-    <polygon
-      fill="url(#blue)"
-      points="230,225 260,208 260,238 230,255"
-    />
-
-    <polygon
-      fill="url(#cyan)"
-      points="260,208 290,190 290,220 260,238"
-    />
-
-    <polygon
-      fill="url(#blue)"
-      points="290,190 320,172 320,202 290,220"
-    />
-
-    <polygon
-      fill="url(#cyan)"
-      points="230,255 260,238 260,268 230,285"
-    />
-
-    <polygon
-      fill="url(#blue)"
-      points="260,238 290,220 290,250 260,268"
-    />
-
-    <polygon
-      fill="url(#cyan)"
-      points="290,220 320,202 320,232 290,250"
-    />
-
-    <polygon
-      fill="url(#blue)"
-      points="230,285 260,268 260,298 230,315"
-    />
-
-    <polygon
-      fill="url(#cyan)"
-      points="260,268 290,250 290,280 260,298"
-    />
-
-    <polygon
-      fill="#80e5ff"
-      points="330,150 342,143 342,153 330,160"
-    />
-
-    <polygon
-      fill="#55d6ff"
-      points="350,135 358,130 358,138 350,143"
-    />
-
-    <polygon
-      fill="#0077ff"
-      points="335,175 345,169 345,177 335,183"
-    />
+  <g fill="url(#sparkle)">
+    <polygon points="795,435 820,445 810,470 785,460"/>
+    <polygon points="835,400 858,393 863,415 840,422"/>
   </g>
 </svg>
-```

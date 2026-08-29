@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,7 @@
     <title>Join Us — PrepComeBack</title>
 
     <meta name="description"
-          content="Join the PrepComeBack team and help build a free global platform for students.">
+          content="Join PrepComeBack and help build a global student-led platform.">
 
     <style>
         * {
@@ -66,7 +67,7 @@
         }
 
         .header {
-            padding: 70px 0 40px;
+            padding: 75px 0 45px;
         }
 
         .header h1 {
@@ -144,6 +145,11 @@
             margin-top: 5px;
         }
 
+        .checkbox label {
+            font-weight: 400;
+            margin: 0;
+        }
+
         button {
             width: 100%;
             border: none;
@@ -204,6 +210,7 @@
 <body>
 
 <nav>
+
     <div class="container nav-inner">
 
         <a href="index.html" class="logo">
@@ -211,13 +218,27 @@
         </a>
 
         <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="opportunities.html">Opportunities</a>
-            <a href="resources.html">Resources</a>
-            <a href="team.html">Team</a>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="team.html">
+                Team
+            </a>
+
         </div>
 
     </div>
+
 </nav>
 
 
@@ -246,15 +267,56 @@
 
         <div class="container">
 
+            <!-- REAL FORM SUBMISSION -->
+
             <form
                 class="form-card"
-                id="joinForm"
+                action="https://formsubmit.co/prepcomeback@gmail.com"
+                method="POST"
             >
+
+                <!-- FormSubmit settings -->
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="New PrepComeBack Team Application"
+                >
+
+                <input
+                    type="hidden"
+                    name="_template"
+                    value="table"
+                >
+
+                <input
+                    type="hidden"
+                    name="_next"
+                    value="https://wizofrenik27.github.io/PrepComeBack/join.html"
+                >
+
+                <input
+                    type="hidden"
+                    name="_captcha"
+                    value="true"
+                >
+
+                <input
+                    type="hidden"
+                    name="_honey"
+                    style="display:none"
+                    tabindex="-1"
+                    autocomplete="off"
+                >
+
+
+                <!-- NAME -->
 
                 <div class="field">
 
                     <label for="name">
-                        Full name <span class="required">*</span>
+                        Full name
+                        <span class="required">*</span>
                     </label>
 
                     <input
@@ -268,10 +330,13 @@
                 </div>
 
 
+                <!-- EMAIL -->
+
                 <div class="field">
 
                     <label for="email">
-                        Email <span class="required">*</span>
+                        Email
+                        <span class="required">*</span>
                     </label>
 
                     <input
@@ -284,6 +349,8 @@
 
                 </div>
 
+
+                <!-- ROLE -->
 
                 <div class="field">
 
@@ -302,7 +369,7 @@
                             Select a role
                         </option>
 
-                        <option value="SMM">
+                        <option value="SMM / Social Media">
                             SMM / Social Media
                         </option>
 
@@ -310,7 +377,7 @@
                             Marketing
                         </option>
 
-                        <option value="Design">
+                        <option value="UI/UX Design">
                             UI/UX Design
                         </option>
 
@@ -339,6 +406,8 @@
                 </div>
 
 
+                <!-- ABOUT -->
+
                 <div class="field">
 
                     <label for="experience">
@@ -355,6 +424,8 @@
 
                 </div>
 
+
+                <!-- PORTFOLIO -->
 
                 <div class="field">
 
@@ -376,6 +447,8 @@
                 </div>
 
 
+                <!-- MOTIVATION -->
+
                 <div class="field">
 
                     <label for="motivation">
@@ -393,6 +466,8 @@
                 </div>
 
 
+                <!-- AGREEMENT -->
+
                 <div class="checkbox">
 
                     <input
@@ -402,9 +477,10 @@
                     >
 
                     <label for="agreement">
-                        I understand that this is a student-led
-                        project and that submitting this form does
-                        not guarantee acceptance to the team.
+                        I understand that PrepComeBack is a
+                        student-led project and that submitting
+                        this application does not guarantee
+                        acceptance to the team.
                     </label>
 
                 </div>
@@ -416,8 +492,8 @@
 
 
                 <div class="note">
-                    Applications will be reviewed by the
-                    PrepComeBack team.
+                    Your application will be sent to the
+                    PrepComeBack team for review.
                 </div>
 
             </form>
@@ -447,33 +523,16 @@
         </div>
 
         <div>
+
             <a href="index.html">
-                Back to Home →
+                ← Back to Home
             </a>
+
         </div>
 
     </div>
 
 </footer>
-
-
-<script>
-
-    const form =
-        document.getElementById("joinForm");
-
-    form.addEventListener("submit", function(event) {
-
-        event.preventDefault();
-
-        alert(
-            "Thank you for your application! " +
-            "The submission system will be connected next."
-        );
-
-    });
-
-</script>
 
 </body>
 </html>

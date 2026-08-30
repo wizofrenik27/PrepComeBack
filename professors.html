@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Professors — PrepComeBack</title>
+
+    <meta name="description"
+          content="Discover professors, researchers and academic experts from leading universities around the world. Find research interests, universities and official academic profiles.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        .nav-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .page-header {
+            padding: 75px 0 45px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .page-header p {
+            max-width: 780px;
+            color: #64748b;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-box {
+            background: white;
+            padding: 22px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            margin-bottom: 20px;
+
+            transition: background 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        #search {
+            width: 100%;
+            padding: 14px 16px;
+
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+
+            font-size: 16px;
+            outline: none;
+
+            background: white;
+            color: #0f172a;
+
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        #search:focus {
+            border-color: #2563eb;
+        }
+
+
+        /* =========================
+           FILTERS
+        ========================= */
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filter {
+            border: 1px solid #cbd5e1;
+
+            background: white;
+            color: #0f172a;
+
+            padding: 10px 15px;
+
+            border-radius: 999px;
+
+            cursor: pointer;
+
+            font-weight: 600;
+
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        .filter:hover {
+            border-color: #2563eb;
+        }
+
+        .filter.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+
+        /* =========================
+           PROFESSORS GRID
+        ========================= */
+
+        .professors {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 20px;
+
+            padding-bottom: 80px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+            background: white;
+
+            border: 1px solid #e2e8f0;
+
+            border-radius: 18px;
+
+            padding: 25px;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.2s ease,
+                transform 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow:
+                0 12px 30px
+                rgba(15, 23, 42, 0.08);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           UNIVERSITY
+        ========================= */
+
+        .university {
+            display: inline-block;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            background: #dbeafe;
+            color: #1d4ed8;
+
+            padding: 5px 9px;
+
+            border-radius: 999px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           PROFESSOR NAME
+        ========================= */
+
+        .card h2 {
+            font-size: 21px;
+
+            margin-bottom: 7px;
+        }
+
+
+        /* =========================
+           POSITION
+        ========================= */
+
+        .position {
+            font-size: 14px;
+
+            font-weight: 600;
+
+            color: #475569;
+
+            margin-bottom: 13px;
+
+            transition: color 0.3s ease;
+        }
+
+
+        /* =========================
+           DESCRIPTION
+        ========================= */
+
+        .card p {
+            color: #64748b;
+
+            margin-bottom: 17px;
+
+            transition: color 0.3s ease;
+        }
+
+
+        /* =========================
+           RESEARCH TAGS
+        ========================= */
+
+        .research-tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 6px;
+
+            margin-bottom: 18px;
+        }
+
+        .research-tag {
+            font-size: 11px;
+
+            background: #f1f5f9;
+
+            color: #475569;
+
+            padding: 4px 8px;
+
+            border-radius: 999px;
+        }
+
+
+        /* =========================
+           LOCATION
+        ========================= */
+
+        .location {
+            font-size: 13px;
+
+            color: #64748b;
+
+            margin-bottom: 17px;
+
+            transition: color 0.3s ease;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .visit {
+            display: inline-block;
+
+            background: #2563eb;
+
+            color: white;
+
+            padding: 10px 15px;
+
+            border-radius: 9px;
+
+            font-weight: 700;
+
+            transition:
+                background 0.2s ease;
+        }
+
+        .visit:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================
+           EMPTY
+        ========================= */
+
+        .empty {
+            display: none;
+
+            padding: 40px;
+
+            text-align: center;
+
+            color: #64748b;
+
+            grid-column: 1 / -1;
+        }
+
+
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        body.dark {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark nav {
+            background: #0f172a;
+            border-bottom-color: #334155;
+        }
+
+        body.dark .page-header p {
+            color: #94a3b8;
+        }
+
+        body.dark .search-box {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark #search {
+            background: #0f172a;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+
+        body.dark #search::placeholder {
+            color: #64748b;
+        }
+
+        body.dark .filter {
+            background: #1e293b;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+
+        body.dark .filter.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        body.dark .card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark .position {
+            color: #cbd5e1;
+        }
+
+        body.dark .card p {
+            color: #94a3b8;
+        }
+
+        body.dark .research-tag {
+            background: #334155;
+            color: #cbd5e1;
+        }
+
+        body.dark .location {
+            color: #94a3b8;
+        }
+
+        body.dark .empty {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .professors {
+                grid-template-columns:
+                    repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .professors {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="container nav-inner">
+
+        <a href="index.html" class="logo">
+            Prep<span>ComeBack</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#join">
+                Join Us
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>
+                Find researchers.
+            </h1>
+
+            <p>
+                Explore professors and researchers from leading
+                universities around the world. Search by university,
+                field and research interest to discover academics
+                whose work matches your interests.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search professors, universities or research areas..."
+                >
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    data-category="all">
+
+                    All
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="AI">
+
+                    AI & Machine Learning
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="Neuroscience">
+
+                    Neuroscience
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="Medicine">
+
+                    Medicine
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="Biology">
+
+                    Biology
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="Physics">
+
+                    Physics
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="Mathematics">
+
+                    Mathematics
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="Economics">
+
+                    Economics
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="Finance">
+
+                    Finance
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="International Relations">
+
+                    International Relations
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="Psychology">
+
+                    Psychology
+
+                </button>
+
+
+                <button
+                    class="filter"
+                    data-category="Engineering">
+
+                    Engineering
+
+                </button>
+
+
+            </div>
+
+
+            <!-- =========================
+                 PROFESSORS
+            ========================= -->
+
+            <div
+                class="professors"
+                id="professors">
+
+
+                <!-- ==================================================
+                     STANFORD
+                ================================================== -->
+
+
+                <article
+                    class="card"
+                    data-category="AI">
+
+                    <span class="university">
+                        Stanford University
+                    </span>
+
+                    <h2>
+                        Fei-Fei Li
+                    </h2>
+
+                    <div class="position">
+                        Professor of Computer Science
+                    </div>
+
+                    <p>
+                        Researcher in artificial intelligence,
+                        machine learning, computer vision, robotics
+                        and AI for healthcare.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            AI
+                        </span>
+
+                        <span class="research-tag">
+                            Machine Learning
+                        </span>
+
+                        <span class="research-tag">
+                            Computer Vision
+                        </span>
+
+                        <span class="research-tag">
+                            Robotics
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Stanford, USA
+                    </div>
+
+                    <a
+                        href="https://profiles.stanford.edu/fei-fei-li"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Profile →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Biology">
+
+                    <span class="university">
+                        Stanford University
+                    </span>
+
+                    <h2>
+                        Michael Levitt
+                    </h2>
+
+                    <div class="position">
+                        Professor of Structural Biology
+                    </div>
+
+                    <p>
+                        Research in computational biology,
+                        molecular modeling, protein structure
+                        and biological simulation.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Structural Biology
+                        </span>
+
+                        <span class="research-tag">
+                            Computational Biology
+                        </span>
+
+                        <span class="research-tag">
+                            Molecular Modeling
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Stanford, USA
+                    </div>
+
+                    <a
+                        href="https://profiles.stanford.edu/michael-levitt"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Profile →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Neuroscience">
+
+                    <span class="university">
+                        Stanford University
+                    </span>
+
+                    <h2>
+                        Gordon Li
+                    </h2>
+
+                    <div class="position">
+                        Professor of Neurosurgery
+                    </div>
+
+                    <p>
+                        Research and clinical work involving brain
+                        tumors, neurosurgery and neurological science.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Neurosurgery
+                        </span>
+
+                        <span class="research-tag">
+                            Brain Tumors
+                        </span>
+
+                        <span class="research-tag">
+                            Neurology
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Stanford, USA
+                    </div>
+
+                    <a
+                        href="https://profiles.stanford.edu/browse/stanford?affiliations=capFaculty"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Stanford Profiles →
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==================================================
+                     MIT
+                ================================================== -->
+
+
+                <article
+                    class="card"
+                    data-category="AI">
+
+                    <span class="university">
+                        MIT
+                    </span>
+
+                    <h2>
+                        Regina Barzilay
+                    </h2>
+
+                    <div class="position">
+                        School of Engineering Distinguished Professor
+                    </div>
+
+                    <p>
+                        Researcher working at the intersection of
+                        artificial intelligence, machine learning
+                        and healthcare.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            AI
+                        </span>
+
+                        <span class="research-tag">
+                            Machine Learning
+                        </span>
+
+                        <span class="research-tag">
+                            Healthcare
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Cambridge, USA
+                    </div>
+
+                    <a
+                        href="https://www.regina.csail.mit.edu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Profile →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Economics">
+
+                    <span class="university">
+                        MIT
+                    </span>
+
+                    <h2>
+                        Daron Acemoglu
+                    </h2>
+
+                    <div class="position">
+                        Institute Professor of Economics
+                    </div>
+
+                    <p>
+                        Research in economics, economic growth,
+                        political economy, technology and inequality.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Economics
+                        </span>
+
+                        <span class="research-tag">
+                            Political Economy
+                        </span>
+
+                        <span class="research-tag">
+                            Technology
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Cambridge, USA
+                    </div>
+
+                    <a
+                        href="https://economics.mit.edu/people/daron-acemoglu"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Profile →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Mathematics">
+
+                    <span class="university">
+                        MIT
+                    </span>
+
+                    <h2>
+                        Martin Bazant
+                    </h2>
+
+                    <div class="position">
+                        Professor of Applied Mathematics
+                    </div>
+
+                    <p>
+                        Research spanning applied mathematics,
+                        theoretical physics, electrochemistry and
+                        chemical engineering.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Mathematics
+                        </span>
+
+                        <span class="research-tag">
+                            Physics
+                        </span>
+
+                        <span class="research-tag">
+                            Applied Mathematics
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Cambridge, USA
+                    </div>
+
+                    <a
+                        href="https://math.mit.edu/directory/faculty/professors.html"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        MIT Faculty Directory →
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==================================================
+                     OXFORD
+                ================================================== -->
+
+
+                <article
+                    class="card"
+                    data-category="Neuroscience">
+
+                    <span class="university">
+                        University of Oxford
+                    </span>
+
+                    <h2>
+                        Timothy Behrens
+                    </h2>
+
+                    <div class="position">
+                        Professor of Computational Neuroscience
+                    </div>
+
+                    <p>
+                        Research in computational neuroscience,
+                        brain networks, learning and neural computation.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Neuroscience
+                        </span>
+
+                        <span class="research-tag">
+                            Computational Neuroscience
+                        </span>
+
+                        <span class="research-tag">
+                            Brain Research
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Oxford, UK
+                    </div>
+
+                    <a
+                        href="https://www.ndcn.ox.ac.uk/team"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Oxford Faculty Directory →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Neuroscience">
+
+                    <span class="university">
+                        University of Oxford
+                    </span>
+
+                    <h2>
+                        Rafal Bogacz
+                    </h2>
+
+                    <div class="position">
+                        Professor of Computational Neuroscience
+                    </div>
+
+                    <p>
+                        Research involving computational models of
+                        decision-making, learning and brain function.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Neuroscience
+                        </span>
+
+                        <span class="research-tag">
+                            Computational Modeling
+                        </span>
+
+                        <span class="research-tag">
+                            Decision Making
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Oxford, UK
+                    </div>
+
+                    <a
+                        href="https://www.ndcn.ox.ac.uk/team"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Oxford Faculty Directory →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Psychology">
+
+                    <span class="university">
+                        University of Oxford
+                    </span>
+
+                    <h2>
+                        Masud Husain
+                    </h2>
+
+                    <div class="position">
+                        Professor of Neurology & Cognitive Neuroscience
+                    </div>
+
+                    <p>
+                        Research focused on memory, attention,
+                        motivation and cognitive disorders.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Cognitive Neuroscience
+                        </span>
+
+                        <span class="research-tag">
+                            Psychology
+                        </span>
+
+                        <span class="research-tag">
+                            Memory
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Oxford, UK
+                    </div>
+
+                    <a
+                        href="https://www.psy.ox.ac.uk/people/masud-husain"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Profile →
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==================================================
+                     HARVARD
+                ================================================== -->
+
+
+                <article
+                    class="card"
+                    data-category="Economics">
+
+                    <span class="university">
+                        Harvard University
+                    </span>
+
+                    <h2>
+                        Eric S. Maskin
+                    </h2>
+
+                    <div class="position">
+                        Adams University Professor
+                    </div>
+
+                    <p>
+                        Economist known for research in economic theory,
+                        mechanism design and social choice.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Economics
+                        </span>
+
+                        <span class="research-tag">
+                            Economic Theory
+                        </span>
+
+                        <span class="research-tag">
+                            Social Choice
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Cambridge, USA
+                    </div>
+
+                    <a
+                        href="https://www.harvard.edu/about/university-professorships/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Harvard Profile →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Biology">
+
+                    <span class="university">
+                        Harvard University
+                    </span>
+
+                    <h2>
+                        Marc W. Kirschner
+                    </h2>
+
+                    <div class="position">
+                        John Franklin Enders University Professor
+                    </div>
+
+                    <p>
+                        Research in cell biology, developmental biology
+                        and systems-level biological processes.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Biology
+                        </span>
+
+                        <span class="research-tag">
+                            Cell Biology
+                        </span>
+
+                        <span class="research-tag">
+                            Development
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Cambridge, USA
+                    </div>
+
+                    <a
+                        href="https://www.harvard.edu/about/university-professorships/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Harvard Profile →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="International Relations">
+
+                    <span class="university">
+                        Harvard University
+                    </span>
+
+                    <h2>
+                        Danielle Allen
+                    </h2>
+
+                    <div class="position">
+                        James Bryant Conant University Professor
+                    </div>
+
+                    <p>
+                        Scholar working across political theory,
+                        democracy, civic life and public policy.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Political Science
+                        </span>
+
+                        <span class="research-tag">
+                            Democracy
+                        </span>
+
+                        <span class="research-tag">
+                            Public Policy
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Cambridge, USA
+                    </div>
+
+                    <a
+                        href="https://www.harvard.edu/about/university-professorships/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Harvard Profile →
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==================================================
+                     UC BERKELEY
+                ================================================== -->
+
+
+                <article
+                    class="card"
+                    data-category="Finance">
+
+                    <span class="university">
+                        UC Berkeley
+                    </span>
+
+                    <h2>
+                        Terrence Hendershott
+                    </h2>
+
+                    <div class="position">
+                        Professor of Finance
+                    </div>
+
+                    <p>
+                        Research in finance, market structure,
+                        trading and financial technology.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Finance
+                        </span>
+
+                        <span class="research-tag">
+                            Markets
+                        </span>
+
+                        <span class="research-tag">
+                            Financial Technology
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Berkeley, USA
+                    </div>
+
+                    <a
+                        href="https://haas.berkeley.edu/finance/faculty/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Berkeley Faculty →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Finance">
+
+                    <span class="university">
+                        UC Berkeley
+                    </span>
+
+                    <h2>
+                        Amir Kermani
+                    </h2>
+
+                    <div class="position">
+                        Professor of Finance & Accounting
+                    </div>
+
+                    <p>
+                        Research in corporate finance, financial markets
+                        and economic policy.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Finance
+                        </span>
+
+                        <span class="research-tag">
+                            Corporate Finance
+                        </span>
+
+                        <span class="research-tag">
+                            Economics
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Berkeley, USA
+                    </div>
+
+                    <a
+                        href="https://haas.berkeley.edu/finance/faculty/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Berkeley Faculty →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Finance">
+
+                    <span class="university">
+                        UC Berkeley
+                    </span>
+
+                    <h2>
+                        Richard H. Stanton
+                    </h2>
+
+                    <div class="position">
+                        Professor of Finance
+                    </div>
+
+                    <p>
+                        Research in financial economics, asset pricing,
+                        risk and financial markets.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Finance
+                        </span>
+
+                        <span class="research-tag">
+                            Asset Pricing
+                        </span>
+
+                        <span class="research-tag">
+                            Financial Economics
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Berkeley, USA
+                    </div>
+
+                    <a
+                        href="https://haas.berkeley.edu/finance/faculty/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Berkeley Faculty →
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==================================================
+                     NUS
+                ================================================== -->
+
+
+                <article
+                    class="card"
+                    data-category="Finance">
+
+                    <span class="university">
+                        National University of Singapore
+                    </span>
+
+                    <h2>
+                        Sumit Agarwal
+                    </h2>
+
+                    <div class="position">
+                        Professor of Finance
+                    </div>
+
+                    <p>
+                        Research in household finance, financial markets,
+                        banking and sustainable finance.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Finance
+                        </span>
+
+                        <span class="research-tag">
+                            Banking
+                        </span>
+
+                        <span class="research-tag">
+                            Sustainable Finance
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Singapore
+                    </div>
+
+                    <a
+                        href="https://bschool.nus.edu.sg/finance/faculty/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        NUS Faculty →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Finance">
+
+                    <span class="university">
+                        National University of Singapore
+                    </span>
+
+                    <h2>
+                        Anand Srinivasan
+                    </h2>
+
+                    <div class="position">
+                        Associate Professor of Finance
+                    </div>
+
+                    <p>
+                        Research in finance, banking and financial
+                        institutions.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Finance
+                        </span>
+
+                        <span class="research-tag">
+                            Banking
+                        </span>
+
+                        <span class="research-tag">
+                            Financial Institutions
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Singapore
+                    </div>
+
+                    <a
+                        href="https://bschool.nus.edu.sg/finance/faculty/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        NUS Faculty →
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==================================================
+                     TSINGHUA
+                ================================================== -->
+
+
+                <article
+                    class="card"
+                    data-category="Physics">
+
+                    <span class="university">
+                        Tsinghua University
+                    </span>
+
+                    <h2>
+                        Xuening Bai
+                    </h2>
+
+                    <div class="position">
+                        Professor of Astrophysics
+                    </div>
+
+                    <p>
+                        Research in astrophysics, theoretical physics
+                        and planetary and stellar systems.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Physics
+                        </span>
+
+                        <span class="research-tag">
+                            Astrophysics
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Beijing, China
+                    </div>
+
+                    <a
+                        href="https://www.ias.tsinghua.edu.cn/en/Staff/Faculty.htm"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Tsinghua Faculty →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Physics">
+
+                    <span class="university">
+                        Tsinghua University
+                    </span>
+
+                    <h2>
+                        Jingyuan Chen
+                    </h2>
+
+                    <div class="position">
+                        Professor of Physics
+                    </div>
+
+                    <p>
+                        Academic researcher in physics at the Institute
+                        for Advanced Study.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Physics
+                        </span>
+
+                        <span class="research-tag">
+                            Theoretical Research
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Beijing, China
+                    </div>
+
+                    <a
+                        href="https://www.ias.tsinghua.edu.cn/en/Staff/Faculty.htm"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Tsinghua Faculty →
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==================================================
+                     HKU DIRECTORY
+                ================================================== -->
+
+
+                <article
+                    class="card"
+                    data-category="Medicine">
+
+                    <span class="university">
+                        University of Hong Kong
+                    </span>
+
+                    <h2>
+                        HKU Faculty of Medicine
+                    </h2>
+
+                    <div class="position">
+                        Medicine & Biomedical Research
+                    </div>
+
+                    <p>
+                        Explore professors and researchers working
+                        across medicine, biomedical sciences and
+                        clinical research.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Medicine
+                        </span>
+
+                        <span class="research-tag">
+                            Biomedical Science
+                        </span>
+
+                        <span class="research-tag">
+                            Research
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Hong Kong
+                    </div>
+
+                    <a
+                        href="https://www.hku.edu.hk/faculties/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        HKU Faculty Directory →
+
+                    </a>
+
+                </article>
+
+
+                <!-- ==================================================
+                     GLOBAL DIRECTORIES
+                ================================================== -->
+
+
+                <article
+                    class="card"
+                    data-category="Engineering">
+
+                    <span class="university">
+                        MIT
+                    </span>
+
+                    <h2>
+                        MIT Faculty Directory
+                    </h2>
+
+                    <div class="position">
+                        Engineering & Technology
+                    </div>
+
+                    <p>
+                        Search MIT faculty and academic staff across
+                        engineering, science, computing, business and
+                        other academic areas.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Engineering
+                        </span>
+
+                        <span class="research-tag">
+                            Technology
+                        </span>
+
+                        <span class="research-tag">
+                            Science
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Cambridge, USA
+                    </div>
+
+                    <a
+                        href="https://www.mit.edu/directory/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Search MIT Faculty →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="all">
+
+                    <span class="university">
+                        Stanford University
+                    </span>
+
+                    <h2>
+                        Stanford Profiles
+                    </h2>
+
+                    <div class="position">
+                        Global Academic Directory
+                    </div>
+
+                    <p>
+                        Search thousands of Stanford faculty, researchers
+                        and academic experts by expertise, department,
+                        research and publications.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Faculty
+                        </span>
+
+                        <span class="research-tag">
+                            Research
+                        </span>
+
+                        <span class="research-tag">
+                            Publications
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Stanford, USA
+                    </div>
+
+                    <a
+                        href="https://profiles.stanford.edu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Search Stanford →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="all">
+
+                    <span class="university">
+                        University of Oxford
+                    </span>
+
+                    <h2>
+                        Oxford Academic Directory
+                    </h2>
+
+                    <div class="position">
+                        Academics & Researchers
+                    </div>
+
+                    <p>
+                        Explore Oxford academics and researchers across
+                        departments, faculties and research areas.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Faculty
+                        </span>
+
+                        <span class="research-tag">
+                            Research
+                        </span>
+
+                        <span class="research-tag">
+                            Academics
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Oxford, UK
+                    </div>
+
+                    <a
+                        href="https://www.ox.ac.uk/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Oxford →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="all">
+
+                    <span class="university">
+                        University of Cambridge
+                    </span>
+
+                    <h2>
+                        Cambridge Departments & Faculties
+                    </h2>
+
+                    <div class="position">
+                        Academic Directory
+                    </div>
+
+                    <p>
+                        Explore Cambridge's departments, faculties
+                        and institutes to find researchers across
+                        different disciplines.
+                    </p>
+
+                    <div class="research-tags">
+
+                        <span class="research-tag">
+                            Faculty
+                        </span>
+
+                        <span class="research-tag">
+                            Research
+                        </span>
+
+                        <span class="research-tag">
+                            Departments
+                        </span>
+
+                    </div>
+
+                    <div class="location">
+                        📍 Cambridge, UK
+                    </div>
+
+                    <a
+                        href="https://www.cam.ac.uk/colleges-and-departments/department-a-z"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Cambridge Directory →
+
+                    </a>
+
+                </article>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty"
+                    id="empty">
+
+                    No professors or researchers found.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     SEARCH & FILTERS
+========================= -->
+
+<script>
+
+    const searchInput =
+        document.getElementById("search");
+
+    const filters =
+        document.querySelectorAll(".filter");
+
+    const cards =
+        document.querySelectorAll(".card");
+
+    const empty =
+        document.getElementById("empty");
+
+    let currentCategory = "all";
+
+
+    function updateResults() {
+
+        const searchText =
+            searchInput.value
+                .toLowerCase()
+                .trim();
+
+        let visible = 0;
+
+
+        cards.forEach(card => {
+
+            const category =
+                card.dataset.category;
+
+            const text =
+                card.innerText.toLowerCase();
+
+
+            const categoryMatch =
+                currentCategory === "all" ||
+                category === currentCategory ||
+                category === "all";
+
+
+            const searchMatch =
+                text.includes(searchText);
+
+
+            if (
+                categoryMatch &&
+                searchMatch
+            ) {
+
+                card.style.display =
+                    "block";
+
+                visible++;
+
+            } else {
+
+                card.style.display =
+                    "none";
+
+            }
+
+        });
+
+
+        empty.style.display =
+            visible === 0
+                ? "block"
+                : "none";
+
+    }
+
+
+    filters.forEach(filter => {
+
+        filter.addEventListener(
+            "click",
+            () => {
+
+                filters.forEach(item => {
+
+                    item.classList.remove(
+                        "active"
+                    );
+
+                });
+
+
+                filter.classList.add(
+                    "active"
+                );
+
+
+                currentCategory =
+                    filter.dataset.category;
+
+
+                updateResults();
+
+            }
+        );
+
+    });
+
+
+    searchInput.addEventListener(
+        "input",
+        updateResults
+    );
+
+</script>
+
+
+<!-- =========================
+     THEME SYNC
+========================= -->
+
+<script>
+
+    const savedTheme =
+        localStorage.getItem(
+            "prepcomeback-theme"
+        );
+
+
+    if (
+        savedTheme === "dark"
+    ) {
+
+        document.body.classList.add(
+            "dark"
+        );
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

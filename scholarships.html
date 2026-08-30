@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+```
+<meta charset="UTF-8">
+
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Scholarships — PrepComeBack</title>
+
+<meta name="description"
+      content="Find scholarships and financial aid opportunities for international students, including full-ride, full-tuition, need-based and merit-based scholarships.">
+
+<style>
+
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f8fafc;
+        color: #0f172a;
+        line-height: 1.6;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .container {
+        width: min(1100px, 92%);
+        margin: auto;
+    }
+
+
+    /* =========================
+       NAVIGATION
+    ========================= */
+
+    nav {
+        background: white;
+        border-bottom: 1px solid #e2e8f0;
+        transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .nav-inner {
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    .logo {
+        font-size: 23px;
+        font-weight: 800;
+    }
+
+    .logo span {
+        color: #2563eb;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 25px;
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .nav-links a:hover {
+        color: #2563eb;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    .page-header {
+        padding: 75px 0 45px;
+    }
+
+    .page-header h1 {
+        font-size: clamp(40px, 6vw, 65px);
+        line-height: 1.05;
+        margin-bottom: 18px;
+    }
+
+    .page-header p {
+        max-width: 750px;
+        color: #64748b;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    .search-box {
+        background: white;
+        padding: 22px;
+        border: 1px solid #e2e8f0;
+        border-radius: 16px;
+        margin-bottom: 25px;
+        transition: background 0.3s ease,
+                    border-color 0.3s ease;
+    }
+
+    #search {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid #cbd5e1;
+        border-radius: 10px;
+        font-size: 16px;
+        outline: none;
+        background: white;
+        color: #0f172a;
+        transition: background 0.3s ease,
+                    color 0.3s ease,
+                    border-color 0.3s ease;
+    }
+
+    #search:focus {
+        border-color: #2563eb;
+    }
+
+
+    /* =========================
+       FILTERS
+    ========================= */
+
+    .filters {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 35px;
+    }
+
+    .filter {
+        border: 1px solid #cbd5e1;
+        background: white;
+        color: #0f172a;
+        padding: 10px 15px;
+        border-radius: 999px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.3s ease,
+                    color 0.3s ease,
+                    border-color 0.3s ease;
+    }
+
+    .filter:hover {
+        border-color: #2563eb;
+    }
+
+    .filter.active {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+    }
+
+
+    /* =========================
+       SCHOLARSHIPS GRID
+    ========================= */
+
+    .scholarships {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding-bottom: 80px;
+    }
+
+    .card {
+        background: white;
+        border: 1px solid #e2e8f0;
+        border-radius: 18px;
+        padding: 25px;
+        transition: background 0.3s ease,
+                    border-color 0.3s ease,
+                    box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+        box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    .tag {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+        background: #dbeafe;
+        color: #1d4ed8;
+        padding: 5px 9px;
+        border-radius: 999px;
+        margin-bottom: 15px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        color: #64748b;
+        margin-bottom: 18px;
+        transition: color 0.3s ease;
+    }
+
+    .details {
+        font-size: 14px;
+        color: #475569;
+        margin-bottom: 18px;
+        transition: color 0.3s ease;
+    }
+
+    .details div {
+        margin-bottom: 5px;
+    }
+
+    .learn {
+        display: inline-block;
+        background: #2563eb;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 9px;
+        font-weight: 700;
+    }
+
+
+    /* =========================
+       IMPORTANT NOTE
+    ========================= */
+
+    .note {
+        grid-column: 1 / -1;
+        background: #eff6ff;
+        border: 1px solid #bfdbfe;
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 5px;
+        color: #1e3a8a;
+    }
+
+    .note strong {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+
+    /* =========================
+       EMPTY
+    ========================= */
+
+    .empty {
+        display: none;
+        padding: 40px;
+        text-align: center;
+        color: #64748b;
+        grid-column: 1 / -1;
+    }
+
+
+    /* =========================
+       DARK MODE
+    ========================= */
+
+    body.dark {
+        background: #0f172a;
+        color: #f8fafc;
+    }
+
+    body.dark nav {
+        background: #0f172a;
+        border-bottom-color: #334155;
+    }
+
+    body.dark .page-header p {
+        color: #94a3b8;
+    }
+
+    body.dark .search-box {
+        background: #1e293b;
+        border-color: #334155;
+    }
+
+    body.dark #search {
+        background: #0f172a;
+        color: #f8fafc;
+        border-color: #475569;
+    }
+
+    body.dark #search::placeholder {
+        color: #64748b;
+    }
+
+    body.dark .filter {
+        background: #1e293b;
+        color: #f8fafc;
+        border-color: #475569;
+    }
+
+    body.dark .filter.active {
+        background: #2563eb;
+        color: white;
+        border-color: #2563eb;
+    }
+
+    body.dark .card {
+        background: #1e293b;
+        border-color: #334155;
+    }
+
+    body.dark .card p {
+        color: #94a3b8;
+    }
+
+    body.dark .details {
+        color: #cbd5e1;
+    }
+
+    body.dark .note {
+        background: #172554;
+        border-color: #1e40af;
+        color: #bfdbfe;
+    }
+
+    body.dark .empty {
+        color: #94a3b8;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 800px) {
+
+        .nav-links {
+            display: none;
+        }
+
+        .scholarships {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+</style>
+```
+
+</head>
+
+<body>
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+```
+<div class="container nav-inner">
+
+    <a href="index.html" class="logo">
+        Prep<span>ComeBack</span>
+    </a>
+
+    <div class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="opportunities.html">
+            Opportunities
+        </a>
+
+        <a href="index.html#resources">
+            Resources
+        </a>
+
+        <a href="team.html">
+            Team
+        </a>
+
+        <a href="join.html">
+            Join Us
+        </a>
+
+    </div>
+
+</div>
+```
+
+</nav>
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+```
+<section class="page-header">
+
+    <div class="container">
+
+        <h1>
+            Find scholarships.
+        </h1>
+
+        <p>
+            Discover financial aid and scholarship opportunities
+            for students around the world — including full-ride,
+            full-tuition, need-based and merit-based funding.
+        </p>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container">
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search scholarships..."
+            >
+
+        </div>
+
+
+        <!-- FILTERS -->
+
+        <div class="filters">
+
+            <button class="filter active" data-category="all">
+                All
+            </button>
+
+            <button class="filter" data-category="Full Ride">
+                Full Ride
+            </button>
+
+            <button class="filter" data-category="Full Tuition">
+                Full Tuition
+            </button>
+
+            <button class="filter" data-category="Need Based">
+                Need-Based
+            </button>
+
+            <button class="filter" data-category="Merit">
+                Merit-Based
+            </button>
+
+            <button class="filter" data-category="International">
+                International
+            </button>
+
+        </div>
+
+
+        <div class="scholarships" id="scholarships">
+
+
+            <!-- =========================
+                 INFORMATION NOTE
+            ========================= -->
+
+            <div class="note">
+
+                <strong>
+                    💡 Important
+                </strong>
+
+                Scholarship policies, deadlines and eligibility
+                requirements can change. Always verify the
+                current information on the official university
+                or scholarship website before applying.
+
+            </div>
+
+
+            <!-- =========================
+                 HARVARD
+            ========================= -->
+
+            <article
+                class="card"
+                data-category="Full Ride"
+                data-search="Harvard University financial aid international full scholarship need based">
+
+                <span class="tag">
+                    Full Ride
+                </span>
+
+                <h2>
+                    Harvard University
+                </h2>
+
+                <p>
+                    Need-based financial aid for undergraduate
+                    students, including international students.
+                </p>
+
+                <div class="details">
+
+                    <div>🌍 International students: Yes</div>
+
+                    <div>💰 Type: Need-based</div>
+
+                    <div>🎓 Level: Undergraduate</div>
+
+                    <div>🏠 Can cover tuition + living costs</div>
+
+                </div>
+
+                <a
+                    href="https://college.harvard.edu/financial-aid"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="learn">
+
+                    Official Financial Aid →
+
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 MIT
+            ========================= -->
+
+            <article
+                class="card"
+                data-category="Full Ride"
+                data-search="MIT Massachusetts Institute Technology financial aid international full demonstrated need">
+
+                <span class="tag">
+                    Full Ride
+                </span>
+
+                <h2>
+                    MIT
+                </h2>
+
+                <p>
+                    MIT meets the full demonstrated financial
+                    need of undergraduate students regardless
+                    of citizenship.
+                </p>
+
+                <div class="details">
+
+                    <div>🌍 International students: Yes</div>
+
+                    <div>💰 Type: Need-based</div>
+
+                    <div>🎓 Level: Undergraduate</div>
+
+                    <div>📚 Aid can cover demonstrated need</div>
+
+                </div>
+
+                <a
+                    href="https://sfs.mit.edu/undergraduate-students/how-aid-works/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="learn">
+
+                    Official Financial Aid →
+
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 YALE
+            ========================= -->
+
+            <article
+                class="card"
+                data-category="Full Ride"
+                data-search="Yale University financial aid international students need based scholarship">
+
+                <span class="tag">
+                    Full Ride
+                </span>
+
+                <h2>
+                    Yale University
+                </h2>
+
+                <p>
+                    Yale provides need-based undergraduate
+                    financial aid regardless of citizenship.
+                </p>
+
+                <div class="details">
+
+                    <div>🌍 International students: Yes</div>
+
+                    <div>💰 Type: Need-based</div>
+
+                    <div>🎓 Level: Undergraduate</div>
+
+                    <div>🚫 No loans in Yale aid offers</div>
+
+                </div>
+
+                <a
+                    href="https://admissions.yale.edu/financial-aid"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="learn">
+
+                    Official Financial Aid →
+
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 PRINCETON
+            ========================= -->
+
+            <article
+                class="card"
+                data-category="Full Ride"
+                data-search="Princeton University financial aid international students full cost attendance">
+
+                <span class="tag">
+                    Full Ride
+                </span>
+
+                <h2>
+                    Princeton University
+                </h2>
+
+                <p>
+                    Princeton offers generous need-based aid
+                    designed to meet students' demonstrated need.
+                </p>
+
+                <div class="details">
+
+                    <div>🌍 International students: Yes</div>
+
+                    <div>💰 Type: Need-based</div>
+
+                    <div>🎓 Level: Undergraduate</div>
+
+                    <div>🏠 May cover full cost of attendance</div>
+
+                </div>
+
+                <a
+                    href="https://www.princeton.edu/admission-aid"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="learn">
+
+                    Official Financial Aid →
+
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 DARTMOUTH
+            ========================= -->
+
+            <article
+                class="card"
+                data-category="Full Ride"
+                data-search="Dartmouth College international students financial aid full demonstrated need">
+
+                <span class="tag">
+                    Full Ride
+                </span>
+
+                <h2>
+                    Dartmouth College
+                </h2>
+
+                <p>
+                    Dartmouth meets the demonstrated financial
+                    need of admitted undergraduate students,
+                    including international students.
+                </p>
+
+                <div class="details">
+
+                    <div>🌍 International students: Yes</div>
+
+                    <div>💰 Type: Need-based</div>
+
+                    <div>🎓 Level: Undergraduate</div>
+
+                    <div>✈️ Travel support may be included</div>
+
+                </div>
+
+                <a
+                    href="https://financialaid.dartmouth.edu/apply-aid/international-students"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="learn">
+
+                    Official Financial Aid →
+
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 VANDERBILT
+            ========================= -->
+
+            <article
+                class="card"
+                data-category="Merit"
+                data-search="Vanderbilt University scholarship international students merit full tuition Cornelius Ingram">
+
+                <span class="tag">
+                    Merit-Based
+                </span>
+
+                <h2>
+                    Vanderbilt University
+                </h2>
+
+                <p>
+                    Vanderbilt offers competitive merit scholarships
+                    and need-based aid to a limited number of
+                    international first-year applicants.
+                </p>
+
+                <div class="details">
+
+                    <div>🌍 International students: Yes</div>
+
+                    <div>🏆 Type: Merit + Need-based</div>
+
+                    <div>🎓 Level: Undergraduate</div>
+
+                    <div>💰 Signature awards can cover full tuition</div>
+
+                </div>
+
+                <a
+                    href="https://admissions.vanderbilt.edu/affordability/international-costs-and-finances/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="learn">
+
+                    Official Scholarships →
+
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 DUKE
+            ========================= -->
+
+            <article
+                class="card"
+                data-category="Full Tuition"
+                data-search="Duke University scholarship undergraduate merit full tuition University Scholars">
+
+                <span class="tag">
+                    Full Tuition
+                </span>
+
+                <h2>
+                    Duke University
+                </h2>
+
+                <p>
+                    Duke offers highly competitive merit scholarships,
+                    including programs providing full tuition and
+                    additional funding.
+                </p>
+
+                <div class="details">
+
+                    <div>🌍 International students: Check eligibility</div>
+
+                    <div>🏆 Type: Merit</div>
+
+                    <div>🎓 Level: Undergraduate</div>
+
+                    <div>💰 Full-tuition opportunities available</div>
+
+                </div>
+
+                <a
+                    href="https://ousf.duke.edu/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="learn">
+
+                    Official Scholarships →
+
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 USC
+            ========================= -->
+
+            <article
+                class="card"
+                data-category="Merit"
+                data-search="USC University Southern California international student merit scholarship undergraduate">
+
+                <span class="tag">
+                    Merit-Based
+                </span>
+
+                <h2>
+                    University of Southern California
+                </h2>
+
+                <p>
+                    International applicants are eligible for
+                    USC merit scholarships, although these awards
+                    do not cover the full cost of attendance.
+                </p>
+
+                <div class="details">
+
+                    <div>🌍 International students: Yes</div>
+
+                    <div>🏆 Type: Merit</div>
+
+                    <div>🎓 Level: Undergraduate</div>
+
+                    <div>⚠️ Does not cover full cost</div>
+
+                </div>
+
+                <a
+                    href="https://admission.usc.edu/prospective-students/how-to-apply/international-students/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="learn">
+
+                    Official Scholarships →
+
+                </a>
+
+            </article>
+
+
+            <!-- =========================
+                 INTERNATIONAL SCHOLARSHIP SEARCH
+            ========================= -->
+
+            <article
+                class="card"
+                data-category="International"
+                data-search="international scholarship search students financial aid scholarships global">
+
+                <span class="tag">
+                    International
+                </span>
+
+                <h2>
+                    International Scholarship Search
+                </h2>
+
+                <p>
+                    Search for additional scholarship opportunities
+                    from universities and organizations around the world.
+                </p>
+
+                <div class="details">
+
+                    <div>🌍 Global opportunities</div>
+
+                    <div>🎓 Undergraduate + other levels</div>
+
+                    <div>🔎 Search by country and subject</div>
+
+                    <div>📅 Always verify deadlines</div>
+
+                </div>
+
+                <a
+                    href="https://www.educations.com/scholarships"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="learn">
+
+                    Explore Scholarships →
+
+                </a>
+
+            </article>
+
+
+            <!-- EMPTY -->
+
+            <div class="empty" id="empty">
+
+                No scholarships found.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+```
+
+</main>
+
+<!-- =========================
+     SEARCH & FILTERS
+========================= -->
+
+<script>
+
+    const searchInput =
+        document.getElementById("search");
+
+    const filters =
+        document.querySelectorAll(".filter");
+
+    const cards =
+        document.querySelectorAll(".card");
+
+    const empty =
+        document.getElementById("empty");
+
+    let currentCategory = "all";
+
+
+    function updateResults() {
+
+        const searchText =
+            searchInput.value.toLowerCase().trim();
+
+        let visible = 0;
+
+
+        cards.forEach(card => {
+
+            const category =
+                card.dataset.category;
+
+            const text =
+                (
+                    card.innerText +
+                    " " +
+                    (card.dataset.search || "")
+                ).toLowerCase();
+
+            const categoryMatch =
+                currentCategory === "all" ||
+                category === currentCategory;
+
+            const searchMatch =
+                text.includes(searchText);
+
+
+            if (categoryMatch && searchMatch) {
+
+                card.style.display = "block";
+
+                visible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        empty.style.display =
+            visible === 0 ? "block" : "none";
+
+    }
+
+
+    filters.forEach(filter => {
+
+        filter.addEventListener("click", () => {
+
+            filters.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            filter.classList.add("active");
+
+            currentCategory =
+                filter.dataset.category;
+
+            updateResults();
+
+        });
+
+    });
+
+
+    searchInput.addEventListener(
+        "input",
+        updateResults
+    );
+
+
+</script>
+
+<!-- =========================
+     THEME SYNC
+========================= -->
+
+<script>
+
+    const savedTheme =
+        localStorage.getItem("prepcomeback-theme");
+
+    if (savedTheme === "dark") {
+
+        document.body.classList.add("dark");
+
+    }
+
+</script>
+
+</body>
+
+</html>

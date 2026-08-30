@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,13 +10,17 @@
 
     <title>PrepComeBack — Sign In</title>
 
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
     <!-- SUPABASE -->
-
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 
     <style>
+
+        /* =====================================
+           RESET
+        ===================================== */
 
         * {
             box-sizing: border-box;
@@ -23,6 +28,10 @@
             padding: 0;
         }
 
+
+        /* =====================================
+           BODY
+        ===================================== */
 
         body {
 
@@ -33,6 +42,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            padding: 30px 0;
 
             background:
                 radial-gradient(
@@ -49,8 +60,16 @@
 
             color: #0f172a;
 
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
+
         }
 
+
+        /* =====================================
+           CONTAINER
+        ===================================== */
 
         .auth-container {
 
@@ -58,6 +77,10 @@
 
         }
 
+
+        /* =====================================
+           LOGO
+        ===================================== */
 
         .logo {
 
@@ -81,9 +104,13 @@
         }
 
 
+        /* =====================================
+           AUTH CARD
+        ===================================== */
+
         .auth-card {
 
-            background: white;
+            background: #ffffff;
 
             border: 1px solid #e2e8f0;
 
@@ -94,6 +121,11 @@
             box-shadow:
                 0 20px 60px
                 rgba(15, 23, 42, 0.10);
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
 
         }
 
@@ -113,8 +145,14 @@
 
             margin-bottom: 25px;
 
+            transition: color 0.3s ease;
+
         }
 
+
+        /* =====================================
+           TABS
+        ===================================== */
 
         .tabs {
 
@@ -132,6 +170,8 @@
 
             margin-bottom: 25px;
 
+            transition: background 0.3s ease;
+
         }
 
 
@@ -141,6 +181,8 @@
 
             background: transparent;
 
+            color: #0f172a;
+
             padding: 11px;
 
             border-radius: 8px;
@@ -149,12 +191,17 @@
 
             cursor: pointer;
 
+            transition:
+                background 0.3s ease,
+                color 0.3s ease,
+                box-shadow 0.3s ease;
+
         }
 
 
         .tab.active {
 
-            background: white;
+            background: #ffffff;
 
             box-shadow:
                 0 2px 8px
@@ -164,6 +211,10 @@
 
         }
 
+
+        /* =====================================
+           FORM
+        ===================================== */
 
         .form-group {
 
@@ -199,6 +250,23 @@
 
             outline: none;
 
+            background: #ffffff;
+
+            color: #0f172a;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+
+        }
+
+
+        input::placeholder {
+
+            color: #94a3b8;
+
         }
 
 
@@ -212,6 +280,25 @@
 
         }
 
+
+        /* =====================================
+           PASSWORD HINT
+        ===================================== */
+
+        .password-hint {
+
+            font-size: 12px;
+
+            color: #94a3b8;
+
+            margin-top: 5px;
+
+        }
+
+
+        /* =====================================
+           SUBMIT BUTTON
+        ===================================== */
 
         .submit-btn {
 
@@ -235,6 +322,10 @@
 
             margin-top: 8px;
 
+            transition:
+                background 0.2s ease,
+                opacity 0.2s ease;
+
         }
 
 
@@ -244,6 +335,19 @@
 
         }
 
+
+        .submit-btn:disabled {
+
+            opacity: 0.65;
+
+            cursor: not-allowed;
+
+        }
+
+
+        /* =====================================
+           MESSAGE
+        ===================================== */
 
         .message {
 
@@ -287,6 +391,10 @@
         }
 
 
+        /* =====================================
+           BACK HOME
+        ===================================== */
+
         .back-home {
 
             display: block;
@@ -299,6 +407,8 @@
 
             font-size: 14px;
 
+            transition: color 0.2s ease;
+
         }
 
 
@@ -309,13 +419,150 @@
         }
 
 
-        .password-hint {
+        /* =====================================
+           DARK MODE
+        ===================================== */
 
-            font-size: 12px;
+        body.dark {
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    #1e3a8a,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at bottom left,
+                    #312e81,
+                    transparent 30%
+                ),
+                #0f172a;
+
+            color: #f8fafc;
+
+        }
+
+
+        body.dark .auth-card {
+
+            background: #1e293b;
+
+            border-color: #334155;
+
+            box-shadow:
+                0 20px 60px
+                rgba(0, 0, 0, 0.30);
+
+        }
+
+
+        body.dark .subtitle {
 
             color: #94a3b8;
 
-            margin-top: 5px;
+        }
+
+
+        body.dark .tabs {
+
+            background: #111827;
+
+        }
+
+
+        body.dark .tab {
+
+            color: #cbd5e1;
+
+        }
+
+
+        body.dark .tab.active {
+
+            background: #1e293b;
+
+            color: #93c5fd;
+
+        }
+
+
+        body.dark input {
+
+            background: #0f172a;
+
+            color: #f8fafc;
+
+            border-color: #475569;
+
+        }
+
+
+        body.dark input::placeholder {
+
+            color: #64748b;
+
+        }
+
+
+        body.dark input:focus {
+
+            border-color: #60a5fa;
+
+        }
+
+
+        body.dark .password-hint {
+
+            color: #64748b;
+
+        }
+
+
+        body.dark .back-home {
+
+            color: #94a3b8;
+
+        }
+
+
+        body.dark .back-home:hover {
+
+            color: #93c5fd;
+
+        }
+
+
+        /* =====================================
+           MOBILE
+        ===================================== */
+
+        @media (max-width: 500px) {
+
+            body {
+
+                padding: 20px 0;
+
+            }
+
+            .auth-card {
+
+                padding: 25px;
+
+                border-radius: 18px;
+
+            }
+
+            .logo {
+
+                font-size: 27px;
+
+            }
+
+            .auth-card h1 {
+
+                font-size: 27px;
+
+            }
 
         }
 
@@ -330,12 +577,20 @@
 <div class="auth-container">
 
 
+    <!-- =====================================
+         LOGO
+    ===================================== -->
+
     <div class="logo">
 
         Prep<span>ComeBack</span>
 
     </div>
 
+
+    <!-- =====================================
+         AUTH CARD
+    ===================================== -->
 
     <div class="auth-card">
 
@@ -353,6 +608,10 @@
 
         </p>
 
+
+        <!-- =====================================
+             TABS
+        ===================================== -->
 
         <div class="tabs">
 
@@ -380,6 +639,10 @@
         </div>
 
 
+        <!-- =====================================
+             FORM
+        ===================================== -->
+
         <form id="authForm">
 
 
@@ -396,6 +659,7 @@
                     type="email"
                     id="email"
                     placeholder="you@example.com"
+                    autocomplete="email"
                     required>
 
             </div>
@@ -415,6 +679,7 @@
                     id="password"
                     placeholder="••••••••"
                     minlength="6"
+                    autocomplete="current-password"
                     required>
 
 
@@ -440,6 +705,10 @@
         </form>
 
 
+        <!-- =====================================
+             MESSAGE
+        ===================================== -->
+
         <div
             class="message"
             id="message">
@@ -448,6 +717,10 @@
 
     </div>
 
+
+    <!-- =====================================
+         BACK HOME
+    ===================================== -->
 
     <a
         href="index.html"
@@ -468,7 +741,6 @@
    SUPABASE CONNECTION
 ===================================== */
 
-
 const SUPABASE_URL =
     "https://bhoessvocspmuekgccll.supabase.co";
 
@@ -484,11 +756,29 @@ const supabaseClient =
     );
 
 
+/* =====================================
+   DARK MODE
+   READ THE SAME THEME AS INDEX.HTML
+===================================== */
+
+const savedTheme =
+    localStorage.getItem("prepcomeback-theme");
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark");
+
+} else {
+
+    document.body.classList.remove("dark");
+
+}
+
 
 /* =====================================
    ELEMENTS
 ===================================== */
-
 
 const signupTab =
     document.getElementById("signupTab");
@@ -521,11 +811,9 @@ const message =
 let mode = "signup";
 
 
-
 /* =====================================
    MESSAGE
 ===================================== */
-
 
 function showMessage(text, type) {
 
@@ -537,11 +825,9 @@ function showMessage(text, type) {
 }
 
 
-
 /* =====================================
-   SIGN UP
+   SIGN UP TAB
 ===================================== */
-
 
 signupTab.addEventListener(
     "click",
@@ -549,23 +835,18 @@ signupTab.addEventListener(
 
         mode = "signup";
 
-
         signupTab.classList.add("active");
 
         loginTab.classList.remove("active");
 
-
         authTitle.textContent =
             "Create your account";
-
 
         authSubtitle.textContent =
             "Join PrepComeBack and explore opportunities.";
 
-
         submitBtn.textContent =
             "Create Account";
-
 
         message.className =
             "message";
@@ -574,11 +855,9 @@ signupTab.addEventListener(
 );
 
 
-
 /* =====================================
-   SIGN IN
+   SIGN IN TAB
 ===================================== */
-
 
 loginTab.addEventListener(
     "click",
@@ -586,23 +865,18 @@ loginTab.addEventListener(
 
         mode = "login";
 
-
         loginTab.classList.add("active");
 
         signupTab.classList.remove("active");
 
-
         authTitle.textContent =
             "Welcome back";
-
 
         authSubtitle.textContent =
             "Sign in to continue to PrepComeBack.";
 
-
         submitBtn.textContent =
             "Sign In";
-
 
         message.className =
             "message";
@@ -611,11 +885,9 @@ loginTab.addEventListener(
 );
 
 
-
 /* =====================================
-   FORM
+   FORM SUBMIT
 ===================================== */
-
 
 authForm.addEventListener(
     "submit",
@@ -637,16 +909,13 @@ authForm.addEventListener(
 
         submitBtn.disabled = true;
 
-
         submitBtn.textContent =
             "Please wait...";
 
 
-
-        /* ==============================
+        /* =================================
            CREATE ACCOUNT
-        ============================== */
-
+        ================================= */
 
         if (mode === "signup") {
 
@@ -664,7 +933,6 @@ authForm.addEventListener(
                 });
 
 
-
             if (error) {
 
                 showMessage(
@@ -672,13 +940,10 @@ authForm.addEventListener(
                     "error"
                 );
 
-
                 submitBtn.disabled = false;
-
 
                 submitBtn.textContent =
                     "Create Account";
-
 
                 return;
 
@@ -693,7 +958,6 @@ authForm.addEventListener(
 
             submitBtn.disabled = false;
 
-
             submitBtn.textContent =
                 "Create Account";
 
@@ -703,11 +967,9 @@ authForm.addEventListener(
         }
 
 
-
-        /* ==============================
-           LOGIN
-        ============================== */
-
+        /* =================================
+           SIGN IN
+        ================================= */
 
         const {
             data,
@@ -722,7 +984,6 @@ authForm.addEventListener(
             });
 
 
-
         if (error) {
 
             showMessage(
@@ -733,7 +994,6 @@ authForm.addEventListener(
 
             submitBtn.disabled = false;
 
-
             submitBtn.textContent =
                 "Sign In";
 
@@ -743,11 +1003,9 @@ authForm.addEventListener(
         }
 
 
-
-        /* ==============================
+        /* =================================
            SUCCESS
-        ============================== */
-
+        ================================= */
 
         window.location.href =
             "index.html";
@@ -756,11 +1014,9 @@ authForm.addEventListener(
 );
 
 
-
 /* =====================================
    CHECK EXISTING SESSION
 ===================================== */
-
 
 supabaseClient.auth.getSession()
     .then(function ({ data }) {
@@ -781,3 +1037,4 @@ supabaseClient.auth.getSession()
 </body>
 
 </html>
+```

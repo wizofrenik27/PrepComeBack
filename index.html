@@ -2547,4 +2547,45 @@
 
 
 </body>
+    <!-- SUPABASE AUTH CHECK -->
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+
+const SUPABASE_URL =
+    "https://bhoessvocspmuekgccll.supabase.co";
+
+const SUPABASE_KEY =
+    "sb_publishable_SPzS34dfGQ-xJuvnAQU9gw_o0mJ-KcY";
+
+const supabaseClient =
+    supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_KEY
+    );
+
+
+async function checkUser() {
+
+    const { data } =
+        await supabaseClient.auth.getSession();
+
+
+    if (!data.session) {
+
+        window.location.href =
+            "auth.html";
+
+    }
+
+}
+
+
+checkUser();
+
+</script>
+
+
+</body>
 </html>

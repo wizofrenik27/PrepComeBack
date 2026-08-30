@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,18 +8,12 @@
 
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Resources — PrepComeBack</title>
 
-    <meta
-        name="description"
-        content="Free resources for students: SAT, university applications, English tests, research, competitions and skills."
-    >
-
+    <meta name="description"
+          content="Free resources for students: university applications, SAT, English tests, research, competitions and skills.">
 
     <style>
 
@@ -28,30 +23,23 @@
             padding: 0;
         }
 
-
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f8fafc;
             color: #0f172a;
             line-height: 1.6;
-
-            transition:
-                background 0.3s ease,
-                color 0.3s ease;
+            transition: background 0.3s ease, color 0.3s ease;
         }
-
 
         a {
             text-decoration: none;
             color: inherit;
         }
 
-
         .container {
             width: min(1100px, 92%);
             margin: auto;
         }
-
 
         /* =========================
            NAVIGATION
@@ -60,48 +48,36 @@
         nav {
             background: white;
             border-bottom: 1px solid #e2e8f0;
-
-            transition:
-                background 0.3s ease,
-                border-color 0.3s ease;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
-
 
         .nav-inner {
             min-height: 70px;
-
             display: flex;
             align-items: center;
             justify-content: space-between;
-
             gap: 20px;
         }
-
 
         .logo {
             font-size: 23px;
             font-weight: 800;
         }
 
-
         .logo span {
             color: #2563eb;
         }
 
-
         .nav-links {
             display: flex;
             gap: 25px;
-
             font-size: 15px;
             font-weight: 600;
         }
 
-
         .nav-links a:hover {
             color: #2563eb;
         }
-
 
         /* =========================
            HEADER
@@ -111,26 +87,18 @@
             padding: 75px 0 45px;
         }
 
-
         .page-header h1 {
             font-size: clamp(40px, 6vw, 65px);
-
             line-height: 1.05;
-
             margin-bottom: 18px;
         }
 
-
         .page-header p {
             max-width: 700px;
-
             color: #64748b;
-
             font-size: 18px;
-
             transition: color 0.3s ease;
         }
-
 
         /* =========================
            SEARCH
@@ -138,95 +106,60 @@
 
         .search-box {
             background: white;
-
             padding: 22px;
-
             border: 1px solid #e2e8f0;
-
             border-radius: 16px;
-
             margin-bottom: 25px;
-
-            transition:
-                background 0.3s ease,
-                border-color 0.3s ease;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
-
 
         #search {
             width: 100%;
-
             padding: 14px 16px;
-
             border: 1px solid #cbd5e1;
-
             border-radius: 10px;
-
             font-size: 16px;
-
             outline: none;
-
             background: white;
-
             color: #0f172a;
-
-            transition:
-                background 0.3s ease,
-                color 0.3s ease,
-                border-color 0.3s ease;
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
         }
-
 
         #search:focus {
             border-color: #2563eb;
         }
 
-
         /* =========================
-           CATEGORY FILTERS
+           FILTERS
         ========================= */
 
         .filters {
             display: flex;
-
             flex-wrap: wrap;
-
             gap: 10px;
-
             margin-bottom: 35px;
         }
 
-
         .filter {
             border: 1px solid #cbd5e1;
-
             background: white;
-
             color: #0f172a;
-
             padding: 10px 15px;
-
             border-radius: 999px;
-
             cursor: pointer;
-
             font-weight: 600;
-
-            transition:
-                background 0.3s ease,
-                color 0.3s ease,
-                border-color 0.3s ease;
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
         }
-
 
         .filter.active {
             background: #2563eb;
-
             color: white;
-
             border-color: #2563eb;
         }
-
 
         /* =========================
            RESOURCE GRID
@@ -234,253 +167,272 @@
 
         .resources {
             display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-
             padding-bottom: 80px;
         }
 
-
         .card {
             background: white;
-
             border: 1px solid #e2e8f0;
-
             border-radius: 18px;
-
             padding: 25px;
-
-            transition:
-                background 0.3s ease,
-                border-color 0.3s ease,
-                box-shadow 0.2s ease;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease,
+                        box-shadow 0.2s ease;
         }
-
 
         .card:hover {
-            box-shadow:
-                0 12px 30px
-                rgba(15, 23, 42, 0.08);
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
         }
-
 
         .category {
             display: inline-block;
-
             font-size: 12px;
-
             font-weight: 700;
-
             background: #dbeafe;
-
             color: #1d4ed8;
-
             padding: 5px 9px;
-
             border-radius: 999px;
-
             margin-bottom: 15px;
         }
-
 
         .card h2 {
             font-size: 20px;
-
             margin-bottom: 10px;
         }
 
-
         .card p {
             color: #64748b;
-
             margin-bottom: 18px;
-
-            transition:
-                color 0.3s ease;
+            transition: color 0.3s ease;
         }
-
 
         .free {
             font-size: 13px;
-
             font-weight: 700;
-
             color: #15803d;
-
             margin-bottom: 15px;
         }
-
 
         .visit {
             display: inline-block;
-
             background: #2563eb;
-
             color: white;
-
             padding: 10px 15px;
-
             border-radius: 9px;
-
             font-weight: 700;
         }
-
-
-        .visit:hover {
-            background: #1d4ed8;
-        }
-
-
-        /* =========================
-           SECTION HEADINGS
-        ========================= */
-
-        .section-heading {
-            grid-column: 1 / -1;
-
-            margin-top: 20px;
-
-            margin-bottom: 0;
-        }
-
-
-        .section-heading h2 {
-            font-size: 28px;
-
-            margin-bottom: 6px;
-        }
-
-
-        .section-heading p {
-            color: #64748b;
-        }
-
-
-        /* =========================
-           VIDEO CARDS
-        ========================= */
-
-        .video-card {
-            position: relative;
-        }
-
-
-        .video-icon {
-            width: 48px;
-            height: 48px;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: center;
-
-            border-radius: 12px;
-
-            background: #fee2e2;
-
-            color: #dc2626;
-
-            font-size: 20px;
-
-            margin-bottom: 18px;
-        }
-
-
-        .video-label {
-            font-size: 12px;
-
-            font-weight: 700;
-
-            color: #dc2626;
-
-            margin-bottom: 8px;
-        }
-
-
-        /* =========================
-           CATEGORY LANDING
-        ========================= */
-
-        .category-card {
-            cursor: pointer;
-        }
-
-
-        .category-icon {
-            font-size: 34px;
-
-            margin-bottom: 15px;
-        }
-
-
-        .category-card h2 {
-            margin-bottom: 8px;
-        }
-
-
-        .category-card p {
-            margin-bottom: 0;
-        }
-
-
-        /* =========================
-           BACK BUTTON
-        ========================= */
-
-        .back-button {
-            display: none;
-
-            margin-bottom: 30px;
-
-            border: none;
-
-            background: transparent;
-
-            color: #2563eb;
-
-            font-size: 15px;
-
-            font-weight: 700;
-
-            cursor: pointer;
-
-            padding: 0;
-        }
-
-
-        .back-button:hover {
-            text-decoration: underline;
-        }
-
-
-        /* =========================
-           EMPTY
-        ========================= */
 
         .empty {
             display: none;
-
             grid-column: 1 / -1;
-
             text-align: center;
-
             padding: 40px;
-
             color: #64748b;
         }
 
-
         /* =========================
-           HIDDEN
+           RESOURCE DETAILS
         ========================= */
 
-        .hidden {
-            display: none !important;
+        .resource-section {
+            grid-column: 1 / -1;
+            margin-bottom: 35px;
         }
 
+        .resource-section-title {
+            font-size: 30px;
+            margin-bottom: 8px;
+        }
+
+        .resource-section-description {
+            color: #64748b;
+            margin-bottom: 22px;
+        }
+
+        .resource-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .resource-item {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 20px;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease,
+                        box-shadow 0.2s ease;
+        }
+
+        .resource-item:hover {
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.07);
+        }
+
+        .resource-type {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: .5px;
+            color: #2563eb;
+            margin-bottom: 7px;
+        }
+
+        .resource-item h3 {
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
+
+        .resource-item p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 14px;
+        }
+
+        .resource-link {
+            color: #2563eb;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .resource-link:hover {
+            text-decoration: underline;
+        }
+
+        /* =========================
+           YOUTUBE
+        ========================= */
+
+        .video-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease,
+                        box-shadow 0.2s ease;
+        }
+
+        .video-card:hover {
+            box-shadow: 0 10px 25px rgba(15, 23, 42, 0.07);
+        }
+
+        .video-thumbnail {
+            aspect-ratio: 16 / 9;
+            background: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+        }
+
+        .video-content {
+            padding: 18px;
+        }
+
+        .video-content h3 {
+            font-size: 17px;
+            margin-bottom: 7px;
+        }
+
+        .video-content p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 13px;
+        }
+
+        .youtube-link {
+            color: #dc2626;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* =========================
+           CATEGORY CONTENT
+        ========================= */
+
+        .category-content {
+            display: none;
+            grid-column: 1 / -1;
+        }
+
+        .category-content.active {
+            display: block;
+        }
+
+        .category-back {
+            display: inline-block;
+            margin-bottom: 25px;
+            color: #2563eb;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .category-main-title {
+            font-size: clamp(32px, 5vw, 48px);
+            margin-bottom: 10px;
+        }
+
+        .category-main-description {
+            color: #64748b;
+            max-width: 750px;
+            margin-bottom: 35px;
+        }
+
+        .subsection {
+            margin-bottom: 45px;
+        }
+
+        .subsection h2 {
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+        .subsection > p {
+            color: #64748b;
+            margin-bottom: 20px;
+        }
+
+        /* =========================
+           PLAN TABLE
+        ========================= */
+
+        .plan-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .plan-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+        .plan-table th,
+        .plan-table td {
+            padding: 14px;
+            border-bottom: 1px solid #e2e8f0;
+            text-align: left;
+        }
+
+        .plan-table th {
+            font-size: 14px;
+            background: #f8fafc;
+        }
+
+        .plan-table td {
+            font-size: 14px;
+        }
+
+        .plan-table a {
+            color: #2563eb;
+            font-weight: 700;
+        }
 
         /* =========================
            DARK MODE
@@ -488,83 +440,78 @@
 
         body.dark {
             background: #0f172a;
-
             color: #f8fafc;
         }
-
 
         body.dark nav {
             background: #0f172a;
-
             border-bottom-color: #334155;
         }
 
-
-        body.dark .page-header p {
+        body.dark .page-header p,
+        body.dark .resource-section-description,
+        body.dark .category-main-description,
+        body.dark .subsection > p {
             color: #94a3b8;
         }
 
-
         body.dark .search-box {
             background: #1e293b;
-
             border-color: #334155;
         }
 
-
         body.dark #search {
             background: #0f172a;
-
             color: #f8fafc;
-
             border-color: #475569;
         }
-
 
         body.dark #search::placeholder {
             color: #64748b;
         }
 
-
         body.dark .filter {
             background: #1e293b;
-
             color: #f8fafc;
-
             border-color: #475569;
         }
 
-
         body.dark .filter.active {
             background: #2563eb;
-
             color: white;
-
             border-color: #2563eb;
         }
 
-
-        body.dark .card {
+        body.dark .card,
+        body.dark .resource-item,
+        body.dark .video-card,
+        body.dark .plan-table {
             background: #1e293b;
-
             border-color: #334155;
         }
 
-
-        body.dark .card p {
+        body.dark .card p,
+        body.dark .resource-item p,
+        body.dark .video-content p {
             color: #94a3b8;
         }
 
-
-        body.dark .section-heading p {
-            color: #94a3b8;
+        body.dark .video-thumbnail {
+            background: #334155;
         }
 
+        body.dark .plan-table th {
+            background: #0f172a;
+        }
+
+        body.dark .plan-table th,
+        body.dark .plan-table td {
+            border-color: #334155;
+        }
 
         body.dark .empty {
             color: #94a3b8;
         }
-
 
         /* =========================
            MOBILE
@@ -576,8 +523,11 @@
                 display: none;
             }
 
-
             .resources {
+                grid-template-columns: 1fr;
+            }
+
+            .resource-list {
                 grid-template-columns: 1fr;
             }
 
@@ -603,28 +553,23 @@
             Prep<span>ComeBack</span>
         </a>
 
-
         <div class="nav-links">
 
             <a href="index.html">
                 Home
             </a>
 
-
             <a href="opportunities.html">
                 Opportunities
             </a>
-
 
             <a href="resources.html">
                 Resources
             </a>
 
-
             <a href="index.html#about">
                 About
             </a>
-
 
             <a href="index.html#join">
                 Join Us
@@ -643,11 +588,6 @@
 
 <main>
 
-
-    <!-- =========================
-         HEADER
-    ========================= -->
-
     <section class="page-header">
 
         <div class="container">
@@ -655,7 +595,6 @@
             <h1>
                 Free resources.
             </h1>
-
 
             <p>
                 Carefully selected resources to help students
@@ -668,15 +607,11 @@
     </section>
 
 
-
     <section>
 
         <div class="container">
 
-
-            <!-- =========================
-                 SEARCH
-            ========================= -->
+            <!-- SEARCH -->
 
             <div class="search-box">
 
@@ -689,991 +624,2027 @@
             </div>
 
 
-
-            <!-- =========================
-                 CATEGORY FILTERS
-            ========================= -->
+            <!-- CATEGORY BUTTONS -->
 
             <div class="filters">
 
-
-                <button
-                    class="filter active"
-                    data-category="all"
-                >
+                <button class="filter active" data-category="all">
                     All
                 </button>
 
-
-                <button
-                    class="filter"
-                    data-category="University"
-                >
+                <button class="filter" data-category="University">
                     University
                 </button>
 
-
-                <button
-                    class="filter"
-                    data-category="SAT"
-                >
+                <button class="filter" data-category="SAT">
                     SAT
                 </button>
 
-
-                <button
-                    class="filter"
-                    data-category="English"
-                >
+                <button class="filter" data-category="English">
                     English
                 </button>
 
-
-                <button
-                    class="filter"
-                    data-category="Research"
-                >
+                <button class="filter" data-category="Research">
                     Research
                 </button>
 
-
-                <button
-                    class="filter"
-                    data-category="Competitions"
-                >
+                <button class="filter" data-category="Competitions">
                     Competitions
                 </button>
 
-
-                <button
-                    class="filter"
-                    data-category="Skills"
-                >
+                <button class="filter" data-category="Skills">
                     Skills
                 </button>
 
             </div>
 
 
-
-            <!-- =========================
-                 BACK
-            ========================= -->
-
-            <button
-                class="back-button"
-                id="backButton"
-            >
-                ← Back to categories
-            </button>
+            <div class="resources">
 
 
-
-            <!-- =========================
-                 RESOURCES
-            ========================= -->
-
-            <div class="resources" id="resourcesGrid">
+                <!-- =====================================================
+                     CATEGORY CARDS
+                ====================================================== -->
 
 
-                <!-- ==========================================
-                     CATEGORY LANDING
-                =========================================== -->
+                <article class="card category-card"
+                         data-category="University">
 
-
-                <article
-                    class="card category-card"
-                    data-landing="true"
-                    data-category="University"
-                >
-
-                    <div class="category-icon">
-                        🎓
-                    </div>
-
+                    <span class="category">
+                        University
+                    </span>
 
                     <h2>
-                        University
+                        University Applications
                     </h2>
-
 
                     <p>
                         Applications, scholarships, financial aid,
-                        fee waivers, essays and admissions.
+                        fee waivers and resources for international students.
                     </p>
+
+                    <div class="free">
+                        ✓ Free resources
+                    </div>
+
+                    <a href="#" class="visit category-open"
+                       data-open="University">
+                        Explore Resources →
+                    </a>
 
                 </article>
 
 
+                <article class="card category-card"
+                         data-category="SAT">
 
-                <article
-                    class="card category-card"
-                    data-landing="true"
-                    data-category="SAT"
-                >
-
-                    <div class="category-icon">
-                        🧮
-                    </div>
-
-
-                    <h2>
+                    <span class="category">
                         SAT
-                    </h2>
-
-
-                    <p>
-                        Official practice, question banks,
-                        preparation platforms, tools and videos.
-                    </p>
-
-                </article>
-
-
-
-                <article
-                    class="card category-card"
-                    data-landing="true"
-                    data-category="English"
-                >
-
-                    <div class="category-icon">
-                        🇬🇧
-                    </div>
-
-
-                    <h2>
-                        English
-                    </h2>
-
-
-                    <p>
-                        IELTS, TOEFL, Duolingo English Test,
-                        practice platforms and YouTube channels.
-                    </p>
-
-                </article>
-
-
-
-                <article
-                    class="card category-card"
-                    data-landing="true"
-                    data-category="Research"
-                >
-
-                    <div class="category-icon">
-                        🔬
-                    </div>
-
-
-                    <h2>
-                        Research
-                    </h2>
-
-
-                    <p>
-                        Research opportunities, academic papers,
-                        journals and research tools.
-                    </p>
-
-                </article>
-
-
-
-                <article
-                    class="card category-card"
-                    data-landing="true"
-                    data-category="Competitions"
-                >
-
-                    <div class="category-icon">
-                        🏆
-                    </div>
-
-
-                    <h2>
-                        Competitions
-                    </h2>
-
-
-                    <p>
-                        Olympiads, academic competitions,
-                        essay contests and challenges.
-                    </p>
-
-                </article>
-
-
-
-                <article
-                    class="card category-card"
-                    data-landing="true"
-                    data-category="Skills"
-                >
-
-                    <div class="category-icon">
-                        💻
-                    </div>
-
-
-                    <h2>
-                        Skills
-                    </h2>
-
-
-                    <p>
-                        Programming, data analytics, AI,
-                        productivity and project building.
-                    </p>
-
-                </article>
-
-
-
-                <!-- ==========================================
-                     SAT RESOURCE HUB
-                =========================================== -->
-
-
-                <div
-                    class="section-heading sat-content hidden"
-                >
-
-                    <h2>
-                        SAT Resources
-                    </h2>
-
-
-                    <p>
-                        Choose the resources that work best
-                        for your SAT preparation.
-                    </p>
-
-                </div>
-
-
-
-                <!-- ==========================================
-                     OFFICIAL SAT
-                =========================================== -->
-
-
-                <div
-                    class="section-heading sat-content hidden"
-                >
-
-                    <h2>
-                        Official SAT Resources
-                    </h2>
-
-
-                    <p>
-                        Start with resources created by
-                        College Board and its official partners.
-                    </p>
-
-                </div>
-
-
-
-                <article
-                    class="card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <span class="category">
-                        Official
                     </span>
-
-
-                    <h2>
-                        College Board SAT Practice
-                    </h2>
-
-
-                    <p>
-                        Official SAT practice hub with practice
-                        tests, Student Question Bank, study guides
-                        and preparation tools.
-                    </p>
-
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-
-                    <a
-                        href="https://satsuite.collegeboard.org/practice"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-
-                <article
-                    class="card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <span class="category">
-                        Official
-                    </span>
-
-
-                    <h2>
-                        Bluebook Practice Tests
-                    </h2>
-
-
-                    <p>
-                        Take official full-length digital SAT
-                        practice tests in the same testing
-                        environment used for digital testing.
-                    </p>
-
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-
-                    <a
-                        href="https://bluebook.collegeboard.org/students/practice"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-
-                <article
-                    class="card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <span class="category">
-                        Official
-                    </span>
-
-
-                    <h2>
-                        Student Question Bank
-                    </h2>
-
-
-                    <p>
-                        Thousands of official SAT questions
-                        that can be filtered by section, domain,
-                        skill and difficulty.
-                    </p>
-
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-
-                    <a
-                        href="https://satsuite.collegeboard.org/practice/student-question-bank"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-
-                <!-- ==========================================
-                     SAT PREPARATION
-                =========================================== -->
-
-
-                <div
-                    class="section-heading sat-content hidden"
-                >
-
-                    <h2>
-                        SAT Preparation
-                    </h2>
-
-
-                    <p>
-                        Practice platforms for learning,
-                        reviewing and improving your score.
-                    </p>
-
-                </div>
-
-
-
-                <article
-                    class="card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <span class="category">
-                        Preparation
-                    </span>
-
-
-                    <h2>
-                        Khan Academy — Official SAT Prep
-                    </h2>
-
-
-                    <p>
-                        Free official SAT preparation with
-                        thousands of questions, lessons, videos,
-                        quizzes and skill-based practice.
-                    </p>
-
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-
-                    <a
-                        href="https://www.khanacademy.org/digital-sat"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-
-                <article
-                    class="card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <span class="category">
-                        Practice
-                    </span>
-
-
-                    <h2>
-                        Official SAT Paper Practice
-                    </h2>
-
-
-                    <p>
-                        Downloadable official full-length SAT
-                        practice tests with scoring guides and
-                        answer explanations.
-                    </p>
-
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-
-                    <a
-                        href="https://satsuite.collegeboard.org/practice/practice-tests/paper"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-
-                <!-- ==========================================
-                     SAT TOOLS
-                =========================================== -->
-
-
-                <div
-                    class="section-heading sat-content hidden"
-                >
-
-                    <h2>
-                        SAT Tools
-                    </h2>
-
-
-                    <p>
-                        Tools worth learning before test day.
-                    </p>
-
-                </div>
-
-
-
-                <article
-                    class="card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <span class="category">
-                        Math Tool
-                    </span>
-
-
-                    <h2>
-                        Desmos
-                    </h2>
-
-
-                    <p>
-                        Explore the Desmos graphing calculator
-                        and practice using it for SAT Math.
-                    </p>
-
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-
-                    <a
-                        href="https://www.desmos.com/calculator"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-
-                <!-- ==========================================
-                     SAT YOUTUBE
-                =========================================== -->
-
-
-                <div
-                    class="section-heading sat-content hidden"
-                >
-
-                    <h2>
-                        YouTube Channels
-                    </h2>
-
-
-                    <p>
-                        Video-based explanations and SAT
-                        preparation from experienced educators.
-                    </p>
-
-                </div>
-
-
-
-                <article
-                    class="card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <span class="category">
-                        YouTube
-                    </span>
-
-
-                    <h2>
-                        Khan Academy
-                    </h2>
-
-
-                    <p>
-                        Official SAT lessons, explanations,
-                        examples and preparation videos.
-                    </p>
-
-
-                    <div class="free">
-                        ✓ Free videos
-                    </div>
-
-
-                    <a
-                        href="https://www.youtube.com/@khanacademy"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Watch Channel →
-                    </a>
-
-                </article>
-
-
-
-                <article
-                    class="card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <span class="category">
-                        YouTube
-                    </span>
-
-
-                    <h2>
-                        The Organic Chemistry Tutor
-                    </h2>
-
-
-                    <p>
-                        Clear mathematics explanations that can
-                        help students strengthen SAT Math skills.
-                    </p>
-
-
-                    <div class="free">
-                        ✓ Free videos
-                    </div>
-
-
-                    <a
-                        href="https://www.youtube.com/@TheOrganicChemistryTutor"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Watch Channel →
-                    </a>
-
-                </article>
-
-
-
-                <article
-                    class="card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <span class="category">
-                        YouTube
-                    </span>
-
-
-                    <h2>
-                        Scalar Learning
-                    </h2>
-
-
-                    <p>
-                        SAT preparation videos, practice questions
-                        and walkthroughs.
-                    </p>
-
-
-                    <div class="free">
-                        ✓ Free videos
-                    </div>
-
-
-                    <a
-                        href="https://www.youtube.com/@ScalarLearning"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Watch Channel →
-                    </a>
-
-                </article>
-
-
-
-                <!-- ==========================================
-                     FEATURED SAT VIDEOS
-                =========================================== -->
-
-
-                <div
-                    class="section-heading sat-content hidden"
-                >
-
-                    <h2>
-                        Featured Videos
-                    </h2>
-
-
-                    <p>
-                        Useful videos to watch while preparing
-                        for the Digital SAT.
-                    </p>
-
-                </div>
-
-
-
-                <article
-                    class="card video-card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <div class="video-icon">
-                        ▶
-                    </div>
-
-
-                    <div class="video-label">
-                        YOUTUBE VIDEO
-                    </div>
-
 
                     <h2>
                         Digital SAT Preparation
                     </h2>
 
-
                     <p>
-                        Learn how the digital SAT works and how
-                        to approach your preparation.
+                        Official practice, question banks, Math,
+                        Reading & Writing, Desmos and expert channels.
                     </p>
 
+                    <div class="free">
+                        ✓ Free resources
+                    </div>
 
-                    <a
-                        href="https://www.youtube.com/results?search_query=digital+SAT+preparation"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Watch on YouTube →
+                    <a href="#" class="visit category-open"
+                       data-open="SAT">
+                        Explore Resources →
                     </a>
 
                 </article>
 
 
-
-                <article
-                    class="card video-card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <div class="video-icon">
-                        ▶
-                    </div>
-
-
-                    <div class="video-label">
-                        YOUTUBE VIDEO
-                    </div>
-
-
-                    <h2>
-                        SAT Math Strategies
-                    </h2>
-
-
-                    <p>
-                        Explore different approaches and
-                        strategies for SAT Math questions.
-                    </p>
-
-
-                    <a
-                        href="https://www.youtube.com/results?search_query=SAT+math+strategies"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Watch on YouTube →
-                    </a>
-
-                </article>
-
-
-
-                <article
-                    class="card video-card sat-content hidden"
-                    data-resource="sat"
-                >
-
-                    <div class="video-icon">
-                        ▶
-                    </div>
-
-
-                    <div class="video-label">
-                        YOUTUBE VIDEO
-                    </div>
-
-
-                    <h2>
-                        SAT Reading & Writing Strategies
-                    </h2>
-
-
-                    <p>
-                        Find explanations and strategies for
-                        Digital SAT Reading and Writing.
-                    </p>
-
-
-                    <a
-                        href="https://www.youtube.com/results?search_query=Digital+SAT+Reading+Writing+strategies"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Watch on YouTube →
-                    </a>
-
-                </article>
-
-
-
-                <!-- ==========================================
-                     OTHER CATEGORIES
-                =========================================== -->
-
-
-                <article
-                    class="card hidden"
-                    data-placeholder="University"
-                >
-
-                    <span class="category">
-                        University
-                    </span>
-
-
-                    <h2>
-                        University Resources
-                    </h2>
-
-
-                    <p>
-                        Applications, scholarships, fee waivers,
-                        financial aid and essay resources will
-                        appear here.
-                    </p>
-
-                </article>
-
-
-
-                <article
-                    class="card hidden"
-                    data-placeholder="English"
-                >
+                <article class="card category-card"
+                         data-category="English">
 
                     <span class="category">
                         English
                     </span>
 
-
                     <h2>
-                        English Resources
+                        English Test Preparation
                     </h2>
-
 
                     <p>
                         IELTS, TOEFL, Duolingo English Test,
-                        practice platforms and videos.
+                        practice tests, lessons and YouTube channels.
                     </p>
+
+                    <div class="free">
+                        ✓ Free resources
+                    </div>
+
+                    <a href="#" class="visit category-open"
+                       data-open="English">
+                        Explore Resources →
+                    </a>
 
                 </article>
 
 
-
-                <article
-                    class="card hidden"
-                    data-placeholder="Research"
-                >
+                <article class="card category-card"
+                         data-category="Research">
 
                     <span class="category">
                         Research
                     </span>
 
-
                     <h2>
                         Research Resources
                     </h2>
 
-
                     <p>
-                        Research opportunities, academic papers,
-                        journals and research tools.
+                        Find papers, journals, research opportunities,
+                        academic databases and research guidance.
                     </p>
+
+                    <div class="free">
+                        ✓ Free resources
+                    </div>
+
+                    <a href="#" class="visit category-open"
+                       data-open="Research">
+                        Explore Resources →
+                    </a>
 
                 </article>
 
 
-
-                <article
-                    class="card hidden"
-                    data-placeholder="Competitions"
-                >
+                <article class="card category-card"
+                         data-category="Competitions">
 
                     <span class="category">
                         Competitions
                     </span>
 
-
                     <h2>
-                        Competitions
+                        Olympiads & Competitions
                     </h2>
 
-
                     <p>
-                        Olympiads, academic competitions and
-                        essay competitions.
+                        Academic competitions, olympiads, essays,
+                        challenges and opportunities for students.
                     </p>
+
+                    <div class="free">
+                        ✓ Free resources
+                    </div>
+
+                    <a href="#" class="visit category-open"
+                       data-open="Competitions">
+                        Explore Resources →
+                    </a>
 
                 </article>
 
 
-
-                <article
-                    class="card hidden"
-                    data-placeholder="Skills"
-                >
+                <article class="card category-card"
+                         data-category="Skills">
 
                     <span class="category">
                         Skills
                     </span>
 
-
                     <h2>
                         Skills & Projects
                     </h2>
 
-
                     <p>
-                        Programming, data analytics, AI,
-                        productivity and project resources.
+                        Learn coding, data analysis, design,
+                        productivity and build meaningful projects.
                     </p>
+
+                    <div class="free">
+                        ✓ Free resources
+                    </div>
+
+                    <a href="#" class="visit category-open"
+                       data-open="Skills">
+                        Explore Resources →
+                    </a>
 
                 </article>
 
 
+                <!-- =====================================================
+                     UNIVERSITY
+                ====================================================== -->
 
-                <div
-                    class="empty"
-                    id="empty"
-                >
-                    No resources found.
+                <div class="category-content" id="University">
+
+                    <a class="category-back">
+                        ← Back to categories
+                    </a>
+
+                    <h1 class="category-main-title">
+                        University Applications
+                    </h1>
+
+                    <p class="category-main-description">
+                        A collection of useful resources for university
+                        applications, scholarships, financial aid and
+                        international students.
+                    </p>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            Application Platforms
+                        </h2>
+
+                        <p>
+                            Start your application through the platforms
+                            used by universities around the world.
+                        </p>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Application
+                                </span>
+
+                                <h3>
+                                    Common App
+                                </h3>
+
+                                <p>
+                                    Apply to participating universities
+                                    through one centralized application.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.commonapp.org/"
+                                   target="_blank">
+                                    Open Common App →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Financial Aid
+                                </span>
+
+                                <h3>
+                                    CSS Profile
+                                </h3>
+
+                                <p>
+                                    Financial aid application used by
+                                    participating colleges.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://cssprofile.collegeboard.org/"
+                                   target="_blank">
+                                    Open CSS Profile →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    International Students
+                                </span>
+
+                                <h3>
+                                    EducationUSA
+                                </h3>
+
+                                <p>
+                                    Official U.S. Department of State
+                                    resource for international students.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://educationusa.state.gov/"
+                                   target="_blank">
+                                    Visit EducationUSA →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Scholarships
+                                </span>
+
+                                <h3>
+                                    Scholarships & Financial Aid
+                                </h3>
+
+                                <p>
+                                    Learn how financial aid works and
+                                    research funding opportunities.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://studentaid.gov/"
+                                   target="_blank">
+                                    Explore Financial Aid →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            Helpful Guides
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Guide
+                                </span>
+
+                                <h3>
+                                    Common App — How to Apply
+                                </h3>
+
+                                <p>
+                                    Step-by-step information about
+                                    creating and completing an application.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.commonapp.org/apply/"
+                                   target="_blank">
+                                    Read Guide →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Guide
+                                </span>
+
+                                <h3>
+                                    CSS Profile for International Students
+                                </h3>
+
+                                <p>
+                                    Information about reporting international
+                                    family finances and financial aid.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://cssprofile.collegeboard.org/international-students"
+                                   target="_blank">
+                                    Read Guide →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            YouTube
+                        </h2>
+
+                        <p>
+                            Search for university application,
+                            scholarship and financial-aid guidance.
+                        </p>
+
+                        <div class="resource-list">
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        EducationUSA
+                                    </h3>
+
+                                    <p>
+                                        Official guidance for students
+                                        interested in studying in the U.S.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/@educationusa"
+                                       target="_blank">
+                                        Open YouTube Channel →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
+
+                <!-- =====================================================
+                     SAT
+                ====================================================== -->
+
+                <div class="category-content" id="SAT">
+
+                    <a class="category-back">
+                        ← Back to categories
+                    </a>
+
+                    <h1 class="category-main-title">
+                        Digital SAT Preparation
+                    </h1>
+
+                    <p class="category-main-description">
+                        Official practice, high-quality preparation,
+                        Math, Reading & Writing, Desmos and expert
+                        video resources.
+                    </p>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            1. Official Foundation
+                        </h2>
+
+                        <p>
+                            Start with official materials before moving
+                            to third-party preparation.
+                        </p>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Official
+                                </span>
+
+                                <h3>
+                                    College Board Bluebook
+                                </h3>
+
+                                <p>
+                                    Official digital testing application
+                                    with full-length adaptive practice tests.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://bluebook.collegeboard.org/"
+                                   target="_blank">
+                                    Open Bluebook →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Official
+                                </span>
+
+                                <h3>
+                                    Student Question Bank
+                                </h3>
+
+                                <p>
+                                    Thousands of official SAT questions
+                                    with filters for section, skill and difficulty.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://satsuitequestionbank.collegeboard.org/"
+                                   target="_blank">
+                                    Open Question Bank →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Official
+                                </span>
+
+                                <h3>
+                                    Khan Academy — Official SAT Prep
+                                </h3>
+
+                                <p>
+                                    Free lessons, videos, practice questions,
+                                    quizzes and advanced practice.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.khanacademy.org/digital-sat"
+                                   target="_blank">
+                                    Open Khan Academy →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Free Tutoring
+                                </span>
+
+                                <h3>
+                                    Schoolhouse.world
+                                </h3>
+
+                                <p>
+                                    Free peer tutoring and SAT preparation
+                                    sessions.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://schoolhouse.world/"
+                                   target="_blank">
+                                    Open Schoolhouse →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            2. Math & Desmos
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Calculator
+                                </span>
+
+                                <h3>
+                                    Desmos Graphing Calculator
+                                </h3>
+
+                                <p>
+                                    Practice graphing functions, equations,
+                                    systems, regressions and more.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.desmos.com/calculator"
+                                   target="_blank">
+                                    Open Desmos →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Practice
+                                </span>
+
+                                <h3>
+                                    Khan Academy SAT Math
+                                </h3>
+
+                                <p>
+                                    Practice SAT Math from Foundations
+                                    through Advanced level.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.khanacademy.org/digital-sat/math"
+                                   target="_blank">
+                                    Practice Math →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Telegram
+                                </span>
+
+                                <h3>
+                                    DSAT MATH LESSON
+                                </h3>
+
+                                <p>
+                                    Free SAT Math lessons and preparation
+                                    materials shared through Telegram.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://t.me/SAT_DSAT_MATH_LESSON"
+                                   target="_blank">
+                                    Open Telegram →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Telegram
+                                </span>
+
+                                <h3>
+                                    DSATuz
+                                </h3>
+
+                                <p>
+                                    SAT preparation community, materials
+                                    and updates.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://t.me/DSATuz"
+                                   target="_blank">
+                                    Open Telegram →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Telegram
+                                </span>
+
+                                <h3>
+                                    DSATaz
+                                </h3>
+
+                                <p>
+                                    SAT preparation materials and practice
+                                    resources.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://t.me/DSATaz"
+                                   target="_blank">
+                                    Open Telegram →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            3. Reading & Writing
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Practice
+                                </span>
+
+                                <h3>
+                                    Khan Academy Reading & Writing
+                                </h3>
+
+                                <p>
+                                    Official practice covering the complete
+                                    SAT Reading and Writing section.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.khanacademy.org/digital-sat/reading-and-writing"
+                                   target="_blank">
+                                    Practice Reading & Writing →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Grammar
+                                </span>
+
+                                <h3>
+                                    The Critical Reader
+                                </h3>
+
+                                <p>
+                                    SAT Reading and Writing explanations,
+                                    strategies and grammar resources.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://thecriticalreader.com/"
+                                   target="_blank">
+                                    Visit Website →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            4. YouTube Channels
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        Tutorllini Test Prep
+                                    </h3>
+
+                                    <p>
+                                        SAT Math, Desmos and difficult
+                                        problem-solving strategies.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/results?search_query=Tutorllini+Test+Prep"
+                                       target="_blank">
+                                        Watch on YouTube →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        Scalar Learning
+                                    </h3>
+
+                                    <p>
+                                        SAT practice tests, Math and
+                                        problem-solving sessions.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/results?search_query=Scalar+Learning+SAT"
+                                       target="_blank">
+                                        Watch on YouTube →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        John Jung — SAT Math
+                                    </h3>
+
+                                    <p>
+                                        SAT Math strategies and
+                                        challenging questions.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/results?search_query=John+Jung+SAT+Math"
+                                       target="_blank">
+                                        Watch on YouTube →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        PrepPros
+                                    </h3>
+
+                                    <p>
+                                        SAT Reading, Writing, Math and
+                                        preparation strategies.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/results?search_query=PrepPros+SAT"
+                                       target="_blank">
+                                        Watch on YouTube →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            5. 1500+ Preparation Plan
+                        </h2>
+
+                        <div class="plan-table-wrapper">
+
+                            <table class="plan-table">
+
+                                <thead>
+
+                                    <tr>
+                                        <th>Stage</th>
+                                        <th>Resource</th>
+                                        <th>Goal</th>
+                                    </tr>
+
+                                </thead>
+
+                                <tbody>
+
+                                    <tr>
+                                        <td>1. Diagnosis</td>
+                                        <td>Bluebook</td>
+                                        <td>Find your starting score and weak areas.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>2. Theory</td>
+                                        <td>Khan Academy</td>
+                                        <td>Build complete topic knowledge.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3. Desmos</td>
+                                        <td>Desmos + YouTube</td>
+                                        <td>Become comfortable with the digital calculator.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>4. Hard Practice</td>
+                                        <td>Student Question Bank</td>
+                                        <td>Target difficult questions and weak skills.</td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>5. Full Tests</td>
+                                        <td>Bluebook</td>
+                                        <td>Track progress under realistic conditions.</td>
+                                    </tr>
+
+                                </tbody>
+
+                            </table>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================================
+                     ENGLISH
+                ====================================================== -->
+
+                <div class="category-content" id="English">
+
+                    <a class="category-back">
+                        ← Back to categories
+                    </a>
+
+                    <h1 class="category-main-title">
+                        English Test Preparation
+                    </h1>
+
+                    <p class="category-main-description">
+                        IELTS, TOEFL and Duolingo English Test resources,
+                        practice platforms, videos and study guidance.
+                    </p>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            1. IELTS
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Official
+                                </span>
+
+                                <h3>
+                                    IELTS.org
+                                </h3>
+
+                                <p>
+                                    Official IELTS information, test format,
+                                    preparation and sample materials.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.ielts.org/"
+                                   target="_blank">
+                                    Open IELTS.org →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Practice
+                                </span>
+
+                                <h3>
+                                    British Council — IELTS
+                                </h3>
+
+                                <p>
+                                    Free practice materials, sample questions
+                                    and preparation guidance.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://takeielts.britishcouncil.org/"
+                                   target="_blank">
+                                    Open British Council →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Practice
+                                </span>
+
+                                <h3>
+                                    IDP IELTS
+                                </h3>
+
+                                <p>
+                                    IELTS preparation materials and
+                                    practice resources.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://ielts.idp.com/"
+                                   target="_blank">
+                                    Open IDP IELTS →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Telegram
+                                </span>
+
+                                <h3>
+                                    IELTS Preparation Channel
+                                </h3>
+
+                                <p>
+                                    IELTS preparation content and
+                                    student results shared through Telegram.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://t.me/Sunnats_Student_Results"
+                                   target="_blank">
+                                    Open Telegram →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Telegram
+                                </span>
+
+                                <h3>
+                                    Sunnat Writes
+                                </h3>
+
+                                <p>
+                                    IELTS Writing-related preparation
+                                    and individual course information.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://t.me/Sunnat_Writes"
+                                   target="_blank">
+                                    Open Telegram →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            2. TOEFL
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Official
+                                </span>
+
+                                <h3>
+                                    ETS TOEFL
+                                </h3>
+
+                                <p>
+                                    Official TOEFL information and
+                                    preparation resources.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.ets.org/toefl.html"
+                                   target="_blank">
+                                    Open ETS TOEFL →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Free Practice
+                                </span>
+
+                                <h3>
+                                    ETS Practice
+                                </h3>
+
+                                <p>
+                                    Official free practice materials
+                                    from the test maker.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.ets.org/practice.html"
+                                   target="_blank">
+                                    Open ETS Practice →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            3. Duolingo English Test
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Official
+                                </span>
+
+                                <h3>
+                                    Duolingo English Test
+                                </h3>
+
+                                <p>
+                                    Official test information, practice
+                                    and preparation resources.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://englishtest.duolingo.com/"
+                                   target="_blank">
+                                    Open Duolingo English Test →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            4. YouTube
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        IELTS Official
+                                    </h3>
+
+                                    <p>
+                                        Official IELTS videos and
+                                        preparation guidance.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/@IELTSofficial"
+                                       target="_blank">
+                                        Open YouTube Channel →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        British Council IELTS
+                                    </h3>
+
+                                    <p>
+                                        IELTS lessons, tips and
+                                        preparation videos.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/results?search_query=British+Council+IELTS"
+                                       target="_blank">
+                                        Watch on YouTube →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================================
+                     RESEARCH
+                ====================================================== -->
+
+                <div class="category-content" id="Research">
+
+                    <a class="category-back">
+                        ← Back to categories
+                    </a>
+
+                    <h1 class="category-main-title">
+                        Research Resources
+                    </h1>
+
+                    <p class="category-main-description">
+                        Find academic papers, literature, research
+                        opportunities and tools for student researchers.
+                    </p>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            Academic Databases
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Research
+                                </span>
+
+                                <h3>
+                                    Google Scholar
+                                </h3>
+
+                                <p>
+                                    Search academic papers, citations,
+                                    researchers and publications.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://scholar.google.com/"
+                                   target="_blank">
+                                    Open Google Scholar →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Research
+                                </span>
+
+                                <h3>
+                                    PubMed
+                                </h3>
+
+                                <p>
+                                    Biomedical and life-sciences
+                                    literature database.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://pubmed.ncbi.nlm.nih.gov/"
+                                   target="_blank">
+                                    Open PubMed →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Research
+                                </span>
+
+                                <h3>
+                                    Semantic Scholar
+                                </h3>
+
+                                <p>
+                                    Free academic search and
+                                    research discovery tool.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.semanticscholar.org/"
+                                   target="_blank">
+                                    Open Semantic Scholar →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Open Access
+                                </span>
+
+                                <h3>
+                                    arXiv
+                                </h3>
+
+                                <p>
+                                    Open-access research papers across
+                                    many scientific fields.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://arxiv.org/"
+                                   target="_blank">
+                                    Open arXiv →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            Research Tools
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Citations
+                                </span>
+
+                                <h3>
+                                    Zotero
+                                </h3>
+
+                                <p>
+                                    Free tool for collecting, organizing
+                                    and citing research sources.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.zotero.org/"
+                                   target="_blank">
+                                    Open Zotero →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Data
+                                </span>
+
+                                <h3>
+                                    Kaggle
+                                </h3>
+
+                                <p>
+                                    Datasets, notebooks and data-science
+                                    learning resources.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.kaggle.com/"
+                                   target="_blank">
+                                    Open Kaggle →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            YouTube
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        Nature
+                                    </h3>
+
+                                    <p>
+                                        Scientific research, discoveries
+                                        and academic discussions.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/@nature"
+                                       target="_blank">
+                                        Open YouTube Channel →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        MIT OpenCourseWare
+                                    </h3>
+
+                                    <p>
+                                        Free university-level educational
+                                        lectures and academic content.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/@mitocw"
+                                       target="_blank">
+                                        Open YouTube Channel →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================================
+                     COMPETITIONS
+                ====================================================== -->
+
+                <div class="category-content" id="Competitions">
+
+                    <a class="category-back">
+                        ← Back to categories
+                    </a>
+
+                    <h1 class="category-main-title">
+                        Olympiads & Competitions
+                    </h1>
+
+                    <p class="category-main-description">
+                        Discover academic competitions, olympiads,
+                        essay contests and challenges.
+                    </p>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            Competition Platforms
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Mathematics
+                                </span>
+
+                                <h3>
+                                    AoPS
+                                </h3>
+
+                                <p>
+                                    Mathematics competitions, problem
+                                    solving and community resources.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://artofproblemsolving.com/"
+                                   target="_blank">
+                                    Open AoPS →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Science
+                                </span>
+
+                                <h3>
+                                    Science Olympiad
+                                </h3>
+
+                                <p>
+                                    Science competition information,
+                                    events and preparation materials.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.soinc.org/"
+                                   target="_blank">
+                                    Visit Science Olympiad →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    STEM
+                                </span>
+
+                                <h3>
+                                    Regeneron ISEF
+                                </h3>
+
+                                <p>
+                                    International science and engineering
+                                    fair information and resources.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.societyforscience.org/isef/"
+                                   target="_blank">
+                                    Visit ISEF →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Competitions
+                                </span>
+
+                                <h3>
+                                    International Olympiad Resources
+                                </h3>
+
+                                <p>
+                                    Explore official olympiad websites
+                                    for mathematics, physics, chemistry
+                                    and other subjects.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.imo-official.org/"
+                                   target="_blank">
+                                    Explore IMO →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            YouTube
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        Physics Olympiad Preparation
+                                    </h3>
+
+                                    <p>
+                                        Searchable collection of
+                                        physics olympiad preparation videos.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/results?search_query=physics+olympiad+preparation"
+                                       target="_blank">
+                                        Watch Videos →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        Mathematics Olympiad Preparation
+                                    </h3>
+
+                                    <p>
+                                        Problem solving and olympiad
+                                        mathematics preparation.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/results?search_query=math+olympiad+preparation"
+                                       target="_blank">
+                                        Watch Videos →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================================
+                     SKILLS
+                ====================================================== -->
+
+                <div class="category-content" id="Skills">
+
+                    <a class="category-back">
+                        ← Back to categories
+                    </a>
+
+                    <h1 class="category-main-title">
+                        Skills & Projects
+                    </h1>
+
+                    <p class="category-main-description">
+                        Free platforms for learning practical skills,
+                        building projects and creating a strong portfolio.
+                    </p>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            Coding & Technology
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Coding
+                                </span>
+
+                                <h3>
+                                    freeCodeCamp
+                                </h3>
+
+                                <p>
+                                    Free coding curriculum covering
+                                    web development, Python and more.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.freecodecamp.org/"
+                                   target="_blank">
+                                    Start Learning →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Programming
+                                </span>
+
+                                <h3>
+                                    W3Schools
+                                </h3>
+
+                                <p>
+                                    Tutorials and references for HTML,
+                                    CSS, JavaScript and programming.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.w3schools.com/"
+                                   target="_blank">
+                                    Visit W3Schools →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Projects
+                                </span>
+
+                                <h3>
+                                    GitHub
+                                </h3>
+
+                                <p>
+                                    Build, store and showcase your
+                                    coding and data projects.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://github.com/"
+                                   target="_blank">
+                                    Open GitHub →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Data
+                                </span>
+
+                                <h3>
+                                    Kaggle Learn
+                                </h3>
+
+                                <p>
+                                    Free practical courses in Python,
+                                    pandas, SQL and data science.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.kaggle.com/learn"
+                                   target="_blank">
+                                    Start Kaggle Learn →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            Design & Creative Skills
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Design
+                                </span>
+
+                                <h3>
+                                    Canva Design School
+                                </h3>
+
+                                <p>
+                                    Learn design fundamentals and
+                                    create visual projects.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.canva.com/designschool/"
+                                   target="_blank">
+                                    Visit Design School →
+                                </a>
+
+                            </div>
+
+
+                            <div class="resource-item">
+
+                                <span class="resource-type">
+                                    Learning
+                                </span>
+
+                                <h3>
+                                    Coursera Free Courses
+                                </h3>
+
+                                <p>
+                                    Explore courses that may offer
+                                    free learning access or audit options.
+                                </p>
+
+                                <a class="resource-link"
+                                   href="https://www.coursera.org/"
+                                   target="_blank">
+                                    Explore Coursera →
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="subsection">
+
+                        <h2>
+                            YouTube
+                        </h2>
+
+                        <div class="resource-list">
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        freeCodeCamp
+                                    </h3>
+
+                                    <p>
+                                        Long-form programming and
+                                        technology courses.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/@freecodecamp"
+                                       target="_blank">
+                                        Open YouTube Channel →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+
+                            <div class="video-card">
+
+                                <div class="video-thumbnail">
+                                    ▶
+                                </div>
+
+                                <div class="video-content">
+
+                                    <h3>
+                                        MIT OpenCourseWare
+                                    </h3>
+
+                                    <p>
+                                        University-level lectures across
+                                        technology, science and business.
+                                    </p>
+
+                                    <a class="youtube-link"
+                                       href="https://www.youtube.com/@mitocw"
+                                       target="_blank">
+                                        Open YouTube Channel →
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- EMPTY -->
+
+                <div class="empty" id="empty">
+                    No resources found.
+                </div>
 
             </div>
 
@@ -1684,9 +2655,8 @@
 </main>
 
 
-
 <!-- =========================
-     SEARCH & CATEGORY LOGIC
+     CATEGORY / SEARCH SYSTEM
 ========================= -->
 
 <script>
@@ -1694,301 +2664,254 @@
     const searchInput =
         document.getElementById("search");
 
-
     const filters =
         document.querySelectorAll(".filter");
 
+    const categoryCards =
+        document.querySelectorAll(".category-card");
 
-    const cards =
-        document.querySelectorAll(".card");
-
-
-    const backButton =
-        document.getElementById("backButton");
-
+    const categoryContents =
+        document.querySelectorAll(".category-content");
 
     const empty =
         document.getElementById("empty");
 
-
-    const satContent =
-        document.querySelectorAll(".sat-content");
-
-
-    const landingCards =
-        document.querySelectorAll(
-            '[data-landing="true"]'
-        );
-
-
     let currentCategory = "all";
 
 
-    /*
-        Show the main category page.
-    */
+    /* =========================
+       SHOW CATEGORY
+    ========================= */
 
-    function showCategories() {
+    function showCategory(category) {
 
-        currentCategory = "all";
-
-        searchInput.value = "";
-
-
-        landingCards.forEach(card => {
-
-            card.classList.remove("hidden");
-
+        categoryCards.forEach(card => {
+            card.style.display = "none";
         });
 
-
-        satContent.forEach(item => {
-
-            item.classList.add("hidden");
-
+        categoryContents.forEach(content => {
+            content.classList.remove("active");
         });
 
+        const selected =
+            document.getElementById(category);
 
-        document
-            .querySelectorAll("[data-placeholder]")
-            .forEach(item => {
+        if (selected) {
+            selected.classList.add("active");
+        }
 
-                item.classList.add("hidden");
+        empty.style.display = "none";
 
-            });
-
-
-        backButton.style.display = "none";
-
-
-        filters.forEach(filter => {
-
-            filter.classList.remove("active");
-
+        window.scrollTo({
+            top: document.querySelector(".page-header").offsetTop,
+            behavior: "smooth"
         });
 
+    }
 
-        document
-            .querySelector('[data-category="all"]')
-            .classList.add("active");
 
+    /* =========================
+       SHOW ALL CATEGORIES
+    ========================= */
+
+    function showAllCategories() {
+
+        categoryContents.forEach(content => {
+            content.classList.remove("active");
+        });
+
+        categoryCards.forEach(card => {
+            card.style.display = "block";
+        });
 
         empty.style.display = "none";
 
     }
 
 
-
-    /*
-        Show SAT resource hub.
-    */
-
-    function showSAT() {
-
-        currentCategory = "SAT";
-
-        searchInput.value = "";
-
-
-        landingCards.forEach(card => {
-
-            card.classList.add("hidden");
-
-        });
-
-
-        satContent.forEach(item => {
-
-            item.classList.remove("hidden");
-
-        });
-
-
-        document
-            .querySelectorAll("[data-placeholder]")
-            .forEach(item => {
-
-                item.classList.add("hidden");
-
-            });
-
-
-        backButton.style.display = "block";
-
-
-        filters.forEach(filter => {
-
-            filter.classList.remove("active");
-
-        });
-
-
-        document
-            .querySelector('[data-category="SAT"]')
-            .classList.add("active");
-
-
-        empty.style.display = "none";
-
-    }
-
-
-
-    /*
-        Category cards.
-    */
-
-    landingCards.forEach(card => {
-
-        card.addEventListener("click", () => {
-
-            const category =
-                card.dataset.category;
-
-
-            if (category === "SAT") {
-
-                showSAT();
-
-            }
-
-            else {
-
-                /*
-                    Other categories will be connected
-                    when their resource hubs are added.
-                */
-
-                alert(
-                    category +
-                    " resources are coming next."
-                );
-
-            }
-
-        });
-
-    });
-
-
-
-    /*
-        Filter buttons.
-    */
+    /* =========================
+       CATEGORY BUTTONS
+    ========================= */
 
     filters.forEach(filter => {
 
-        filter.addEventListener(
-            "click",
-            () => {
+        filter.addEventListener("click", () => {
 
-                const category =
-                    filter.dataset.category;
+            filters.forEach(item => {
+                item.classList.remove("active");
+            });
 
+            filter.classList.add("active");
 
-                if (category === "all") {
+            currentCategory =
+                filter.dataset.category;
 
-                    showCategories();
+            searchInput.value = "";
 
-                }
+            if (currentCategory === "all") {
 
-                else if (category === "SAT") {
+                showAllCategories();
 
-                    showSAT();
+            } else {
 
-                }
-
-                else {
-
-                    alert(
-                        category +
-                        " resources are coming next."
-                    );
-
-                }
+                showCategory(currentCategory);
 
             }
-        );
+
+        });
 
     });
 
 
+    /* =========================
+       EXPLORE RESOURCE BUTTONS
+    ========================= */
 
-    /*
-        Back button.
-    */
+    document.querySelectorAll(".category-open")
+        .forEach(button => {
 
-    backButton.addEventListener(
-        "click",
-        showCategories
-    );
+            button.addEventListener("click", event => {
+
+                event.preventDefault();
+
+                const category =
+                    button.dataset.open;
+
+                filters.forEach(filter => {
+
+                    filter.classList.remove("active");
+
+                    if (
+                        filter.dataset.category === category
+                    ) {
+                        filter.classList.add("active");
+                    }
+
+                });
+
+                currentCategory = category;
+
+                showCategory(category);
+
+            });
+
+        });
 
 
+    /* =========================
+       BACK BUTTON
+    ========================= */
 
-    /*
-        Search inside SAT hub.
-    */
+    document.querySelectorAll(".category-back")
+        .forEach(button => {
 
-    searchInput.addEventListener(
-        "input",
-        () => {
+            button.addEventListener("click", () => {
 
-            if (currentCategory !== "SAT") {
+                currentCategory = "all";
 
-                return;
+                filters.forEach(filter => {
+
+                    filter.classList.remove("active");
+
+                    if (
+                        filter.dataset.category === "all"
+                    ) {
+                        filter.classList.add("active");
+                    }
+
+                });
+
+                searchInput.value = "";
+
+                showAllCategories();
+
+                window.scrollTo({
+                    top: document.querySelector(".page-header").offsetTop,
+                    behavior: "smooth"
+                });
+
+            });
+
+        });
+
+
+    /* =========================
+       SEARCH
+    ========================= */
+
+    searchInput.addEventListener("input", () => {
+
+        const searchText =
+            searchInput.value.toLowerCase().trim();
+
+        if (searchText === "") {
+
+            if (currentCategory === "all") {
+                showAllCategories();
+            } else {
+                showCategory(currentCategory);
+            }
+
+            return;
+
+        }
+
+
+        categoryContents.forEach(content => {
+            content.classList.remove("active");
+        });
+
+
+        let found = false;
+
+
+        categoryCards.forEach(card => {
+
+            const text =
+                card.innerText.toLowerCase();
+
+            const matches =
+                text.includes(searchText);
+
+            if (matches) {
+
+                card.style.display = "block";
+                found = true;
+
+            } else {
+
+                card.style.display = "none";
 
             }
 
-
-            const searchText =
-                searchInput.value
-                    .toLowerCase()
-                    .trim();
+        });
 
 
-            let visible = 0;
+        if (!found) {
 
-
-            satContent.forEach(item => {
+            categoryContents.forEach(content => {
 
                 const text =
-                    item.innerText
-                        .toLowerCase();
+                    content.innerText.toLowerCase();
 
+                if (text.includes(searchText)) {
 
-                if (
-                    text.includes(searchText)
-                ) {
-
-                    item.classList.remove(
-                        "hidden"
-                    );
-
-                    visible++;
-
-                }
-
-                else {
-
-                    item.classList.add(
-                        "hidden"
-                    );
+                    content.classList.add("active");
+                    found = true;
 
                 }
 
             });
 
-
-            empty.style.display =
-                visible === 0
-                    ? "block"
-                    : "none";
-
         }
-    );
+
+
+        empty.style.display =
+            found ? "none" : "block";
+
+    });
 
 </script>
-
 
 
 <!-- =========================
@@ -1998,24 +2921,15 @@
 <script>
 
     const savedTheme =
-        localStorage.getItem(
-            "prepcomeback-theme"
-        );
+        localStorage.getItem("prepcomeback-theme");
 
-
-    if (
-        savedTheme === "dark"
-    ) {
-
-        document.body.classList.add(
-            "dark"
-        );
-
+    if (savedTheme === "dark") {
+        document.body.classList.add("dark");
     }
 
 </script>
 
 
 </body>
-
 </html>
+```

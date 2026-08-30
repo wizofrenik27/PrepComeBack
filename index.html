@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> 
-    <link rel="icon" type="image/svg+xml" href="favicon.svg"> 
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>PrepComeBack — Your Future Starts Here</title>
@@ -11,6 +11,7 @@
           content="PrepComeBack is a free global platform helping students discover opportunities, access resources and build their future.">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -42,6 +43,7 @@
             width: min(1120px, 92%);
             margin: auto;
         }
+
 
         /* =========================
            NAVIGATION
@@ -104,6 +106,7 @@
             background: #1d4ed8 !important;
         }
 
+
         /* =========================
            THEME TOGGLE
         ========================= */
@@ -136,8 +139,9 @@
             border-color: #2563eb;
         }
 
+
         /* =========================
-           HAMBURGER MENU BUTTON
+           HAMBURGER
         ========================= */
 
         .hamburger-btn {
@@ -171,7 +175,11 @@
             height: 2px;
             background: #0f172a;
             border-radius: 2px;
-            transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+
+            transition:
+                background 0.3s ease,
+                transform 0.3s ease,
+                opacity 0.3s ease;
         }
 
         .nav-left {
@@ -187,8 +195,9 @@
             transition: background 0.3s ease;
         }
 
+
         /* =========================
-           SIDE MENU (SLIDE-OUT PANEL)
+           SIDE MENU
         ========================= */
 
         .menu-overlay {
@@ -212,11 +221,17 @@
             left: 0;
             height: 100%;
             width: min(320px, 84vw);
+
             background: #ffffff;
             border-right: 1px solid #e2e8f0;
+
             z-index: 1999;
+
             transform: translateX(-100%);
-            transition: transform 0.35s ease, background 0.3s ease, border-color 0.3s ease;
+            transition:
+                transform 0.35s ease,
+                background 0.3s ease,
+                border-color 0.3s ease;
 
             display: flex;
             flex-direction: column;
@@ -231,7 +246,9 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             padding: 22px 22px 18px;
+
             border-bottom: 1px solid #e2e8f0;
             transition: border-color 0.3s ease;
         }
@@ -249,15 +266,23 @@
         .side-menu-close {
             width: 36px;
             height: 36px;
+
             border: 1px solid #cbd5e1;
             border-radius: 50%;
+
             background: #ffffff;
             cursor: pointer;
+
             font-size: 16px;
+
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease,
+                transform 0.2s ease;
         }
 
         .side-menu-close:hover {
@@ -276,11 +301,17 @@
             display: flex;
             align-items: center;
             gap: 12px;
+
             padding: 13px 12px;
+
             border-radius: 10px;
+
             font-weight: 600;
             font-size: 15.5px;
-            transition: background 0.2s ease, color 0.2s ease;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease;
         }
 
         .side-menu-links a:hover {
@@ -290,9 +321,12 @@
 
         .side-menu-socials {
             margin-top: auto;
+
             display: flex;
             gap: 12px;
+
             padding: 22px;
+
             border-top: 1px solid #e2e8f0;
             transition: border-color 0.3s ease;
         }
@@ -300,13 +334,20 @@
         .side-menu-socials a {
             width: 40px;
             height: 40px;
+
             border: 1px solid #cbd5e1;
             border-radius: 50%;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             font-size: 17px;
-            transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+            transition:
+                background 0.2s ease,
+                border-color 0.2s ease,
+                transform 0.2s ease;
         }
 
         .side-menu-socials a:hover {
@@ -317,6 +358,7 @@
         body.menu-open {
             overflow: hidden;
         }
+
 
         /* =========================
            HERO
@@ -339,12 +381,16 @@
 
         .badge {
             display: inline-block;
+
             padding: 8px 14px;
             border-radius: 999px;
+
             background: #dbeafe;
             color: #1d4ed8;
+
             font-weight: 700;
             font-size: 14px;
+
             margin-bottom: 22px;
         }
 
@@ -361,10 +407,213 @@
 
         .hero p {
             max-width: 700px;
+
             font-size: 20px;
             color: #475569;
-            margin-bottom: 34px;
+
+            margin-bottom: 30px;
         }
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-wrapper {
+            position: relative;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+
+        .search-box {
+            width: 100%;
+            height: 62px;
+
+            display: flex;
+            align-items: center;
+
+            background: rgba(255, 255, 255, 0.96);
+
+            border: 1px solid #cbd5e1;
+            border-radius: 16px;
+
+            padding: 0 18px;
+
+            box-shadow:
+                0 10px 30px rgba(15, 23, 42, 0.08);
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .search-box:focus-within {
+            border-color: #2563eb;
+
+            box-shadow:
+                0 0 0 4px rgba(37, 99, 235, 0.12),
+                0 10px 30px rgba(15, 23, 42, 0.08);
+        }
+
+        .search-icon {
+            font-size: 22px;
+            margin-right: 12px;
+            flex-shrink: 0;
+        }
+
+        .search-input {
+            flex: 1;
+
+            border: none;
+            outline: none;
+
+            background: transparent;
+
+            font-size: 16px;
+            color: #0f172a;
+
+            min-width: 0;
+        }
+
+        .search-input::placeholder {
+            color: #94a3b8;
+        }
+
+        .search-clear {
+            width: 32px;
+            height: 32px;
+
+            border: none;
+            border-radius: 50%;
+
+            background: transparent;
+
+            color: #64748b;
+
+            cursor: pointer;
+
+            font-size: 17px;
+
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-clear:hover {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+
+        .search-results {
+            position: absolute;
+
+            top: calc(100% + 10px);
+            left: 0;
+            right: 0;
+
+            background: #ffffff;
+
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+
+            box-shadow:
+                0 20px 50px rgba(15, 23, 42, 0.14);
+
+            overflow: hidden;
+
+            z-index: 100;
+
+            display: none;
+
+            max-height: 380px;
+            overflow-y: auto;
+        }
+
+        .search-results.show {
+            display: block;
+        }
+
+        .search-result {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+
+            padding: 15px 18px;
+
+            border-bottom: 1px solid #f1f5f9;
+
+            cursor: pointer;
+
+            transition:
+                background 0.2s ease,
+                color 0.2s ease;
+        }
+
+        .search-result:last-child {
+            border-bottom: none;
+        }
+
+        .search-result:hover {
+            background: #eff6ff;
+            color: #2563eb;
+        }
+
+        .search-result-icon {
+            width: 40px;
+            height: 40px;
+
+            border-radius: 10px;
+
+            background: #eff6ff;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            font-size: 19px;
+
+            flex-shrink: 0;
+        }
+
+        .search-result-content {
+            min-width: 0;
+        }
+
+        .search-result-title {
+            font-weight: 700;
+            font-size: 15px;
+        }
+
+        .search-result-description {
+            font-size: 13px;
+            color: #64748b;
+
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .search-empty {
+            padding: 25px;
+
+            text-align: center;
+
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .search-hint {
+            margin-top: 10px;
+
+            color: #64748b;
+            font-size: 13px;
+        }
+
+
+        /* =========================
+           BUTTONS
+        ========================= */
 
         .buttons {
             display: flex;
@@ -374,26 +623,39 @@
 
         .primary {
             display: inline-block;
+
             background: #2563eb;
             color: white;
+
             padding: 14px 22px;
+
             border-radius: 11px;
+
             font-weight: 700;
         }
 
         .secondary {
             display: inline-block;
+
             border: 1px solid #cbd5e1;
+
             background: white;
+
             padding: 14px 22px;
+
             border-radius: 11px;
+
             font-weight: 700;
-            transition: background 0.3s ease, border-color 0.3s ease;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease;
         }
 
         .primary:hover {
             background: #1d4ed8;
         }
+
 
         /* =========================
            STATS
@@ -401,16 +663,24 @@
 
         .stats {
             padding: 35px 0;
+
             background: white;
+
             border-top: 1px solid #e2e8f0;
             border-bottom: 1px solid #e2e8f0;
-            transition: background 0.3s ease, border-color 0.3s ease;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease;
         }
 
         .stats-grid {
             display: grid;
+
             grid-template-columns: repeat(4, 1fr);
+
             gap: 20px;
+
             text-align: center;
         }
 
@@ -423,6 +693,7 @@
             color: #64748b;
             font-size: 14px;
         }
+
 
         /* =========================
            GENERAL SECTIONS
@@ -448,21 +719,27 @@
             font-size: 17px;
         }
 
+
         /* =========================
            CARDS
         ========================= */
 
         .cards {
             display: grid;
+
             grid-template-columns: repeat(3, 1fr);
+
             gap: 20px;
         }
 
         .card {
             background: white;
+
             border: 1px solid #e2e8f0;
             border-radius: 18px;
+
             padding: 28px;
+
             transition:
                 background 0.3s ease,
                 border-color 0.3s ease,
@@ -472,7 +749,9 @@
 
         .card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+
+            box-shadow:
+                0 15px 35px rgba(15, 23, 42, 0.08);
         }
 
         .icon {
@@ -489,6 +768,7 @@
             color: #64748b;
         }
 
+
         /* =========================
            RESOURCES
         ========================= */
@@ -497,6 +777,7 @@
             background: #f1f5f9;
             transition: background 0.3s ease;
         }
+
 
         /* =========================
            ABOUT
@@ -509,8 +790,11 @@
 
         .about-grid {
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 50px;
+
             align-items: center;
         }
 
@@ -528,14 +812,18 @@
 
         .mission-box {
             background: #eff6ff;
+
             border-radius: 22px;
+
             padding: 35px;
+
             transition: background 0.3s ease;
         }
 
         .mission-box h3 {
             margin-bottom: 12px;
         }
+
 
         /* =========================
            TEAM
@@ -545,6 +833,7 @@
             background: #f8fafc;
             transition: background 0.3s ease;
         }
+
 
         /* =========================
            JOIN
@@ -561,24 +850,14 @@
 
         .join-card {
             background: #1e293b;
+
             border: 1px solid #334155;
+
             border-radius: 20px;
+
             padding: 30px;
         }
 
-        .roles {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin: 20px 0 28px;
-        }
-
-        .role {
-            background: #334155;
-            padding: 8px 13px;
-            border-radius: 999px;
-            font-size: 14px;
-        }
 
         /* =========================
            FOOTER
@@ -586,33 +865,44 @@
 
         footer {
             background: #020617;
+
             color: #cbd5e1;
+
             padding: 45px 0;
         }
 
         .footer-inner {
             display: flex;
+
             justify-content: space-between;
+
             gap: 30px;
+
             flex-wrap: wrap;
         }
 
         .footer-logo {
             color: white;
+
             font-size: 22px;
+
             font-weight: 800;
+
             margin-bottom: 5px;
         }
 
         .footer-links {
             display: flex;
+
             gap: 20px;
+
             flex-wrap: wrap;
         }
 
         .footer-links a:hover {
             color: white;
         }
+
 
         /* =========================
            DARK MODE
@@ -691,6 +981,58 @@
             color: #bfdbfe;
         }
 
+        body.dark .search-box {
+            background: #1e293b;
+            border-color: #475569;
+        }
+
+        body.dark .search-input {
+            color: #f8fafc;
+        }
+
+        body.dark .search-input::placeholder {
+            color: #94a3b8;
+        }
+
+        body.dark .search-clear {
+            color: #94a3b8;
+        }
+
+        body.dark .search-clear:hover {
+            background: #334155;
+            color: #ffffff;
+        }
+
+        body.dark .search-results {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark .search-result {
+            border-bottom-color: #334155;
+        }
+
+        body.dark .search-result:hover {
+            background: #172554;
+            color: #93c5fd;
+        }
+
+        body.dark .search-result-icon {
+            background: #172554;
+        }
+
+        body.dark .search-result-description {
+            color: #94a3b8;
+        }
+
+        body.dark .search-empty {
+            color: #94a3b8;
+        }
+
+        body.dark .search-hint {
+            color: #94a3b8;
+        }
+
         body.dark .secondary {
             background: #1e293b;
             border-color: #475569;
@@ -739,6 +1081,7 @@
             background: #111827;
         }
 
+
         /* =========================
            MOBILE
         ========================= */
@@ -781,22 +1124,33 @@
             section {
                 padding: 65px 0;
             }
+
+            .search-box {
+                height: 58px;
+            }
+
+            .search-results {
+                max-height: 320px;
+            }
         }
+
     </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      NAVIGATION
 ========================= -->
 
 <nav>
+
     <div class="container nav-inner">
 
         <div class="nav-left">
 
-            <!-- HAMBURGER MENU BUTTON -->
             <button
                 type="button"
                 class="hamburger-btn"
@@ -804,9 +1158,11 @@
                 aria-label="Open menu"
                 aria-expanded="false"
                 title="Menu">
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
 
             <span class="nav-divider"></span>
@@ -816,6 +1172,7 @@
             </a>
 
         </div>
+
 
         <div class="nav-right">
 
@@ -847,29 +1204,38 @@
 
             </div>
 
-            <!-- THEME SWITCH -->
+
             <button
                 type="button"
                 class="theme-toggle"
                 id="themeToggle"
                 aria-label="Switch to dark mode"
                 title="Switch to dark mode">
+
                 🌙
+
             </button>
 
         </div>
 
     </div>
+
 </nav>
 
 
+
 <!-- =========================
-     HAMBURGER SIDE MENU
+     SIDE MENU
 ========================= -->
 
 <div class="menu-overlay" id="menuOverlay"></div>
 
-<aside class="side-menu" id="sideMenu" aria-hidden="true">
+
+<aside
+    class="side-menu"
+    id="sideMenu"
+    aria-hidden="true">
+
 
     <div class="side-menu-header">
 
@@ -877,39 +1243,84 @@
             Prep<span>ComeBack</span>
         </span>
 
+
         <button
             type="button"
             class="side-menu-close"
             id="sideMenuClose"
             aria-label="Close menu">
+
             ✕
+
         </button>
 
     </div>
 
+
     <nav class="side-menu-links">
 
         <a href="index.html">🏠 Home</a>
+
         <a href="professors.html">🎓 Professors</a>
+
         <a href="resources.html">📚 Resources</a>
+
         <a href="opportunities.html">🎯 Opportunities</a>
+
         <a href="research.html">🔬 Research</a>
+
         <a href="competitions.html">🏆 Competitions</a>
+
         <a href="scholarships.html">💰 Scholarships</a>
+
         <a href="team.html">👥 Team</a>
+
         <a href="join.html">🤝 Join Us</a>
+
         <a href="#about">ℹ️ About</a>
 
     </nav>
 
+
     <div class="side-menu-socials">
 
-  <a href="https://www.instagram.com/prepcomeback" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">📷</a>
-<a href="https://tiktok.com/@prepcomebackk" target="_blank" rel="noopener noreferrer" aria-label="TikTok" title="TikTok">🎵</a>
- <a href="mailto:prepcomeback@gmail.com" aria-label="Email" title="Email">📧</a>
+        <a
+            href="https://www.instagram.com/prepcomeback"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            title="Instagram">
+
+            📷
+
+        </a>
+
+
+        <a
+            href="https://tiktok.com/@prepcomebackk"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="TikTok"
+            title="TikTok">
+
+            🎵
+
+        </a>
+
+
+        <a
+            href="mailto:prepcomeback@gmail.com"
+            aria-label="Email"
+            title="Email">
+
+            📧
+
+        </a>
+
     </div>
 
 </aside>
+
 
 
 <!-- =========================
@@ -922,30 +1333,102 @@
 
         <div class="hero-content">
 
+
             <div class="badge">
                 🌍 A free global platform for students
             </div>
 
+
             <h1>
+
                 Your opportunities.<br>
                 Your future.<br>
+
                 <span>Your comeback.</span>
+
             </h1>
 
+
             <p>
+
                 PrepComeBack helps students discover opportunities,
                 access free resources, build skills and connect
                 with a global community.
+
             </p>
+
+
+            <!-- =========================
+                 SEARCH ENGINE
+            ========================= -->
+
+            <div class="search-wrapper">
+
+                <div class="search-box">
+
+                    <span class="search-icon">
+                        🔎
+                    </span>
+
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        class="search-input"
+                        placeholder="Search opportunities, scholarships, SAT, research..."
+                        autocomplete="off"
+                        aria-label="Search PrepComeBack">
+
+
+                    <button
+                        type="button"
+                        class="search-clear"
+                        id="searchClear"
+                        aria-label="Clear search">
+
+                        ✕
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="search-results"
+                    id="searchResults">
+                </div>
+
+
+                <div class="search-hint">
+
+                    Try:
+                    <strong>Scholarships</strong>,
+                    <strong>Research</strong>,
+                    <strong>SAT</strong>,
+                    <strong>Competitions</strong>
+
+                </div>
+
+            </div>
+
 
             <div class="buttons">
 
-                <a href="opportunities.html" class="primary">
+                <a
+                    href="opportunities.html"
+                    class="primary">
+
                     Explore Opportunities
+
                 </a>
 
-                <a href="join.html" class="secondary">
+
+                <a
+                    href="join.html"
+                    class="secondary">
+
                     Join PrepComeBack
+
                 </a>
 
             </div>
@@ -957,6 +1440,7 @@
 </header>
 
 
+
 <!-- =========================
      STATS
 ========================= -->
@@ -966,28 +1450,52 @@
     <div class="container stats-grid">
 
         <div class="stat">
+
             <strong>100%</strong>
-            <span>Free access</span>
+
+            <span>
+                Free access
+            </span>
+
         </div>
 
+
         <div class="stat">
+
             <strong>🌍</strong>
-            <span>Global community</span>
+
+            <span>
+                Global community
+            </span>
+
         </div>
 
+
         <div class="stat">
+
             <strong>🎓</strong>
-            <span>Student-focused</span>
+
+            <span>
+                Student-focused
+            </span>
+
         </div>
 
+
         <div class="stat">
+
             <strong>∞</strong>
-            <span>Possibilities</span>
+
+            <span>
+                Possibilities
+            </span>
+
         </div>
 
     </div>
 
 </div>
+
 
 
 <!-- =========================
@@ -998,6 +1506,7 @@
 
     <div class="container">
 
+
         <div class="section-heading">
 
             <h2>
@@ -1005,99 +1514,149 @@
             </h2>
 
             <p>
+
                 Find scholarships, research programs,
                 competitions, internships and other
                 opportunities for students.
+
             </p>
 
         </div>
 
+
         <div class="cards">
 
+
             <div class="card">
-                <div class="icon">🎓</div>
+
+                <div class="icon">
+                    🎓
+                </div>
 
                 <h3>
                     Scholarships
                 </h3>
 
                 <p>
+
                     Discover scholarships and financial
                     opportunities for students around the world.
+
                 </p>
+
             </div>
 
+
             <div class="card">
-                <div class="icon">🔬</div>
+
+                <div class="icon">
+                    🔬
+                </div>
 
                 <h3>
                     Research
                 </h3>
 
                 <p>
+
                     Explore research programs, projects,
                     mentors and academic opportunities.
+
                 </p>
+
             </div>
 
+
             <div class="card">
-                <div class="icon">🏆</div>
+
+                <div class="icon">
+                    🏆
+                </div>
 
                 <h3>
                     Competitions
                 </h3>
 
                 <p>
+
                     Find olympiads, competitions and challenges
                     where you can develop your skills.
+
                 </p>
+
             </div>
 
+
             <div class="card">
-                <div class="icon">🌎</div>
+
+                <div class="icon">
+                    🌎
+                </div>
 
                 <h3>
                     Programs
                 </h3>
 
                 <p>
+
                     Discover summer schools and international
                     educational programs.
+
                 </p>
+
             </div>
 
+
             <div class="card">
-                <div class="icon">💼</div>
+
+                <div class="icon">
+                    💼
+                </div>
 
                 <h3>
                     Internships
                 </h3>
 
                 <p>
+
                     Find ways to gain experience through
                     internships and projects.
+
                 </p>
+
             </div>
 
+
             <div class="card">
-                <div class="icon">🤝</div>
+
+                <div class="icon">
+                    🤝
+                </div>
 
                 <h3>
                     Community
                 </h3>
 
                 <p>
+
                     Connect with students who share your
                     interests and ambitions.
+
                 </p>
+
             </div>
 
         </div>
 
+
         <div style="margin-top:35px;">
 
-            <a href="opportunities.html" class="primary">
+            <a
+                href="opportunities.html"
+                class="primary">
+
                 View All Opportunities →
+
             </a>
 
         </div>
@@ -1107,13 +1666,18 @@
 </section>
 
 
+
 <!-- =========================
      RESOURCES
 ========================= -->
 
-<section class="resources-section" id="resources">
+<section
+    class="resources-section"
+    id="resources">
+
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -1122,65 +1686,88 @@
             </h2>
 
             <p>
+
                 Resources to help students prepare,
                 learn and build their future.
+
             </p>
 
         </div>
 
+
         <div class="cards">
+
 
             <div class="card">
 
-                <div class="icon">📚</div>
+                <div class="icon">
+                    📚
+                </div>
 
                 <h3>
                     University Applications
                 </h3>
 
                 <p>
+
                     Guides and resources for planning
                     university applications.
+
                 </p>
 
             </div>
 
+
             <div class="card">
 
-                <div class="icon">📝</div>
+                <div class="icon">
+                    📝
+                </div>
 
                 <h3>
                     SAT & English
                 </h3>
 
                 <p>
+
                     Free resources for SAT and English
                     proficiency test preparation.
+
                 </p>
 
             </div>
 
+
             <div class="card">
 
-                <div class="icon">🚀</div>
+                <div class="icon">
+                    🚀
+                </div>
 
                 <h3>
                     Projects & Skills
                 </h3>
 
                 <p>
+
                     Learn skills and build meaningful
                     projects for your future.
+
                 </p>
 
             </div>
 
         </div>
 
+
         <div style="margin-top:35px;">
 
-            <a href="resources.html" class="primary">
+            <a
+                href="resources.html"
+                class="primary">
+
                 Explore Resources →
+
             </a>
 
         </div>
@@ -1190,13 +1777,18 @@
 </section>
 
 
+
 <!-- =========================
      ABOUT
 ========================= -->
 
-<section class="about" id="about">
+<section
+    class="about"
+    id="about">
+
 
     <div class="container about-grid">
+
 
         <div>
 
@@ -1204,19 +1796,26 @@
                 Talent should not depend on opportunity.
             </h2>
 
+
             <p>
+
                 Millions of talented students have the motivation
                 to achieve more, but many do not know where to
                 find opportunities.
+
             </p>
 
+
             <p>
+
                 PrepComeBack aims to make discovering opportunities,
                 learning and connecting with other students easier
                 and more accessible.
+
             </p>
 
         </div>
+
 
         <div class="mission-box">
 
@@ -1224,10 +1823,13 @@
                 Our mission
             </h3>
 
+
             <p>
+
                 Build a free global ecosystem where students can
                 discover opportunities, access resources, connect
                 with people and create their own future.
+
             </p>
 
         </div>
@@ -1237,13 +1839,18 @@
 </section>
 
 
+
 <!-- =========================
      TEAM
 ========================= -->
 
-<section class="team-section" id="team">
+<section
+    class="team-section"
+    id="team">
+
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -1251,15 +1858,23 @@
                 Built by students.
             </h2>
 
+
             <p>
+
                 PrepComeBack is being built by students and young
                 people who want to make opportunities more accessible.
+
             </p>
 
         </div>
 
-        <a href="team.html" class="primary">
+
+        <a
+            href="team.html"
+            class="primary">
+
             Meet the Team →
+
         </a>
 
     </div>
@@ -1267,13 +1882,18 @@
 </section>
 
 
+
 <!-- =========================
      JOIN
 ========================= -->
 
-<section class="join" id="join">
+<section
+    class="join"
+    id="join">
+
 
     <div class="container">
+
 
         <div class="section-heading">
 
@@ -1281,23 +1901,26 @@
                 Build it with us.
             </h2>
 
+
             <p>
+
                 We are looking for motivated people who want
                 to help build a global student platform.
+
             </p>
 
         </div>
 
+
         <div class="join-card">
 
-            <h3>
-            
-            </h3>
 
-           
+            <a
+                href="join.html"
+                class="primary">
 
-            <a href="join.html" class="primary">
                 Apply to Join →
+
             </a>
 
         </div>
@@ -1305,6 +1928,7 @@
     </div>
 
 </section>
+
 
 
 <!-- =========================
@@ -1315,42 +1939,54 @@
 
     <div class="container footer-inner">
 
+
         <div>
 
             <div class="footer-logo">
                 PrepComeBack
             </div>
 
+
             <p>
+
                 Your opportunities. Your future.
                 Your comeback.
+
             </p>
 
         </div>
 
+
         <div class="footer-links">
+
 
             <a href="index.html">
                 Home
             </a>
 
+
             <a href="opportunities.html">
                 Opportunities
             </a>
+
 
             <a href="resources.html">
                 Resources
             </a>
 
+
             <a href="team.html">
                 Team
             </a>
 
+
             <a href="join.html">
                 Join Us
             </a>
-             <a href="mailto:prepcomeback@gmail.com">
-        Contact Us
+
+
+            <a href="mailto:prepcomeback@gmail.com">
+                Contact Us
             </a>
 
         </div>
@@ -1360,13 +1996,21 @@
 </footer>
 
 
+
 <!-- =========================
-     DARK / LIGHT MODE
+     JAVASCRIPT
 ========================= -->
 
 <script>
 
-    const themeToggle = document.getElementById("themeToggle");
+
+    /* =========================
+       DARK / LIGHT MODE
+    ========================= */
+
+    const themeToggle =
+        document.getElementById("themeToggle");
+
 
     function setTheme(theme) {
 
@@ -1375,10 +2019,12 @@
             document.body.classList.add("dark");
 
             themeToggle.textContent = "☀️";
+
             themeToggle.setAttribute(
                 "aria-label",
                 "Switch to light mode"
             );
+
             themeToggle.setAttribute(
                 "title",
                 "Switch to light mode"
@@ -1389,10 +2035,12 @@
             document.body.classList.remove("dark");
 
             themeToggle.textContent = "🌙";
+
             themeToggle.setAttribute(
                 "aria-label",
                 "Switch to dark mode"
             );
+
             themeToggle.setAttribute(
                 "title",
                 "Switch to dark mode"
@@ -1406,84 +2054,484 @@
     }
 
 
-    /* Load saved theme */
-
     const savedTheme =
         localStorage.getItem("prepcomeback-theme");
 
+
     if (savedTheme === "dark") {
+
         setTheme("dark");
+
     } else {
+
         setTheme("light");
+
     }
 
 
-    /* Toggle theme */
+    themeToggle.addEventListener(
+        "click",
+        function () {
 
-    themeToggle.addEventListener("click", function () {
+            const isDark =
+                document.body.classList.contains("dark");
 
-        const isDark =
-            document.body.classList.contains("dark");
+            if (isDark) {
 
-        if (isDark) {
-            setTheme("light");
-        } else {
-            setTheme("dark");
+                setTheme("light");
+
+            } else {
+
+                setTheme("dark");
+
+            }
+
         }
+    );
 
-    });
 
 
     /* =========================
        HAMBURGER SIDE MENU
     ========================= */
 
-    const hamburgerBtn = document.getElementById("hamburgerBtn");
-    const sideMenu = document.getElementById("sideMenu");
-    const menuOverlay = document.getElementById("menuOverlay");
-    const sideMenuClose = document.getElementById("sideMenuClose");
+    const hamburgerBtn =
+        document.getElementById("hamburgerBtn");
+
+    const sideMenu =
+        document.getElementById("sideMenu");
+
+    const menuOverlay =
+        document.getElementById("menuOverlay");
+
+    const sideMenuClose =
+        document.getElementById("sideMenuClose");
+
 
     function openMenu() {
 
         sideMenu.classList.add("open");
+
         menuOverlay.classList.add("open");
+
         document.body.classList.add("menu-open");
 
-        sideMenu.setAttribute("aria-hidden", "false");
-        hamburgerBtn.setAttribute("aria-expanded", "true");
+        sideMenu.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+        hamburgerBtn.setAttribute(
+            "aria-expanded",
+            "true"
+        );
     }
+
 
     function closeMenu() {
 
         sideMenu.classList.remove("open");
+
         menuOverlay.classList.remove("open");
+
         document.body.classList.remove("menu-open");
 
-        sideMenu.setAttribute("aria-hidden", "true");
-        hamburgerBtn.setAttribute("aria-expanded", "false");
+        sideMenu.setAttribute(
+            "aria-hidden",
+            "true"
+        );
+
+        hamburgerBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
     }
+
 
     function toggleMenu() {
 
-        if (sideMenu.classList.contains("open")) {
+        if (
+            sideMenu.classList.contains("open")
+        ) {
+
             closeMenu();
+
         } else {
+
             openMenu();
+
         }
+
     }
 
-    hamburgerBtn.addEventListener("click", toggleMenu);
-    sideMenuClose.addEventListener("click", closeMenu);
-    menuOverlay.addEventListener("click", closeMenu);
 
-    document.addEventListener("keydown", function (e) {
+    hamburgerBtn.addEventListener(
+        "click",
+        toggleMenu
+    );
 
-        if (e.key === "Escape") {
-            closeMenu();
+
+    sideMenuClose.addEventListener(
+        "click",
+        closeMenu
+    );
+
+
+    menuOverlay.addEventListener(
+        "click",
+        closeMenu
+    );
+
+
+    document.addEventListener(
+        "keydown",
+        function (e) {
+
+            if (e.key === "Escape") {
+
+                closeMenu();
+
+            }
+
         }
-    });
+    );
+
+
+
+    /* =========================
+       SEARCH ENGINE
+    ========================= */
+
+    const searchInput =
+        document.getElementById("searchInput");
+
+    const searchResults =
+        document.getElementById("searchResults");
+
+    const searchClear =
+        document.getElementById("searchClear");
+
+
+    /*
+       All searchable pages / sections.
+       We can add more here later.
+    */
+
+    const searchData = [
+
+        {
+            title: "Professors",
+            description: "Find professors, mentors and academic contacts.",
+            icon: "🎓",
+            keywords: "professors professor mentors mentor academic faculty teachers",
+            url: "professors.html"
+        },
+
+        {
+            title: "Scholarships",
+            description: "Discover scholarships and financial opportunities.",
+            icon: "💰",
+            keywords: "scholarships scholarship financial aid funding money full ride",
+            url: "scholarships.html"
+        },
+
+        {
+            title: "Research",
+            description: "Explore research programs, projects and mentors.",
+            icon: "🔬",
+            keywords: "research science projects professors laboratory academic neuroscience",
+            url: "research.html"
+        },
+
+        {
+            title: "Competitions",
+            description: "Find olympiads, competitions and academic challenges.",
+            icon: "🏆",
+            keywords: "competitions competition olympiad olympiads contests challenges",
+            url: "competitions.html"
+        },
+
+        {
+            title: "Opportunities",
+            description: "Explore programs, internships and opportunities.",
+            icon: "🎯",
+            keywords: "opportunities programs internships summer schools jobs activities",
+            url: "opportunities.html"
+        },
+
+        {
+            title: "Resources",
+            description: "Access free educational resources and guides.",
+            icon: "📚",
+            keywords: "resources education guides study learning free materials",
+            url: "resources.html"
+        },
+
+        {
+            title: "SAT & English",
+            description: "Free SAT and English test preparation resources.",
+            icon: "📝",
+            keywords: "sat english ielts duolingo test preparation exam reading writing math",
+            url: "resources.html"
+        },
+
+        {
+            title: "University Applications",
+            description: "Guides for university applications and admissions.",
+            icon: "🏫",
+            keywords: "university college applications admission common app css profile admissions",
+            url: "resources.html"
+        },
+
+        {
+            title: "Team",
+            description: "Meet the people building PrepComeBack.",
+            icon: "👥",
+            keywords: "team people members developers designers marketing",
+            url: "team.html"
+        },
+
+        {
+            title: "Join Us",
+            description: "Join the PrepComeBack team.",
+            icon: "🤝",
+            keywords: "join volunteer team work apply recruitment marketing developer designer",
+            url: "join.html"
+        },
+
+        {
+            title: "About PrepComeBack",
+            description: "Learn more about our mission and platform.",
+            icon: "ℹ️",
+            keywords: "about mission prepcomeback platform students ecosystem",
+            url: "#about"
+        }
+
+    ];
+
+
+
+    /* =========================
+       SEARCH FUNCTION
+    ========================= */
+
+    function performSearch() {
+
+        const query =
+            searchInput.value
+                .trim()
+                .toLowerCase();
+
+
+        searchClear.style.display =
+            query.length > 0
+                ? "flex"
+                : "none";
+
+
+        if (!query) {
+
+            searchResults.classList.remove("show");
+
+            searchResults.innerHTML = "";
+
+            return;
+
+        }
+
+
+        const results =
+            searchData.filter(item => {
+
+                const searchableText =
+                    (
+                        item.title +
+                        " " +
+                        item.description +
+                        " " +
+                        item.keywords
+                    ).toLowerCase();
+
+                return searchableText.includes(query);
+
+            });
+
+
+        searchResults.innerHTML = "";
+
+
+        if (results.length === 0) {
+
+            searchResults.innerHTML = `
+
+                <div class="search-empty">
+
+                    <div style="font-size:28px;margin-bottom:8px;">
+                        🔎
+                    </div>
+
+                    <strong>
+                        No results found
+                    </strong>
+
+                    <div style="margin-top:5px;">
+                        Try another search term.
+                    </div>
+
+                </div>
+
+            `;
+
+        } else {
+
+            results.forEach(item => {
+
+                const result =
+                    document.createElement("a");
+
+                result.className =
+                    "search-result";
+
+                result.href =
+                    item.url;
+
+
+                result.innerHTML = `
+
+                    <div class="search-result-icon">
+                        ${item.icon}
+                    </div>
+
+                    <div class="search-result-content">
+
+                        <div class="search-result-title">
+                            ${item.title}
+                        </div>
+
+                        <div class="search-result-description">
+                            ${item.description}
+                        </div>
+
+                    </div>
+
+                `;
+
+
+                result.addEventListener(
+                    "click",
+                    function () {
+
+                        searchResults.classList.remove("show");
+
+                    }
+                );
+
+
+                searchResults.appendChild(result);
+
+            });
+
+        }
+
+
+        searchResults.classList.add("show");
+
+    }
+
+
+
+    /* =========================
+       SEARCH INPUT
+    ========================= */
+
+    searchInput.addEventListener(
+        "input",
+        performSearch
+    );
+
+
+    /* =========================
+       CLEAR SEARCH
+    ========================= */
+
+    searchClear.addEventListener(
+        "click",
+        function () {
+
+            searchInput.value = "";
+
+            searchInput.focus();
+
+            searchResults.innerHTML = "";
+
+            searchResults.classList.remove(
+                "show"
+            );
+
+            searchClear.style.display = "none";
+
+        }
+    );
+
+
+    /* =========================
+       ENTER KEY
+    ========================= */
+
+    searchInput.addEventListener(
+        "keydown",
+        function (e) {
+
+            if (e.key === "Enter") {
+
+                const firstResult =
+                    searchResults.querySelector(
+                        ".search-result"
+                    );
+
+                if (firstResult) {
+
+                    firstResult.click();
+
+                }
+
+            }
+
+        }
+    );
+
+
+    /* =========================
+       CLOSE SEARCH
+       WHEN CLICKING OUTSIDE
+    ========================= */
+
+    document.addEventListener(
+        "click",
+        function (e) {
+
+            const searchWrapper =
+                document.querySelector(
+                    ".search-wrapper"
+                );
+
+
+            if (
+                !searchWrapper.contains(e.target)
+            ) {
+
+                searchResults.classList.remove(
+                    "show"
+                );
+
+            }
+
+        }
+    );
+
 
 </script>
+
 
 </body>
 </html>

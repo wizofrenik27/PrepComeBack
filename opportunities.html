@@ -2,14 +2,17 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Opportunities — PrepComeBack</title>
 
     <meta name="description"
-          content="Discover free scholarships, competitions, research programs, summer schools and other opportunities with PrepComeBack.">
+          content="Discover scholarships, research programs, competitions, internships, summer programs and other opportunities for students.">
 
     <style>
 
@@ -36,6 +39,7 @@
             width: min(1100px, 92%);
             margin: auto;
         }
+
 
         /* =========================
            NAVIGATION
@@ -75,6 +79,7 @@
             color: #2563eb;
         }
 
+
         /* =========================
            HEADER
         ========================= */
@@ -90,11 +95,12 @@
         }
 
         .page-header p {
-            max-width: 700px;
+            max-width: 750px;
             color: #64748b;
             font-size: 18px;
             transition: color 0.3s ease;
         }
+
 
         /* =========================
            SEARCH
@@ -106,7 +112,8 @@
             border: 1px solid #e2e8f0;
             border-radius: 16px;
             margin-bottom: 25px;
-            transition: background 0.3s ease, border-color 0.3s ease;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease;
         }
 
         #search {
@@ -126,6 +133,7 @@
         #search:focus {
             border-color: #2563eb;
         }
+
 
         /* =========================
            FILTERS
@@ -151,14 +159,19 @@
                         border-color 0.3s ease;
         }
 
+        .filter:hover {
+            border-color: #2563eb;
+        }
+
         .filter.active {
             background: #2563eb;
             color: white;
             border-color: #2563eb;
         }
 
+
         /* =========================
-           CARDS
+           OPPORTUNITY GRID
         ========================= */
 
         .opportunities {
@@ -168,6 +181,11 @@
             padding-bottom: 80px;
         }
 
+
+        /* =========================
+           CARD
+        ========================= */
+
         .card {
             background: white;
             border: 1px solid #e2e8f0;
@@ -175,12 +193,19 @@
             padding: 25px;
             transition: background 0.3s ease,
                         border-color 0.3s ease,
-                        box-shadow 0.2s ease;
+                        box-shadow 0.2s ease,
+                        transform 0.2s ease;
         }
 
         .card:hover {
             box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+            transform: translateY(-2px);
         }
+
+
+        /* =========================
+           TAG
+        ========================= */
 
         .tag {
             display: inline-block;
@@ -193,6 +218,11 @@
             margin-bottom: 15px;
         }
 
+
+        /* =========================
+           CARD TEXT
+        ========================= */
+
         .card h2 {
             font-size: 20px;
             margin-bottom: 10px;
@@ -203,6 +233,11 @@
             margin-bottom: 18px;
             transition: color 0.3s ease;
         }
+
+
+        /* =========================
+           DETAILS
+        ========================= */
 
         .details {
             font-size: 14px;
@@ -215,6 +250,11 @@
             margin-bottom: 5px;
         }
 
+
+        /* =========================
+           BUTTON
+        ========================= */
+
         .learn {
             display: inline-block;
             background: #2563eb;
@@ -222,7 +262,13 @@
             padding: 10px 15px;
             border-radius: 9px;
             font-weight: 700;
+            transition: background 0.2s ease;
         }
+
+        .learn:hover {
+            background: #1d4ed8;
+        }
+
 
         /* =========================
            EMPTY
@@ -235,6 +281,7 @@
             color: #64748b;
             grid-column: 1 / -1;
         }
+
 
         /* =========================
            DARK MODE
@@ -298,15 +345,28 @@
             color: #94a3b8;
         }
 
+
         /* =========================
            MOBILE
         ========================= */
+
+        @media (max-width: 900px) {
+
+            .opportunities {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
 
         @media (max-width: 800px) {
 
             .nav-links {
                 display: none;
             }
+
+        }
+
+        @media (max-width: 600px) {
 
             .opportunities {
                 grid-template-columns: 1fr;
@@ -344,7 +404,7 @@
                 Opportunities
             </a>
 
-            <a href="index.html#resources">
+            <a href="resources.html">
                 Resources
             </a>
 
@@ -369,6 +429,9 @@
 
 <main>
 
+
+    <!-- HEADER -->
+
     <section class="page-header">
 
         <div class="container">
@@ -378,9 +441,10 @@
             </h1>
 
             <p>
-                Find scholarships, competitions, research programs,
-                summer schools, internships and other opportunities
-                designed to help students grow.
+                Find scholarships, research programs,
+                competitions, summer schools, internships
+                and other opportunities designed to help
+                students grow and build their future.
             </p>
 
         </div>
@@ -391,6 +455,9 @@
     <section>
 
         <div class="container">
+
+
+            <!-- SEARCH -->
 
             <div class="search-box">
 
@@ -403,205 +470,913 @@
             </div>
 
 
+            <!-- FILTERS -->
+
             <div class="filters">
 
-                <button class="filter active" data-category="all">
+                <button
+                    class="filter active"
+                    data-category="all">
                     All
                 </button>
 
-                <button class="filter" data-category="Scholarship">
+                <button
+                    class="filter"
+                    data-category="Scholarship">
                     Scholarships
                 </button>
 
-                <button class="filter" data-category="Research">
+                <button
+                    class="filter"
+                    data-category="Research">
                     Research
                 </button>
 
-                <button class="filter" data-category="Competition">
+                <button
+                    class="filter"
+                    data-category="Competition">
                     Competitions
                 </button>
 
-                <button class="filter" data-category="Program">
+                <button
+                    class="filter"
+                    data-category="Program">
                     Programs
                 </button>
 
-                <button class="filter" data-category="Internship">
+                <button
+                    class="filter"
+                    data-category="Internship">
                     Internships
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Summer">
+                    Summer Programs
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Waiver">
+                    Fee Waivers
                 </button>
 
             </div>
 
 
-            <div class="opportunities" id="opportunities">
+            <!-- =========================
+                 OPPORTUNITIES
+            ========================= -->
+
+            <div
+                class="opportunities"
+                id="opportunities">
 
 
-                <!-- OPPORTUNITY 1 -->
+                <!-- =========================
+                     SCHOLARSHIPS
+                ========================= -->
 
-                <article class="card" data-category="Scholarship">
+
+                <article
+                    class="card"
+                    data-category="Scholarship">
 
                     <span class="tag">
                         Scholarship
                     </span>
 
                     <h2>
-                        Example Global Scholarship
+                        Stipendium Hungaricum
                     </h2>
 
                     <p>
-                        A placeholder scholarship opportunity.
-                        We will replace this with verified opportunities.
+                        A major Hungarian government scholarship
+                        program for international students pursuing
+                        higher education in Hungary.
                     </p>
 
                     <div class="details">
 
-                        <div>🌍 Location: Global</div>
-                        <div>💰 Funding: Fully funded</div>
-                        <div>🎓 Students: High school</div>
-                        <div>📅 Deadline: Coming soon</div>
+                        <div>🌍 Location: Hungary</div>
+
+                        <div>💰 Funding: Scholarship</div>
+
+                        <div>🎓 Level: Undergraduate & above</div>
+
+                        <div>🌎 International students: Yes</div>
+
+                        <div>📅 Deadline: Check current cycle</div>
 
                     </div>
 
-                    <a href="#" class="learn">
-                        Learn More →
+                    <a
+                        href="https://stipendiumhungaricum.hu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
                     </a>
 
                 </article>
 
 
-                <!-- OPPORTUNITY 2 -->
+                <article
+                    class="card"
+                    data-category="Scholarship">
 
-                <article class="card" data-category="Research">
+                    <span class="tag">
+                        Scholarship
+                    </span>
+
+                    <h2>
+                        Türkiye Scholarships
+                    </h2>
+
+                    <p>
+                        Government-funded scholarships for international
+                        students to study at universities in Türkiye.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Türkiye</div>
+
+                        <div>💰 Funding: Government scholarship</div>
+
+                        <div>🎓 Level: Bachelor's & above</div>
+
+                        <div>🌎 International students: Yes</div>
+
+                        <div>📅 Deadline: Annual cycle</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.turkiyeburslari.gov.tr/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Scholarship">
+
+                    <span class="tag">
+                        Scholarship
+                    </span>
+
+                    <h2>
+                        MEXT Scholarship
+                    </h2>
+
+                    <p>
+                        Japanese government scholarship opportunities
+                        for international students.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Japan</div>
+
+                        <div>💰 Funding: Government scholarship</div>
+
+                        <div>🎓 Level: Undergraduate & above</div>
+
+                        <div>🌎 International students: Yes</div>
+
+                        <div>📅 Deadline: Varies by country</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.studyinjapan.go.jp/en/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Scholarship">
+
+                    <span class="tag">
+                        Scholarship
+                    </span>
+
+                    <h2>
+                        Heydar Aliyev International Education Grant
+                    </h2>
+
+                    <p>
+                        Government-funded higher education grant
+                        for eligible international students studying
+                        in Azerbaijan.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Azerbaijan</div>
+
+                        <div>💰 Funding: Fully funded support</div>
+
+                        <div>🎓 Level: Bachelor's, Master's, PhD</div>
+
+                        <div>🌎 International students: Eligible countries</div>
+
+                        <div>📅 Deadline: Check annual call</div>
+
+                    </div>
+
+                    <a
+                        href="https://edu.gov.az/en"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     RESEARCH
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Research">
 
                     <span class="tag">
                         Research
                     </span>
 
                     <h2>
-                        Example Research Program
+                        IGlobal Research Fellows Program
                     </h2>
 
                     <p>
-                        A placeholder research opportunity.
-                        Verified programs will be added here.
+                        Faculty-led research experience designed
+                        for ambitious international high school students.
                     </p>
 
                     <div class="details">
 
-                        <div>🌍 Location: Online</div>
-                        <div>💰 Cost: Free</div>
-                        <div>🔬 Field: Research</div>
-                        <div>📅 Deadline: Coming soon</div>
+                        <div>🌍 Location: USA / Illinois</div>
+
+                        <div>🔬 Field: Interdisciplinary research</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🌎 International students: Yes</div>
+
+                        <div>📅 Deadline: Check program cycle</div>
 
                     </div>
 
-                    <a href="#" class="learn">
-                        Learn More →
+                    <a
+                        href="https://international.education.illinois.edu/I-global/iglobal-research-fellows-program"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
                     </a>
 
                 </article>
 
 
-                <!-- OPPORTUNITY 3 -->
+                <article
+                    class="card"
+                    data-category="Research">
 
-                <article class="card" data-category="Competition">
+                    <span class="tag">
+                        Research
+                    </span>
+
+                    <h2>
+                        NC State Online Research Academy
+                    </h2>
+
+                    <p>
+                        An online research program where high school
+                        students work on research projects with faculty
+                        mentors.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Online</div>
+
+                        <div>🔬 Field: Interdisciplinary</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>💰 Funding: Scholarships may be available</div>
+
+                        <div>📅 Deadline: Check current cycle</div>
+
+                    </div>
+
+                    <a
+                        href="https://precollege.ncsu.edu/online-research-academy/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Research">
+
+                    <span class="tag">
+                        Research
+                    </span>
+
+                    <h2>
+                        iResearch Institute
+                    </h2>
+
+                    <p>
+                        A research training program for high school
+                        and early college students interested in
+                        scientific research.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Online</div>
+
+                        <div>🔬 Field: Science research</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>💰 Funding: Financial aid may be available</div>
+
+                        <div>📅 Deadline: Check current cycle</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.iresearchinstitute.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     COMPETITIONS
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Competition">
 
                     <span class="tag">
                         Competition
                     </span>
 
                     <h2>
-                        Example Student Competition
+                        International Olympiad on Astronomy and Astrophysics
                     </h2>
 
                     <p>
-                        A placeholder competition.
-                        Real opportunities will be verified before publishing.
+                        International academic olympiad for high school
+                        students interested in astronomy and astrophysics.
                     </p>
 
                     <div class="details">
 
-                        <div>🌍 Location: Global</div>
-                        <div>💰 Cost: Free</div>
-                        <div>🏆 Type: Competition</div>
-                        <div>📅 Deadline: Coming soon</div>
+                        <div>🌍 Location: International</div>
+
+                        <div>🏆 Type: Academic Olympiad</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔭 Field: Astronomy & Astrophysics</div>
+
+                        <div>📅 Cycle: Annual</div>
 
                     </div>
 
-                    <a href="#" class="learn">
-                        Learn More →
+                    <a
+                        href="https://www.ioaa2026.vn/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
                     </a>
 
                 </article>
 
 
-                <!-- OPPORTUNITY 4 -->
+                <article
+                    class="card"
+                    data-category="Competition">
 
-                <article class="card" data-category="Program">
+                    <span class="tag">
+                        Competition
+                    </span>
+
+                    <h2>
+                        International Knowledge Olympiad
+                    </h2>
+
+                    <p>
+                        International competition in Mathematics and
+                        English for students aged 9–18.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: International</div>
+
+                        <div>🏆 Type: Olympiad</div>
+
+                        <div>🎓 Age: 9–18</div>
+
+                        <div>📚 Subjects: Math & English</div>
+
+                        <div>📅 Registration: Check current round</div>
+
+                    </div>
+
+                    <a
+                        href="https://iko-olympiad.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Competition">
+
+                    <span class="tag">
+                        Competition
+                    </span>
+
+                    <h2>
+                        International Olympiad in Informatics
+                    </h2>
+
+                    <p>
+                        One of the world's major international
+                        computer science competitions for secondary
+                        school students.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: International</div>
+
+                        <div>🏆 Type: Olympiad</div>
+
+                        <div>🎓 Students: Secondary school</div>
+
+                        <div>💻 Field: Computer Science</div>
+
+                        <div>📅 Cycle: Annual</div>
+
+                    </div>
+
+                    <a
+                        href="https://ioi2026.uz/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Competition">
+
+                    <span class="tag">
+                        Competition
+                    </span>
+
+                    <h2>
+                        Turkic International Mathematical Olympiad
+                    </h2>
+
+                    <p>
+                        International mathematics competition connecting
+                        students from multiple countries.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: International</div>
+
+                        <div>🏆 Type: Mathematics Olympiad</div>
+
+                        <div>🎓 Students: School students</div>
+
+                        <div>💰 Cost: Check current rules</div>
+
+                        <div>📅 Cycle: Annual</div>
+
+                    </div>
+
+                    <a
+                        href="https://timoolympiad.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     PROGRAMS
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Program">
 
                     <span class="tag">
                         Program
                     </span>
 
                     <h2>
-                        Example Summer Program
+                        United World Colleges
                     </h2>
 
                     <p>
-                        A placeholder educational program.
-                        More verified programs will be added.
+                        A global educational movement connecting students
+                        from different countries through international education.
                     </p>
 
                     <div class="details">
 
-                        <div>🌍 Location: International</div>
-                        <div>💰 Cost: Free</div>
-                        <div>🎓 Students: High school</div>
-                        <div>📅 Deadline: Coming soon</div>
+                        <div>🌍 Location: Global</div>
+
+                        <div>🎓 Students: Secondary school</div>
+
+                        <div>🌎 International students: Yes</div>
+
+                        <div>💰 Funding: Scholarships may be available</div>
+
+                        <div>📅 Deadline: Depends on national committee</div>
 
                     </div>
 
-                    <a href="#" class="learn">
-                        Learn More →
+                    <a
+                        href="https://www.uwc.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
                     </a>
 
                 </article>
 
 
-                <!-- OPPORTUNITY 5 -->
+                <article
+                    class="card"
+                    data-category="Program">
 
-                <article class="card" data-category="Internship">
+                    <span class="tag">
+                        Program
+                    </span>
+
+                    <h2>
+                        Rise
+                    </h2>
+
+                    <p>
+                        A global program supporting talented young people
+                        with opportunities, community and resources.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Global</div>
+
+                        <div>🎓 Students: Young people</div>
+
+                        <div>💡 Focus: Leadership & impact</div>
+
+                        <div>💰 Support: Program benefits</div>
+
+                        <div>📅 Cycle: Check current application</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.risefortheworld.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     SUMMER PROGRAMS
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Summer">
+
+                    <span class="tag">
+                        Summer Program
+                    </span>
+
+                    <h2>
+                        Online Research Academy
+                    </h2>
+
+                    <p>
+                        A summer research experience for high school
+                        students interested in developing academic research skills.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Online</div>
+
+                        <div>☀️ Season: Summer</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔬 Focus: Research</div>
+
+                        <div>📅 Dates: Check current cycle</div>
+
+                    </div>
+
+                    <a
+                        href="https://gti.ncsu.edu/student-programs/online-research-program-high-school/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Summer">
+
+                    <span class="tag">
+                        Summer Program
+                    </span>
+
+                    <h2>
+                        International Summer Opportunities
+                    </h2>
+
+                    <p>
+                        Explore international summer schools, academic
+                        programs and university-based opportunities.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: International</div>
+
+                        <div>☀️ Season: Summer</div>
+
+                        <div>🎓 Students: High school students</div>
+
+                        <div>📚 Focus: Academic enrichment</div>
+
+                        <div>📅 Availability: Varies</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.educationusa.gov/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Explore →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     INTERNSHIPS
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Internship">
 
                     <span class="tag">
                         Internship
                     </span>
 
                     <h2>
-                        Example Student Internship
+                        Student Research Opportunities
                     </h2>
 
                     <p>
-                        A placeholder internship opportunity
-                        for students looking to gain experience.
+                        Explore research and academic experience opportunities
+                        offered by universities and research institutions.
                     </p>
 
                     <div class="details">
 
-                        <div>🌍 Location: Online</div>
-                        <div>💰 Cost: Free</div>
-                        <div>💼 Type: Internship</div>
-                        <div>📅 Deadline: Coming soon</div>
+                        <div>🌍 Location: International</div>
+
+                        <div>💼 Type: Research experience</div>
+
+                        <div>🎓 Students: Check eligibility</div>
+
+                        <div>🔬 Focus: Academic research</div>
+
+                        <div>📅 Deadline: Varies</div>
 
                     </div>
 
-                    <a href="#" class="learn">
-                        Learn More →
+                    <a
+                        href="https://www.nasa.gov/learning-resources/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Explore →
+
                     </a>
 
                 </article>
 
 
-                <div class="empty" id="empty">
+                <!-- =========================
+                     FEE WAIVERS
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Waiver">
+
+                    <span class="tag">
+                        Fee Waiver
+                    </span>
+
+                    <h2>
+                        Common App Fee Waiver
+                    </h2>
+
+                    <p>
+                        Students who meet eligibility requirements may be
+                        able to apply to participating colleges without paying
+                        the application fee.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: USA</div>
+
+                        <div>💰 Benefit: Application fee waiver</div>
+
+                        <div>🎓 Platform: Common App</div>
+
+                        <div>📋 Eligibility: Check requirements</div>
+
+                        <div>📅 Availability: Application cycle</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.commonapp.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Waiver">
+
+                    <span class="tag">
+                        Fee Waiver
+                    </span>
+
+                    <h2>
+                        CSS Profile Fee Waivers
+                    </h2>
+
+                    <p>
+                        Learn about CSS Profile fee waiver eligibility
+                        and financial aid application options.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: USA</div>
+
+                        <div>💰 Benefit: Financial aid application support</div>
+
+                        <div>🎓 Platform: CSS Profile</div>
+
+                        <div>📋 Eligibility: Check requirements</div>
+
+                        <div>📅 Availability: Application cycle</div>
+
+                    </div>
+
+                    <a
+                        href="https://cssprofile.collegeboard.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="learn">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     EMPTY
+                ========================= -->
+
+                <div
+                    class="empty"
+                    id="empty">
+
                     No opportunities found.
+
                 </div>
 
             </div>
@@ -650,9 +1425,11 @@
             const text =
                 card.innerText.toLowerCase();
 
+
             const categoryMatch =
                 currentCategory === "all" ||
                 category === currentCategory;
+
 
             const searchMatch =
                 text.includes(searchText);
@@ -661,6 +1438,7 @@
             if (categoryMatch && searchMatch) {
 
                 card.style.display = "block";
+
                 visible++;
 
             } else {
@@ -682,14 +1460,19 @@
 
         filter.addEventListener("click", () => {
 
-            filters.forEach(item =>
-                item.classList.remove("active")
-            );
+            filters.forEach(item => {
+
+                item.classList.remove("active");
+
+            });
+
 
             filter.classList.add("active");
 
+
             currentCategory =
                 filter.dataset.category;
+
 
             updateResults();
 
@@ -703,6 +1486,7 @@
         updateResults
     );
 
+
 </script>
 
 
@@ -715,12 +1499,16 @@
     const savedTheme =
         localStorage.getItem("prepcomeback-theme");
 
+
     if (savedTheme === "dark") {
+
         document.body.classList.add("dark");
+
     }
 
 </script>
 
 
 </body>
+
 </html>

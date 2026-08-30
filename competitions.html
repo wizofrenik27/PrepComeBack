@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Competitions — PrepComeBack</title>
+
+    <meta name="description"
+          content="Discover academic competitions, olympiads, essay contests, research competitions, economics competitions and innovation challenges for students.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .nav-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .page-header {
+            padding: 75px 0 45px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .page-header p {
+            max-width: 760px;
+            color: #64748b;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-box {
+            background: white;
+            padding: 22px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        #search {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            background: white;
+            color: #0f172a;
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        #search:focus {
+            border-color: #2563eb;
+        }
+
+
+        /* =========================
+           FILTERS
+        ========================= */
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filter {
+            border: 1px solid #cbd5e1;
+            background: white;
+            color: #0f172a;
+            padding: 10px 15px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        .filter:hover {
+            border-color: #2563eb;
+        }
+
+        .filter.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+
+        /* =========================
+           COMPETITIONS GRID
+        ========================= */
+
+        .competitions {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: 80px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 25px;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease,
+                        box-shadow 0.2s ease,
+                        transform 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           TAG
+        ========================= */
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 5px 9px;
+            border-radius: 999px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           CARD TEXT
+        ========================= */
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #64748b;
+            margin-bottom: 18px;
+            transition: color 0.3s ease;
+        }
+
+
+        /* =========================
+           DETAILS
+        ========================= */
+
+        .details {
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .details div {
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .visit {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 9px;
+            font-weight: 700;
+            transition: background 0.2s ease;
+        }
+
+        .visit:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================
+           EMPTY
+        ========================= */
+
+        .empty {
+            display: none;
+            padding: 40px;
+            text-align: center;
+            color: #64748b;
+            grid-column: 1 / -1;
+        }
+
+
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        body.dark {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark nav {
+            background: #0f172a;
+            border-bottom-color: #334155;
+        }
+
+        body.dark .page-header p {
+            color: #94a3b8;
+        }
+
+        body.dark .search-box {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark #search {
+            background: #0f172a;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+
+        body.dark #search::placeholder {
+            color: #64748b;
+        }
+
+        body.dark .filter {
+            background: #1e293b;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+
+        body.dark .filter.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        body.dark .card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark .card p {
+            color: #94a3b8;
+        }
+
+        body.dark .details {
+            color: #cbd5e1;
+        }
+
+        body.dark .empty {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .competitions {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .competitions {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="container nav-inner">
+
+        <a href="index.html" class="logo">
+            Prep<span>ComeBack</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#join">
+                Join Us
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>
+                Compete. Create. Stand out.
+            </h1>
+
+            <p>
+                Discover academic competitions, olympiads,
+                essay contests, research challenges and innovation
+                competitions that can help you develop your skills
+                and strengthen your academic profile.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search competitions..."
+                >
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    data-category="all">
+                    All
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Olympiad">
+                    Olympiads
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Science">
+                    Science & STEM
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Math">
+                    Mathematics
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Economics">
+                    Economics & Finance
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Essay">
+                    Essay & Writing
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Research">
+                    Research
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Innovation">
+                    Innovation & Business
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Debate">
+                    Debate & Policy
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 COMPETITIONS
+            ========================= -->
+
+            <div
+                class="competitions"
+                id="competitions">
+
+
+                <!-- =========================
+                     ECONOMICS
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Economics">
+
+                    <span class="tag">
+                        Economics & Finance
+                    </span>
+
+                    <h2>
+                        International Economics Olympiad
+                    </h2>
+
+                    <p>
+                        An international competition for high school
+                        students focused on economics, finance and
+                        business.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Students: Worldwide</div>
+
+                        <div>🎓 Level: High school</div>
+
+                        <div>💰 Participation: Free</div>
+
+                        <div>📊 Focus: Economics & Finance</div>
+
+                        <div>🏆 Format: National → International</div>
+
+                    </div>
+
+                    <a
+                        href="https://ieo-official.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Economics">
+
+                    <span class="tag">
+                        Economics
+                    </span>
+
+                    <h2>
+                        International Economics Olympiad — Essay Challenge
+                    </h2>
+
+                    <p>
+                        An international writing challenge where students
+                        explore economics, finance and business through
+                        an original analytical essay.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Students: International</div>
+
+                        <div>🎓 Level: Secondary school</div>
+
+                        <div>📝 Format: Individual or team</div>
+
+                        <div>📊 Focus: Economics & Business</div>
+
+                        <div>💻 Online participation</div>
+
+                    </div>
+
+                    <a
+                        href="https://ieo-official.org/essaychallenge"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     SCIENCE
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Science">
+
+                    <span class="tag">
+                        Science & STEM
+                    </span>
+
+                    <h2>
+                        Regeneron Science Talent Search
+                    </h2>
+
+                    <p>
+                        A prestigious U.S. science and mathematics
+                        competition recognizing exceptional independent
+                        research by high school seniors.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: United States</div>
+
+                        <div>🎓 Students: U.S. high school seniors</div>
+
+                        <div>🔬 Focus: Science, math & engineering</div>
+
+                        <div>💰 Awards: Major monetary awards</div>
+
+                        <div>⚠️ Eligibility restrictions apply</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.societyforscience.org/regeneron-sts/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Science">
+
+                    <span class="tag">
+                        Science & Engineering
+                    </span>
+
+                    <h2>
+                        Regeneron International Science
+                        and Engineering Fair
+                    </h2>
+
+                    <p>
+                        One of the world's largest high school science
+                        competitions, bringing together students who
+                        qualify through affiliated fairs.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: International</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔬 Focus: STEM research</div>
+
+                        <div>🧪 Format: Research project</div>
+
+                        <div>⚠️ Qualification through affiliated fairs</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.societyforscience.org/isef/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     CONRAD
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Innovation">
+
+                    <span class="tag">
+                        Innovation
+                    </span>
+
+                    <h2>
+                        Conrad Challenge
+                    </h2>
+
+                    <p>
+                        A global innovation competition where student
+                        teams develop ideas and solutions to real-world
+                        problems.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Students: International</div>
+
+                        <div>👥 Format: Teams</div>
+
+                        <div>💡 Focus: Innovation & entrepreneurship</div>
+
+                        <div>🏆 Multiple challenge categories</div>
+
+                        <div>📅 2026–27 cycle: Open</div>
+
+                    </div>
+
+                    <a
+                        href="https://conrad.spacecenter.org/the-challenge/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     ESSAY
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Essay">
+
+                    <span class="tag">
+                        Essay & Writing
+                    </span>
+
+                    <h2>
+                        Harvard International Economics
+                        Essay Contest
+                    </h2>
+
+                    <p>
+                        An international economics essay competition
+                        for high school students. Strong submissions
+                        demonstrate analytical thinking and understanding
+                        of economic concepts.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Students: Worldwide</div>
+
+                        <div>🎓 Grades: 9–12</div>
+
+                        <div>📝 Format: Essay</div>
+
+                        <div>📊 Focus: Economics</div>
+
+                        <div>📅 2026–27: Opens this fall</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.thehuea.org/competitions/hieec"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Essay">
+
+                    <span class="tag">
+                        Essay Competition
+                    </span>
+
+                    <h2>
+                        Cambridge Re:think Essay Competition
+                    </h2>
+
+                    <p>
+                        An international essay competition for secondary
+                        school students covering a wide range of academic
+                        and social topics.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Students: Worldwide</div>
+
+                        <div>🎓 Senior Division: Ages 14–18</div>
+
+                        <div>📝 Format: Essay</div>
+
+                        <div>🌎 Countries: International</div>
+
+                        <div>🏆 Awards & recognition</div>
+
+                    </div>
+
+                    <a
+                        href="https://cambridge-research.org/essay-competition/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     ECONOMICS ONLINE
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Economics">
+
+                    <span class="tag">
+                        Economics
+                    </span>
+
+                    <h2>
+                        International Economics Olympiad
+                        Online Competition
+                    </h2>
+
+                    <p>
+                        A global economics competition testing students'
+                        ability to analyze economic issues and communicate
+                        their ideas.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Online</div>
+
+                        <div>🎓 Age: 14–18</div>
+
+                        <div>📊 Focus: Economics</div>
+
+                        <div>🗣 Format: Essay & debate</div>
+
+                        <div>🌎 International participation</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.econolympiad.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     IEOx
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Economics">
+
+                    <span class="tag">
+                        Economics
+                    </span>
+
+                    <h2>
+                        IEOx WinterChallenge
+                    </h2>
+
+                    <p>
+                        An online economics challenge designed to help
+                        students test their knowledge and prepare for
+                        the International Economics Olympiad.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Online</div>
+
+                        <div>🎓 Students: Under 21</div>
+
+                        <div>📊 Economics test</div>
+
+                        <div>💼 Business case</div>
+
+                        <div>💰 Participation: Check current cycle</div>
+
+                    </div>
+
+                    <a
+                        href="https://ieox.ieo-official.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     RESEARCH
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Research">
+
+                    <span class="tag">
+                        Research
+                    </span>
+
+                    <h2>
+                        High School Academic Research Competition
+                    </h2>
+
+                    <p>
+                        A virtual competition where students develop
+                        research ideas, prepare proposals and present
+                        their work.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Global</div>
+
+                        <div>🎓 Students: Ages 13–18</div>
+
+                        <div>🔬 Focus: Academic research</div>
+
+                        <div>💻 Format: Virtual</div>
+
+                        <div>📝 Research proposal required</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.researchcomp.org/welcome-to-sarc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     MATH
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Math">
+
+                    <span class="tag">
+                        Mathematics
+                    </span>
+
+                    <h2>
+                        International Mathematics Olympiad
+                    </h2>
+
+                    <p>
+                        The world's premier international mathematics
+                        competition for secondary school students,
+                        reached through national selection systems.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Students: International</div>
+
+                        <div>🎓 Level: Secondary school</div>
+
+                        <div>🧮 Focus: Advanced mathematics</div>
+
+                        <div>🏆 Format: National selection</div>
+
+                        <div>⚠️ Eligibility varies by country</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.imo-official.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     DEBATE / POLICY
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Debate">
+
+                    <span class="tag">
+                        Debate & Policy
+                    </span>
+
+                    <h2>
+                        Economics Essay & Debate Olympiad
+                    </h2>
+
+                    <p>
+                        A global competition combining analytical writing
+                        with an online debate on current economic and
+                        policy questions.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Students: Worldwide</div>
+
+                        <div>🎓 Age: 14–18</div>
+
+                        <div>📝 Analytical essay</div>
+
+                        <div>🗣 International debate</div>
+
+                        <div>💻 Fully online</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.econolympiad.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     COMPETITION DIRECTORY
+                ========================= -->
+
+                <article
+                    class="card"
+                    data-category="Olympiad">
+
+                    <span class="tag">
+                        Competition Directory
+                    </span>
+
+                    <h2>
+                        SEF Academic Competitions
+                    </h2>
+
+                    <p>
+                        A directory of academic competitions covering
+                        mathematics, physics, chemistry, biology,
+                        economics, debate, writing, robotics and more.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Global opportunities</div>
+
+                        <div>🧮 Mathematics & Science</div>
+
+                        <div>💼 Economics & Business</div>
+
+                        <div>🗣 Debate & Writing</div>
+
+                        <div>🤖 Robotics & Engineering</div>
+
+                    </div>
+
+                    <a
+                        href="https://sef-global.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Explore Competitions →
+
+                    </a>
+
+                </article>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty"
+                    id="empty">
+
+                    No competitions found.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     SEARCH & FILTERS
+========================= -->
+
+<script>
+
+    const searchInput =
+        document.getElementById("search");
+
+    const filters =
+        document.querySelectorAll(".filter");
+
+    const cards =
+        document.querySelectorAll(".card");
+
+    const empty =
+        document.getElementById("empty");
+
+    let currentCategory = "all";
+
+
+    function updateResults() {
+
+        const searchText =
+            searchInput.value.toLowerCase().trim();
+
+        let visible = 0;
+
+
+        cards.forEach(card => {
+
+            const category =
+                card.dataset.category;
+
+            const text =
+                card.innerText.toLowerCase();
+
+
+            const categoryMatch =
+                currentCategory === "all" ||
+                category === currentCategory;
+
+
+            const searchMatch =
+                text.includes(searchText);
+
+
+            if (categoryMatch && searchMatch) {
+
+                card.style.display = "block";
+
+                visible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        empty.style.display =
+            visible === 0 ? "block" : "none";
+
+    }
+
+
+    filters.forEach(filter => {
+
+        filter.addEventListener("click", () => {
+
+            filters.forEach(item => {
+
+                item.classList.remove("active");
+
+            });
+
+
+            filter.classList.add("active");
+
+
+            currentCategory =
+                filter.dataset.category;
+
+
+            updateResults();
+
+        });
+
+    });
+
+
+    searchInput.addEventListener(
+        "input",
+        updateResults
+    );
+
+
+</script>
+
+
+<!-- =========================
+     THEME SYNC
+========================= -->
+
+<script>
+
+    const savedTheme =
+        localStorage.getItem("prepcomeback-theme");
+
+
+    if (savedTheme === "dark") {
+
+        document.body.classList.add("dark");
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

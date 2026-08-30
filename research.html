@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Research — PrepComeBack</title>
+
+    <meta name="description"
+          content="Discover research programs, summer research opportunities, competitions and academic research resources for students.">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f8fafc;
+            color: #0f172a;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1100px, 92%);
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #e2e8f0;
+            transition: background 0.3s ease, border-color 0.3s ease;
+        }
+
+        .nav-inner {
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 23px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        .page-header {
+            padding: 75px 0 45px;
+        }
+
+        .page-header h1 {
+            font-size: clamp(40px, 6vw, 65px);
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+
+        .page-header p {
+            max-width: 750px;
+            color: #64748b;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+
+        /* =========================
+           SEARCH
+        ========================= */
+
+        .search-box {
+            background: white;
+            padding: 22px;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        #search {
+            width: 100%;
+            padding: 14px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            font-size: 16px;
+            outline: none;
+            background: white;
+            color: #0f172a;
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        #search:focus {
+            border-color: #2563eb;
+        }
+
+
+        /* =========================
+           FILTERS
+        ========================= */
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 35px;
+        }
+
+        .filter {
+            border: 1px solid #cbd5e1;
+            background: white;
+            color: #0f172a;
+            padding: 10px 15px;
+            border-radius: 999px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease,
+                        color 0.3s ease,
+                        border-color 0.3s ease;
+        }
+
+        .filter:hover {
+            border-color: #2563eb;
+        }
+
+        .filter.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+
+        /* =========================
+           RESEARCH GRID
+        ========================= */
+
+        .research {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding-bottom: 80px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+
+        .card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 25px;
+            transition: background 0.3s ease,
+                        border-color 0.3s ease,
+                        box-shadow 0.2s ease,
+                        transform 0.2s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           TAG
+        ========================= */
+
+        .tag {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            background: #dbeafe;
+            color: #1d4ed8;
+            padding: 5px 9px;
+            border-radius: 999px;
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           CARD TEXT
+        ========================= */
+
+        .card h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #64748b;
+            margin-bottom: 18px;
+            transition: color 0.3s ease;
+        }
+
+
+        /* =========================
+           DETAILS
+        ========================= */
+
+        .details {
+            font-size: 14px;
+            color: #475569;
+            margin-bottom: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .details div {
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .visit {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 9px;
+            font-weight: 700;
+            transition: background 0.2s ease;
+        }
+
+        .visit:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================
+           EMPTY
+        ========================= */
+
+        .empty {
+            display: none;
+            padding: 40px;
+            text-align: center;
+            color: #64748b;
+            grid-column: 1 / -1;
+        }
+
+
+        /* =========================
+           DARK MODE
+        ========================= */
+
+        body.dark {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        body.dark nav {
+            background: #0f172a;
+            border-bottom-color: #334155;
+        }
+
+        body.dark .page-header p {
+            color: #94a3b8;
+        }
+
+        body.dark .search-box {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark #search {
+            background: #0f172a;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+
+        body.dark #search::placeholder {
+            color: #64748b;
+        }
+
+        body.dark .filter {
+            background: #1e293b;
+            color: #f8fafc;
+            border-color: #475569;
+        }
+
+        body.dark .filter.active {
+            background: #2563eb;
+            color: white;
+            border-color: #2563eb;
+        }
+
+        body.dark .card {
+            background: #1e293b;
+            border-color: #334155;
+        }
+
+        body.dark .card p {
+            color: #94a3b8;
+        }
+
+        body.dark .details {
+            color: #cbd5e1;
+        }
+
+        body.dark .empty {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .research {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .research {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="container nav-inner">
+
+        <a href="index.html" class="logo">
+            Prep<span>ComeBack</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="opportunities.html">
+                Opportunities
+            </a>
+
+            <a href="resources.html">
+                Resources
+            </a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#join">
+                Join Us
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- =========================
+     MAIN
+========================= -->
+
+<main>
+
+
+    <!-- HEADER -->
+
+    <section class="page-header">
+
+        <div class="container">
+
+            <h1>
+                Explore research.
+            </h1>
+
+            <p>
+                Find research programs, university opportunities,
+                summer research, competitions and academic resources
+                to help you become a stronger student researcher.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section>
+
+        <div class="container">
+
+
+            <!-- SEARCH -->
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search research opportunities..."
+                >
+
+            </div>
+
+
+            <!-- FILTERS -->
+
+            <div class="filters">
+
+                <button
+                    class="filter active"
+                    data-category="all">
+                    All
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Program">
+                    Research Programs
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Summer">
+                    Summer Research
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Online">
+                    Online Research
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="University">
+                    University Research
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="STEM">
+                    STEM Research
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Medical">
+                    Medical & Neuroscience
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Competition">
+                    Research Competitions
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="Resources">
+                    Research Resources
+                </button>
+
+            </div>
+
+
+            <!-- =========================
+                 RESEARCH CARDS
+            ========================= -->
+
+            <div
+                class="research"
+                id="research">
+
+
+                <!-- =========================
+                     RESEARCH PROGRAMS
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Program">
+
+                    <span class="tag">
+                        Research Program
+                    </span>
+
+                    <h2>
+                        IGlobal Research Fellows
+                    </h2>
+
+                    <p>
+                        A selective faculty-led research experience
+                        for international high school students at the
+                        University of Illinois Urbana-Champaign.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: USA</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔬 Focus: Interdisciplinary</div>
+
+                        <div>👩‍🏫 Faculty mentorship: Yes</div>
+
+                        <div>📅 Program: Offered twice annually</div>
+
+                    </div>
+
+                    <a
+                        href="https://international.education.illinois.edu/I-global/iglobal-research-fellows-program"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Program">
+
+                    <span class="tag">
+                        Research Program
+                    </span>
+
+                    <h2>
+                        UC San Diego Research Scholars
+                    </h2>
+
+                    <p>
+                        Research experiences for high school students
+                        offered in online, in-person and hybrid formats.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: USA / Online</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔬 Focus: Multiple disciplines</div>
+
+                        <div>🧪 Research: Real-world projects</div>
+
+                        <div>📅 Availability: Varies</div>
+
+                    </div>
+
+                    <a
+                        href="https://researchscholars.ucsd.edu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     SUMMER RESEARCH
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Summer">
+
+                    <span class="tag">
+                        Summer Research
+                    </span>
+
+                    <h2>
+                        NC State Online Research Academy
+                    </h2>
+
+                    <p>
+                        A four-week virtual research program where
+                        high school students complete a dedicated
+                        research project with faculty mentorship.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Online</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔬 Focus: Interdisciplinary</div>
+
+                        <div>👩‍🏫 Faculty mentor: Yes</div>
+
+                        <div>💰 Partial scholarships: Available</div>
+
+                    </div>
+
+                    <a
+                        href="https://precollege.ncsu.edu/online-research-academy/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Summer">
+
+                    <span class="tag">
+                        Summer Research
+                    </span>
+
+                    <h2>
+                        Özyeğin University Summer Research Program
+                    </h2>
+
+                    <p>
+                        A research experience for high school students
+                        focused on learning how scientific research is conducted.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Türkiye</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔬 Focus: Scientific research</div>
+
+                        <div>💰 Cost: Free</div>
+
+                        <div>🏠 Dormitory: Free</div>
+
+                    </div>
+
+                    <a
+                        href="https://hsri.ozyegin.edu.tr/applications/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Summer">
+
+                    <span class="tag">
+                        Summer Research
+                    </span>
+
+                    <h2>
+                        Boyce Thompson Institute High School Research
+                    </h2>
+
+                    <p>
+                        Summer research experiences in plant science
+                        and computational biology with no prior lab
+                        experience required.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: USA</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔬 Focus: Plant Science & Computational Biology</div>
+
+                        <div>🧪 Prior lab experience: Not required</div>
+
+                        <div>📅 Applications: Annual</div>
+
+                    </div>
+
+                    <a
+                        href="https://bti.cornell.edu/education-and-outreach/research-experiences/high-school-research-experience/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     ONLINE RESEARCH
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Online">
+
+                    <span class="tag">
+                        Online Research
+                    </span>
+
+                    <h2>
+                        NC State Virtual Research Academy
+                    </h2>
+
+                    <p>
+                        Complete a college-level research project online
+                        under direct supervision from university faculty.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Format: Fully online</div>
+
+                        <div>🎓 Level: High school</div>
+
+                        <div>⏱ Commitment: 5–10 hours/week</div>
+
+                        <div>👩‍🏫 Faculty mentorship: Yes</div>
+
+                        <div>📜 Certificate: Yes</div>
+
+                    </div>
+
+                    <a
+                        href="https://gti.ncsu.edu/student-programs/online-research-program-high-school/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Online">
+
+                    <span class="tag">
+                        Online Research
+                    </span>
+
+                    <h2>
+                        SARC — High School Academic Research Competition
+                    </h2>
+
+                    <p>
+                        A virtual research competition where students
+                        learn research skills, write a proposal and
+                        present their work.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Format: 100% virtual</div>
+
+                        <div>🎓 Age: 13–18</div>
+
+                        <div>🔬 Focus: Academic research</div>
+
+                        <div>📝 Research proposal: Required</div>
+
+                        <div>📹 Final presentation: Video</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.researchcomp.org/welcome-to-sarc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     UNIVERSITY RESEARCH
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="University">
+
+                    <span class="tag">
+                        University Research
+                    </span>
+
+                    <h2>
+                        Vanderbilt REHSS
+                    </h2>
+
+                    <p>
+                        An intensive six-week scientific research
+                        internship in a Vanderbilt University or
+                        Vanderbilt University Medical Center research lab.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: USA</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🧪 Format: Laboratory research</div>
+
+                        <div>👩‍🏫 Faculty mentorship: Yes</div>
+
+                        <div>⏱ Duration: 6 weeks</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.vanderbilt.edu/cseo/programs/high-school-programs/research-experience-for-high-school-students-rehss/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="University">
+
+                    <span class="tag">
+                        University Research
+                    </span>
+
+                    <h2>
+                        University of Kentucky High School Research
+                    </h2>
+
+                    <p>
+                        High school students can gain exposure to research
+                        and discovery while working with university faculty.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: USA</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔬 Focus: Academic research</div>
+
+                        <div>👩‍🏫 Faculty supervision: Yes</div>
+
+                        <div>📚 Research experience: Yes</div>
+
+                    </div>
+
+                    <a
+                        href="https://our.uky.edu/students/high-school-students"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     STEM RESEARCH
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="STEM">
+
+                    <span class="tag">
+                        STEM Research
+                    </span>
+
+                    <h2>
+                        iResearch Institute
+                    </h2>
+
+                    <p>
+                        International summer research training for
+                        high school and early college students interested
+                        in science research.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Format: Online</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🔬 Focus: Science research</div>
+
+                        <div>🌎 International students: Welcome</div>
+
+                        <div>💰 Financial aid: Available by request</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.iresearchinstitute.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     MEDICAL & NEUROSCIENCE
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Medical">
+
+                    <span class="tag">
+                        Medical Research
+                    </span>
+
+                    <h2>
+                        UCSF Summer Student Research Program
+                    </h2>
+
+                    <p>
+                        A structured biomedical research program where
+                        high school students work with mentors on clinical
+                        or basic science research projects.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: USA</div>
+
+                        <div>🎓 Students: High school</div>
+
+                        <div>🧠 Focus: Biomedical research</div>
+
+                        <div>👩‍🔬 Mentor: Yes</div>
+
+                        <div>💰 Stipend: Program-dependent</div>
+
+                    </div>
+
+                    <a
+                        href="https://summerstudents.ucsf.edu/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Medical">
+
+                    <span class="tag">
+                        Medical Research
+                    </span>
+
+                    <h2>
+                        UC Irvine Summer Online Research Program
+                    </h2>
+
+                    <p>
+                        An online research program for high school students
+                        interested in healthcare and medical research.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Format: Online</div>
+
+                        <div>🎓 Age: 15–18</div>
+
+                        <div>📊 GPA: 3.3+ recommended requirement</div>
+
+                        <div>🧬 Focus: Healthcare research</div>
+
+                        <div>📅 Sessions: Summer</div>
+
+                    </div>
+
+                    <a
+                        href="https://medschool.uci.edu/education/pre-med-pathway-programs/summer-online-research-program"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     RESEARCH COMPETITION
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Competition">
+
+                    <span class="tag">
+                        Research Competition
+                    </span>
+
+                    <h2>
+                        High School Academic Research Competition
+                    </h2>
+
+                    <p>
+                        A global virtual competition designed to help
+                        students learn research methodology and present
+                        an original research idea.
+                    </p>
+
+                    <div class="details">
+
+                        <div>🌍 Location: Global</div>
+
+                        <div>🎓 Age: 13–18</div>
+
+                        <div>🔬 Type: Research competition</div>
+
+                        <div>💻 Format: Virtual</div>
+
+                        <div>📝 Prior experience: Not required</div>
+
+                    </div>
+
+                    <a
+                        href="https://www.researchcomp.org/welcome-to-sarc"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Official Website →
+
+                    </a>
+
+                </article>
+
+
+                <!-- =========================
+                     RESEARCH RESOURCES
+                ========================= -->
+
+
+                <article
+                    class="card"
+                    data-category="Resources">
+
+                    <span class="tag">
+                        Research Resource
+                    </span>
+
+                    <h2>
+                        Google Scholar
+                    </h2>
+
+                    <p>
+                        Search scholarly literature across many disciplines,
+                        including articles, theses, books and academic papers.
+                    </p>
+
+                    <div class="details">
+
+                        <div>📚 Type: Academic search</div>
+
+                        <div>🔬 Fields: Multiple disciplines</div>
+
+                        <div>🌍 Access: Global</div>
+
+                        <div>💰 Cost: Free to search</div>
+
+                        <div>🎓 Useful for: Literature reviews</div>
+
+                    </div>
+
+                    <a
+                        href="https://scholar.google.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Visit Google Scholar →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Resources">
+
+                    <span class="tag">
+                        Research Resource
+                    </span>
+
+                    <h2>
+                        PubMed
+                    </h2>
+
+                    <p>
+                        A major database for biomedical literature,
+                        medicine, neuroscience and life sciences research.
+                    </p>
+
+                    <div class="details">
+
+                        <div>📚 Type: Research database</div>
+
+                        <div>🧠 Focus: Medicine & Life Sciences</div>
+
+                        <div>🌍 Access: Global</div>
+
+                        <div>💰 Cost: Free search</div>
+
+                        <div>🔎 Useful for: Literature research</div>
+
+                    </div>
+
+                    <a
+                        href="https://pubmed.ncbi.nlm.nih.gov/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Visit PubMed →
+
+                    </a>
+
+                </article>
+
+
+                <article
+                    class="card"
+                    data-category="Resources">
+
+                    <span class="tag">
+                        Research Resource
+                    </span>
+
+                    <h2>
+                        arXiv
+                    </h2>
+
+                    <p>
+                        An open-access research repository covering
+                        computer science, mathematics, physics and other fields.
+                    </p>
+
+                    <div class="details">
+
+                        <div>📚 Type: Research repository</div>
+
+                        <div>💻 Focus: STEM</div>
+
+                        <div>🌍 Access: Global</div>
+
+                        <div>💰 Cost: Free</div>
+
+                        <div>📄 Papers: Open access</div>
+
+                    </div>
+
+                    <a
+                        href="https://arxiv.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="visit">
+
+                        Visit arXiv →
+
+                    </a>
+
+                </article>
+
+
+                <!-- EMPTY -->
+
+                <div
+                    class="empty"
+                    id="empty">
+
+                    No research opportunities found.
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<!-- =========================
+     SEARCH & FILTERS
+========================= -->
+
+<script>
+
+    const searchInput =
+        document.getElementById("search");
+
+    const filters =
+        document.querySelectorAll(".filter");
+
+    const cards =
+        document.querySelectorAll(".card");
+
+    const empty =
+        document.getElementById("empty");
+
+    let currentCategory = "all";
+
+
+    function updateResults() {
+
+        const searchText =
+            searchInput.value.toLowerCase().trim();
+
+        let visible = 0;
+
+
+        cards.forEach(card => {
+
+            const category =
+                card.dataset.category;
+
+            const text =
+                card.innerText.toLowerCase();
+
+
+            const categoryMatch =
+                currentCategory === "all" ||
+                category === currentCategory;
+
+
+            const searchMatch =
+                text.includes(searchText);
+
+
+            if (categoryMatch && searchMatch) {
+
+                card.style.display = "block";
+
+                visible++;
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
+
+
+        empty.style.display =
+            visible === 0 ? "block" : "none";
+
+    }
+
+
+    filters.forEach(filter => {
+
+        filter.addEventListener("click", () => {
+
+            filters.forEach(item => {
+
+                item.classList.remove("active");
+
+            });
+
+
+            filter.classList.add("active");
+
+
+            currentCategory =
+                filter.dataset.category;
+
+
+            updateResults();
+
+        });
+
+    });
+
+
+    searchInput.addEventListener(
+        "input",
+        updateResults
+    );
+
+
+</script>
+
+
+<!-- =========================
+     THEME SYNC
+========================= -->
+
+<script>
+
+    const savedTheme =
+        localStorage.getItem("prepcomeback-theme");
+
+
+    if (savedTheme === "dark") {
+
+        document.body.classList.add("dark");
+
+    }
+
+</script>
+
+
+</body>
+
+</html>

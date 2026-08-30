@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>PrepComeBack — Sign In</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #f8fafc;
+            color: #0f172a;
+
+            padding: 20px;
+        }
+
+        .auth-container {
+            width: 100%;
+            max-width: 430px;
+        }
+
+        .logo {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .logo span {
+            color: #2563eb;
+        }
+
+        .auth-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 35px;
+
+            box-shadow:
+                0 20px 50px rgba(15, 23, 42, 0.08);
+        }
+
+        h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+            height: 50px;
+
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+
+            padding: 0 14px;
+            font-size: 15px;
+
+            margin-bottom: 18px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+        }
+
+        button {
+            width: 100%;
+            height: 52px;
+
+            border: none;
+            border-radius: 10px;
+
+            background: #2563eb;
+            color: white;
+
+            font-size: 16px;
+            font-weight: 700;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+
+        .switch {
+            text-align: center;
+            margin-top: 20px;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .switch a {
+            color: #2563eb;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .message {
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 9px;
+            display: none;
+            font-size: 14px;
+        }
+
+        .message.error {
+            display: block;
+            background: #fee2e2;
+            color: #991b1b;
+        }
+
+        .message.success {
+            display: block;
+            background: #dcfce7;
+            color: #166534;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="auth-container">
+
+    <div class="logo">
+        Prep<span>ComeBack</span>
+    </div>
+
+    <div class="auth-card">
+
+        <!-- LOGIN -->
+
+        <div id="loginForm">
+
+            <h1>Welcome back.</h1>
+
+            <p class="subtitle">
+                Sign in to continue to PrepComeBack.
+            </p>
+
+            <label for="loginEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="loginEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+            >
+
+            <label for="loginPassword">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="loginPassword"
+                placeholder="Your password"
+                autocomplete="current-password"
+            >
+
+            <button id="loginButton">
+                Sign In
+            </button>
+
+            <div id="loginMessage" class="message"></div>
+
+            <div class="switch">
+                Don't have an account?
+                <a id="showSignup">Create one</a>
+            </div>
+
+        </div>
+
+
+        <!-- SIGN UP -->
+
+        <div id="signupForm" class="hidden">
+
+            <h1>Create your account.</h1>
+
+            <p class="subtitle">
+                Join the PrepComeBack community.
+            </p>
+
+            <label for="signupEmail">
+                Email
+            </label>
+
+            <input
+                type="email"
+                id="signupEmail"
+                placeholder="you@example.com"
+                autocomplete="email"
+            >
+
+            <label for="signupPassword">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="signupPassword"
+                placeholder="Create a password"
+                autocomplete="new-password"
+            >
+
+            <button id="signupButton">
+                Create Account
+            </button>
+
+            <div id="signupMessage" class="message"></div>
+
+            <div class="switch">
+                Already have an account?
+                <a id="showLogin">Sign in</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+    /* =========================
+       SUPABASE
+    ========================= */
+
+    const SUPABASE_URL =
+        "https://bhoessvocspmuekgccll.supabase.co";
+
+    const SUPABASE_KEY =
+        "sb_publishable_SPzS34dfGQ-xJuvnAQU9gw_o0mJ-KcY";
+
+
+    const supabaseClient =
+        window.supabase.createClient(
+            SUPABASE_URL,
+            SUPABASE_KEY
+        );
+
+
+    /* =========================
+       ELEMENTS
+    ========================= */
+
+    const loginForm =
+        document.getElementById("loginForm");
+
+    const signupForm =
+        document.getElementById("signupForm");
+
+    const showSignup =
+        document.getElementById("showSignup");
+
+    const showLogin =
+        document.getElementById("showLogin");
+
+    const loginButton =
+        document.getElementById("loginButton");
+
+    const signupButton =
+        document.getElementById("signupButton");
+
+    const loginMessage =
+        document.getElementById("loginMessage");
+
+    const signupMessage =
+        document.getElementById("signupMessage");
+
+
+    /* =========================
+       SWITCH FORMS
+    ========================= */
+
+    showSignup.addEventListener("click", () => {
+
+        loginForm.classList.add("hidden");
+        signupForm.classList.remove("hidden");
+
+        clearMessages();
+
+    });
+
+
+    showLogin.addEventListener("click", () => {
+
+        signupForm.classList.add("hidden");
+        loginForm.classList.remove("hidden");
+
+        clearMessages();
+
+    });
+
+
+    function clearMessages() {
+
+        loginMessage.className = "message";
+        loginMessage.textContent = "";
+
+        signupMessage.className = "message";
+        signupMessage.textContent = "";
+
+    }
+
+
+    /* =========================
+       SIGN UP
+    ========================= */
+
+    signupButton.addEventListener(
+        "click",
+        async () => {
+
+            const email =
+                document
+                    .getElementById("signupEmail")
+                    .value
+                    .trim();
+
+            const password =
+                document
+                    .getElementById("signupPassword")
+                    .value;
+
+
+            if (!email || !password) {
+
+                showMessage(
+                    signupMessage,
+                    "Please enter your email and password.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            signupButton.disabled = true;
+
+            signupButton.textContent =
+                "Creating account...";
+
+
+            const {
+                data,
+                error
+            } =
+                await supabaseClient.auth.signUp({
+                    email: email,
+                    password: password
+                });
+
+
+            signupButton.disabled = false;
+
+            signupButton.textContent =
+                "Create Account";
+
+
+            if (error) {
+
+                showMessage(
+                    signupMessage,
+                    error.message,
+                    "error"
+                );
+
+                return;
+            }
+
+
+            if (data.session) {
+
+                window.location.href =
+                    "index.html";
+
+                return;
+            }
+
+
+            showMessage(
+                signupMessage,
+                "Account created! Check your email to confirm your account.",
+                "success"
+            );
+
+        }
+    );
+
+
+    /* =========================
+       LOGIN
+    ========================= */
+
+    loginButton.addEventListener(
+        "click",
+        async () => {
+
+            const email =
+                document
+                    .getElementById("loginEmail")
+                    .value
+                    .trim();
+
+            const password =
+                document
+                    .getElementById("loginPassword")
+                    .value;
+
+
+            if (!email || !password) {
+
+                showMessage(
+                    loginMessage,
+                    "Please enter your email and password.",
+                    "error"
+                );
+
+                return;
+            }
+
+
+            loginButton.disabled = true;
+
+            loginButton.textContent =
+                "Signing in...";
+
+
+            const {
+                data,
+                error
+            } =
+                await supabaseClient.auth.signInWithPassword({
+                    email: email,
+                    password: password
+                });
+
+
+            loginButton.disabled = false;
+
+            loginButton.textContent =
+                "Sign In";
+
+
+            if (error) {
+
+                showMessage(
+                    loginMessage,
+                    error.message,
+                    "error"
+                );
+
+                return;
+            }
+
+
+            window.location.href =
+                "index.html";
+
+        }
+    );
+
+
+    /* =========================
+       MESSAGE
+    ========================= */
+
+    function showMessage(
+        element,
+        text,
+        type
+    ) {
+
+        element.textContent = text;
+
+        element.className =
+            "message " + type;
+
+    }
+
+
+    /* =========================
+       CHECK EXISTING SESSION
+    ========================= */
+
+    async function checkSession() {
+
+        const {
+            data
+        } =
+            await supabaseClient.auth.getSession();
+
+
+        if (data.session) {
+
+            window.location.href =
+                "index.html";
+
+        }
+
+    }
+
+
+    checkSession();
+
+</script>
+
+</body>
+</html>

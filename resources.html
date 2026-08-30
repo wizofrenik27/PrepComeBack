@@ -2,14 +2,23 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
+
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Resources — PrepComeBack</title>
 
-    <meta name="description"
-          content="Free resources for students: university applications, SAT, English tests, research, competitions and skills.">
+    <meta
+        name="description"
+        content="Free resources for students: SAT, university applications, English tests, research, competitions and skills."
+    >
+
 
     <style>
 
@@ -19,23 +28,30 @@
             padding: 0;
         }
 
+
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f8fafc;
             color: #0f172a;
             line-height: 1.6;
-            transition: background 0.3s ease, color 0.3s ease;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease;
         }
+
 
         a {
             text-decoration: none;
             color: inherit;
         }
 
+
         .container {
             width: min(1100px, 92%);
             margin: auto;
         }
+
 
         /* =========================
            NAVIGATION
@@ -44,36 +60,48 @@
         nav {
             background: white;
             border-bottom: 1px solid #e2e8f0;
-            transition: background 0.3s ease, border-color 0.3s ease;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease;
         }
+
 
         .nav-inner {
             min-height: 70px;
+
             display: flex;
             align-items: center;
             justify-content: space-between;
+
             gap: 20px;
         }
+
 
         .logo {
             font-size: 23px;
             font-weight: 800;
         }
 
+
         .logo span {
             color: #2563eb;
         }
 
+
         .nav-links {
             display: flex;
             gap: 25px;
+
             font-size: 15px;
             font-weight: 600;
         }
 
+
         .nav-links a:hover {
             color: #2563eb;
         }
+
 
         /* =========================
            HEADER
@@ -83,18 +111,26 @@
             padding: 75px 0 45px;
         }
 
+
         .page-header h1 {
             font-size: clamp(40px, 6vw, 65px);
+
             line-height: 1.05;
+
             margin-bottom: 18px;
         }
 
+
         .page-header p {
             max-width: 700px;
+
             color: #64748b;
+
             font-size: 18px;
+
             transition: color 0.3s ease;
         }
+
 
         /* =========================
            SEARCH
@@ -102,60 +138,95 @@
 
         .search-box {
             background: white;
+
             padding: 22px;
+
             border: 1px solid #e2e8f0;
+
             border-radius: 16px;
+
             margin-bottom: 25px;
-            transition: background 0.3s ease, border-color 0.3s ease;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease;
         }
+
 
         #search {
             width: 100%;
+
             padding: 14px 16px;
+
             border: 1px solid #cbd5e1;
+
             border-radius: 10px;
+
             font-size: 16px;
+
             outline: none;
+
             background: white;
+
             color: #0f172a;
-            transition: background 0.3s ease,
-                        color 0.3s ease,
-                        border-color 0.3s ease;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
         }
+
 
         #search:focus {
             border-color: #2563eb;
         }
 
+
         /* =========================
-           FILTERS
+           CATEGORY FILTERS
         ========================= */
 
         .filters {
             display: flex;
+
             flex-wrap: wrap;
+
             gap: 10px;
+
             margin-bottom: 35px;
         }
 
+
         .filter {
             border: 1px solid #cbd5e1;
+
             background: white;
+
             color: #0f172a;
+
             padding: 10px 15px;
+
             border-radius: 999px;
+
             cursor: pointer;
+
             font-weight: 600;
-            transition: background 0.3s ease,
-                        color 0.3s ease,
-                        border-color 0.3s ease;
+
+            transition:
+                background 0.3s ease,
+                color 0.3s ease,
+                border-color 0.3s ease;
         }
+
 
         .filter.active {
             background: #2563eb;
+
             color: white;
+
             border-color: #2563eb;
         }
+
 
         /* =========================
            RESOURCE GRID
@@ -163,70 +234,253 @@
 
         .resources {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 20px;
+
             padding-bottom: 80px;
         }
 
+
         .card {
             background: white;
+
             border: 1px solid #e2e8f0;
+
             border-radius: 18px;
+
             padding: 25px;
-            transition: background 0.3s ease,
-                        border-color 0.3s ease,
-                        box-shadow 0.2s ease;
+
+            transition:
+                background 0.3s ease,
+                border-color 0.3s ease,
+                box-shadow 0.2s ease;
         }
 
+
         .card:hover {
-            box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+            box-shadow:
+                0 12px 30px
+                rgba(15, 23, 42, 0.08);
         }
+
 
         .category {
             display: inline-block;
+
             font-size: 12px;
+
             font-weight: 700;
+
             background: #dbeafe;
+
             color: #1d4ed8;
+
             padding: 5px 9px;
+
             border-radius: 999px;
+
             margin-bottom: 15px;
         }
+
 
         .card h2 {
             font-size: 20px;
+
             margin-bottom: 10px;
         }
 
+
         .card p {
             color: #64748b;
+
             margin-bottom: 18px;
-            transition: color 0.3s ease;
+
+            transition:
+                color 0.3s ease;
         }
+
 
         .free {
             font-size: 13px;
+
             font-weight: 700;
+
             color: #15803d;
+
             margin-bottom: 15px;
         }
 
+
         .visit {
             display: inline-block;
+
             background: #2563eb;
+
             color: white;
+
             padding: 10px 15px;
+
             border-radius: 9px;
+
             font-weight: 700;
         }
 
-        .empty {
-            display: none;
+
+        .visit:hover {
+            background: #1d4ed8;
+        }
+
+
+        /* =========================
+           SECTION HEADINGS
+        ========================= */
+
+        .section-heading {
             grid-column: 1 / -1;
-            text-align: center;
-            padding: 40px;
+
+            margin-top: 20px;
+
+            margin-bottom: 0;
+        }
+
+
+        .section-heading h2 {
+            font-size: 28px;
+
+            margin-bottom: 6px;
+        }
+
+
+        .section-heading p {
             color: #64748b;
         }
+
+
+        /* =========================
+           VIDEO CARDS
+        ========================= */
+
+        .video-card {
+            position: relative;
+        }
+
+
+        .video-icon {
+            width: 48px;
+            height: 48px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            border-radius: 12px;
+
+            background: #fee2e2;
+
+            color: #dc2626;
+
+            font-size: 20px;
+
+            margin-bottom: 18px;
+        }
+
+
+        .video-label {
+            font-size: 12px;
+
+            font-weight: 700;
+
+            color: #dc2626;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           CATEGORY LANDING
+        ========================= */
+
+        .category-card {
+            cursor: pointer;
+        }
+
+
+        .category-icon {
+            font-size: 34px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .category-card h2 {
+            margin-bottom: 8px;
+        }
+
+
+        .category-card p {
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           BACK BUTTON
+        ========================= */
+
+        .back-button {
+            display: none;
+
+            margin-bottom: 30px;
+
+            border: none;
+
+            background: transparent;
+
+            color: #2563eb;
+
+            font-size: 15px;
+
+            font-weight: 700;
+
+            cursor: pointer;
+
+            padding: 0;
+        }
+
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================
+           EMPTY
+        ========================= */
+
+        .empty {
+            display: none;
+
+            grid-column: 1 / -1;
+
+            text-align: center;
+
+            padding: 40px;
+
+            color: #64748b;
+        }
+
+
+        /* =========================
+           HIDDEN
+        ========================= */
+
+        .hidden {
+            display: none !important;
+        }
+
 
         /* =========================
            DARK MODE
@@ -234,57 +488,83 @@
 
         body.dark {
             background: #0f172a;
+
             color: #f8fafc;
         }
 
+
         body.dark nav {
             background: #0f172a;
+
             border-bottom-color: #334155;
         }
+
 
         body.dark .page-header p {
             color: #94a3b8;
         }
 
+
         body.dark .search-box {
             background: #1e293b;
+
             border-color: #334155;
         }
 
+
         body.dark #search {
             background: #0f172a;
+
             color: #f8fafc;
+
             border-color: #475569;
         }
+
 
         body.dark #search::placeholder {
             color: #64748b;
         }
 
+
         body.dark .filter {
             background: #1e293b;
+
             color: #f8fafc;
+
             border-color: #475569;
         }
 
+
         body.dark .filter.active {
             background: #2563eb;
+
             color: white;
+
             border-color: #2563eb;
         }
 
+
         body.dark .card {
             background: #1e293b;
+
             border-color: #334155;
         }
+
 
         body.dark .card p {
             color: #94a3b8;
         }
 
+
+        body.dark .section-heading p {
+            color: #94a3b8;
+        }
+
+
         body.dark .empty {
             color: #94a3b8;
         }
+
 
         /* =========================
            MOBILE
@@ -295,6 +575,7 @@
             .nav-links {
                 display: none;
             }
+
 
             .resources {
                 grid-template-columns: 1fr;
@@ -322,23 +603,28 @@
             Prep<span>ComeBack</span>
         </a>
 
+
         <div class="nav-links">
 
             <a href="index.html">
                 Home
             </a>
 
+
             <a href="opportunities.html">
                 Opportunities
             </a>
+
 
             <a href="resources.html">
                 Resources
             </a>
 
+
             <a href="index.html#about">
                 About
             </a>
+
 
             <a href="index.html#join">
                 Join Us
@@ -357,6 +643,11 @@
 
 <main>
 
+
+    <!-- =========================
+         HEADER
+    ========================= -->
+
     <section class="page-header">
 
         <div class="container">
@@ -364,6 +655,7 @@
             <h1>
                 Free resources.
             </h1>
+
 
             <p>
                 Carefully selected resources to help students
@@ -376,9 +668,15 @@
     </section>
 
 
+
     <section>
 
         <div class="container">
+
+
+            <!-- =========================
+                 SEARCH
+            ========================= -->
 
             <div class="search-box">
 
@@ -391,259 +689,466 @@
             </div>
 
 
+
+            <!-- =========================
+                 CATEGORY FILTERS
+            ========================= -->
+
             <div class="filters">
 
-                <button class="filter active" data-category="all">
+
+                <button
+                    class="filter active"
+                    data-category="all"
+                >
                     All
                 </button>
 
-                <button class="filter" data-category="University">
+
+                <button
+                    class="filter"
+                    data-category="University"
+                >
                     University
                 </button>
 
-                <button class="filter" data-category="SAT">
+
+                <button
+                    class="filter"
+                    data-category="SAT"
+                >
                     SAT
                 </button>
 
-                <button class="filter" data-category="English">
+
+                <button
+                    class="filter"
+                    data-category="English"
+                >
                     English
                 </button>
 
-                <button class="filter" data-category="Research">
+
+                <button
+                    class="filter"
+                    data-category="Research"
+                >
                     Research
                 </button>
 
-                <button class="filter" data-category="Competitions">
+
+                <button
+                    class="filter"
+                    data-category="Competitions"
+                >
                     Competitions
                 </button>
 
-                <button class="filter" data-category="Skills">
+
+                <button
+                    class="filter"
+                    data-category="Skills"
+                >
                     Skills
                 </button>
 
             </div>
 
 
-            <div class="resources">
+
+            <!-- =========================
+                 BACK
+            ========================= -->
+
+            <button
+                class="back-button"
+                id="backButton"
+            >
+                ← Back to categories
+            </button>
 
 
-                <!-- =========================
-                     UNIVERSITY APPLICATIONS
-                ========================= -->
 
-                <article class="card" data-category="University">
+            <!-- =========================
+                 RESOURCES
+            ========================= -->
 
-                    <span class="category">
-                        University
-                    </span>
+            <div class="resources" id="resourcesGrid">
 
-                    <h2>
-                        Common App
-                    </h2>
 
-                    <p>
-                        Apply to colleges and universities through
-                        one centralized application platform.
-                    </p>
+                <!-- ==========================================
+                     CATEGORY LANDING
+                =========================================== -->
 
-                    <div class="free">
-                        ✓ Free resource
+
+                <article
+                    class="card category-card"
+                    data-landing="true"
+                    data-category="University"
+                >
+
+                    <div class="category-icon">
+                        🎓
                     </div>
 
-                    <a
-                        href="https://www.commonapp.org/apply/"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
+
+                    <h2>
+                        University
+                    </h2>
+
+
+                    <p>
+                        Applications, scholarships, financial aid,
+                        fee waivers, essays and admissions.
+                    </p>
 
                 </article>
 
 
-                <article class="card" data-category="University">
 
-                    <span class="category">
-                        University
-                    </span>
+                <article
+                    class="card category-card"
+                    data-landing="true"
+                    data-category="SAT"
+                >
 
-                    <h2>
-                        Common App First-Year Toolkit
-                    </h2>
-
-                    <p>
-                        Guides and resources to help first-year
-                        students understand and complete their
-                        college application.
-                    </p>
-
-                    <div class="free">
-                        ✓ Free resource
+                    <div class="category-icon">
+                        🧮
                     </div>
 
-                    <a
-                        href="https://www.commonapp.org/apply/fy-toolkit/"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-                <article class="card" data-category="University">
-
-                    <span class="category">
-                        University
-                    </span>
 
                     <h2>
-                        EducationUSA
-                    </h2>
-
-                    <p>
-                        Official guidance and resources for
-                        international students planning to study
-                        in the United States.
-                    </p>
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-                    <a
-                        href="https://educationusa.state.gov/"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-                <article class="card" data-category="University">
-
-                    <span class="category">
-                        University
-                    </span>
-
-                    <h2>
-                        BigFuture — Apply to College
-                    </h2>
-
-                    <p>
-                        Free tools and guidance for planning and
-                        completing the college application process.
-                    </p>
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-                    <a
-                        href="https://bigfuture.collegeboard.org/plan-for-college/apply-to-college"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-                <article class="card" data-category="University">
-
-                    <span class="category">
-                        University
-                    </span>
-
-                    <h2>
-                        BigFuture — Application Process
-                    </h2>
-
-                    <p>
-                        A step-by-step guide to the major parts
-                        of a college application.
-                    </p>
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-                    <a
-                        href="https://bigfuture.collegeboard.org/plan-for-college/apply-to-college/application-process"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-                <article class="card" data-category="University">
-
-                    <span class="category">
-                        University
-                    </span>
-
-                    <h2>
-                        BigFuture — College Search
-                    </h2>
-
-                    <p>
-                        Explore colleges and compare schools,
-                        programs and admission information.
-                    </p>
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-                    <a
-                        href="https://bigfuture.collegeboard.org/college-search"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
-
-                </article>
-
-
-                <!-- =========================
-                     SAT
-                ========================= -->
-
-                <article class="card" data-category="SAT">
-
-                    <span class="category">
                         SAT
+                    </h2>
+
+
+                    <p>
+                        Official practice, question banks,
+                        preparation platforms, tools and videos.
+                    </p>
+
+                </article>
+
+
+
+                <article
+                    class="card category-card"
+                    data-landing="true"
+                    data-category="English"
+                >
+
+                    <div class="category-icon">
+                        🇬🇧
+                    </div>
+
+
+                    <h2>
+                        English
+                    </h2>
+
+
+                    <p>
+                        IELTS, TOEFL, Duolingo English Test,
+                        practice platforms and YouTube channels.
+                    </p>
+
+                </article>
+
+
+
+                <article
+                    class="card category-card"
+                    data-landing="true"
+                    data-category="Research"
+                >
+
+                    <div class="category-icon">
+                        🔬
+                    </div>
+
+
+                    <h2>
+                        Research
+                    </h2>
+
+
+                    <p>
+                        Research opportunities, academic papers,
+                        journals and research tools.
+                    </p>
+
+                </article>
+
+
+
+                <article
+                    class="card category-card"
+                    data-landing="true"
+                    data-category="Competitions"
+                >
+
+                    <div class="category-icon">
+                        🏆
+                    </div>
+
+
+                    <h2>
+                        Competitions
+                    </h2>
+
+
+                    <p>
+                        Olympiads, academic competitions,
+                        essay contests and challenges.
+                    </p>
+
+                </article>
+
+
+
+                <article
+                    class="card category-card"
+                    data-landing="true"
+                    data-category="Skills"
+                >
+
+                    <div class="category-icon">
+                        💻
+                    </div>
+
+
+                    <h2>
+                        Skills
+                    </h2>
+
+
+                    <p>
+                        Programming, data analytics, AI,
+                        productivity and project building.
+                    </p>
+
+                </article>
+
+
+
+                <!-- ==========================================
+                     SAT RESOURCE HUB
+                =========================================== -->
+
+
+                <div
+                    class="section-heading sat-content hidden"
+                >
+
+                    <h2>
+                        SAT Resources
+                    </h2>
+
+
+                    <p>
+                        Choose the resources that work best
+                        for your SAT preparation.
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==========================================
+                     OFFICIAL SAT
+                =========================================== -->
+
+
+                <div
+                    class="section-heading sat-content hidden"
+                >
+
+                    <h2>
+                        Official SAT Resources
+                    </h2>
+
+
+                    <p>
+                        Start with resources created by
+                        College Board and its official partners.
+                    </p>
+
+                </div>
+
+
+
+                <article
+                    class="card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <span class="category">
+                        Official
                     </span>
+
+
+                    <h2>
+                        College Board SAT Practice
+                    </h2>
+
+
+                    <p>
+                        Official SAT practice hub with practice
+                        tests, Student Question Bank, study guides
+                        and preparation tools.
+                    </p>
+
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+
+                    <a
+                        href="https://satsuite.collegeboard.org/practice"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+
+                <article
+                    class="card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <span class="category">
+                        Official
+                    </span>
+
+
+                    <h2>
+                        Bluebook Practice Tests
+                    </h2>
+
+
+                    <p>
+                        Take official full-length digital SAT
+                        practice tests in the same testing
+                        environment used for digital testing.
+                    </p>
+
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+
+                    <a
+                        href="https://bluebook.collegeboard.org/students/practice"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+
+                <article
+                    class="card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <span class="category">
+                        Official
+                    </span>
+
+
+                    <h2>
+                        Student Question Bank
+                    </h2>
+
+
+                    <p>
+                        Thousands of official SAT questions
+                        that can be filtered by section, domain,
+                        skill and difficulty.
+                    </p>
+
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+
+                    <a
+                        href="https://satsuite.collegeboard.org/practice/student-question-bank"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==========================================
+                     SAT PREPARATION
+                =========================================== -->
+
+
+                <div
+                    class="section-heading sat-content hidden"
+                >
 
                     <h2>
                         SAT Preparation
                     </h2>
 
+
                     <p>
-                        Free practice materials and preparation
-                        resources for the Digital SAT.
+                        Practice platforms for learning,
+                        reviewing and improving your score.
                     </p>
+
+                </div>
+
+
+
+                <article
+                    class="card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <span class="category">
+                        Preparation
+                    </span>
+
+
+                    <h2>
+                        Khan Academy — Official SAT Prep
+                    </h2>
+
+
+                    <p>
+                        Free official SAT preparation with
+                        thousands of questions, lessons, videos,
+                        quizzes and skill-based practice.
+                    </p>
+
 
                     <div class="free">
                         ✓ Free resource
                     </div>
 
+
                     <a
-                        href="https://www.khanacademy.org/test-prep/sat"
+                        href="https://www.khanacademy.org/digital-sat"
                         class="visit"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -654,149 +1159,521 @@
                 </article>
 
 
-                <!-- =========================
-                     ENGLISH
-                ========================= -->
 
-                <article class="card" data-category="English">
+                <article
+                    class="card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <span class="category">
+                        Practice
+                    </span>
+
+
+                    <h2>
+                        Official SAT Paper Practice
+                    </h2>
+
+
+                    <p>
+                        Downloadable official full-length SAT
+                        practice tests with scoring guides and
+                        answer explanations.
+                    </p>
+
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+
+                    <a
+                        href="https://satsuite.collegeboard.org/practice/practice-tests/paper"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==========================================
+                     SAT TOOLS
+                =========================================== -->
+
+
+                <div
+                    class="section-heading sat-content hidden"
+                >
+
+                    <h2>
+                        SAT Tools
+                    </h2>
+
+
+                    <p>
+                        Tools worth learning before test day.
+                    </p>
+
+                </div>
+
+
+
+                <article
+                    class="card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <span class="category">
+                        Math Tool
+                    </span>
+
+
+                    <h2>
+                        Desmos
+                    </h2>
+
+
+                    <p>
+                        Explore the Desmos graphing calculator
+                        and practice using it for SAT Math.
+                    </p>
+
+
+                    <div class="free">
+                        ✓ Free resource
+                    </div>
+
+
+                    <a
+                        href="https://www.desmos.com/calculator"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Visit Resource →
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==========================================
+                     SAT YOUTUBE
+                =========================================== -->
+
+
+                <div
+                    class="section-heading sat-content hidden"
+                >
+
+                    <h2>
+                        YouTube Channels
+                    </h2>
+
+
+                    <p>
+                        Video-based explanations and SAT
+                        preparation from experienced educators.
+                    </p>
+
+                </div>
+
+
+
+                <article
+                    class="card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <span class="category">
+                        YouTube
+                    </span>
+
+
+                    <h2>
+                        Khan Academy
+                    </h2>
+
+
+                    <p>
+                        Official SAT lessons, explanations,
+                        examples and preparation videos.
+                    </p>
+
+
+                    <div class="free">
+                        ✓ Free videos
+                    </div>
+
+
+                    <a
+                        href="https://www.youtube.com/@khanacademy"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Watch Channel →
+                    </a>
+
+                </article>
+
+
+
+                <article
+                    class="card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <span class="category">
+                        YouTube
+                    </span>
+
+
+                    <h2>
+                        The Organic Chemistry Tutor
+                    </h2>
+
+
+                    <p>
+                        Clear mathematics explanations that can
+                        help students strengthen SAT Math skills.
+                    </p>
+
+
+                    <div class="free">
+                        ✓ Free videos
+                    </div>
+
+
+                    <a
+                        href="https://www.youtube.com/@TheOrganicChemistryTutor"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Watch Channel →
+                    </a>
+
+                </article>
+
+
+
+                <article
+                    class="card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <span class="category">
+                        YouTube
+                    </span>
+
+
+                    <h2>
+                        Scalar Learning
+                    </h2>
+
+
+                    <p>
+                        SAT preparation videos, practice questions
+                        and walkthroughs.
+                    </p>
+
+
+                    <div class="free">
+                        ✓ Free videos
+                    </div>
+
+
+                    <a
+                        href="https://www.youtube.com/@ScalarLearning"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Watch Channel →
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==========================================
+                     FEATURED SAT VIDEOS
+                =========================================== -->
+
+
+                <div
+                    class="section-heading sat-content hidden"
+                >
+
+                    <h2>
+                        Featured Videos
+                    </h2>
+
+
+                    <p>
+                        Useful videos to watch while preparing
+                        for the Digital SAT.
+                    </p>
+
+                </div>
+
+
+
+                <article
+                    class="card video-card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <div class="video-icon">
+                        ▶
+                    </div>
+
+
+                    <div class="video-label">
+                        YOUTUBE VIDEO
+                    </div>
+
+
+                    <h2>
+                        Digital SAT Preparation
+                    </h2>
+
+
+                    <p>
+                        Learn how the digital SAT works and how
+                        to approach your preparation.
+                    </p>
+
+
+                    <a
+                        href="https://www.youtube.com/results?search_query=digital+SAT+preparation"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Watch on YouTube →
+                    </a>
+
+                </article>
+
+
+
+                <article
+                    class="card video-card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <div class="video-icon">
+                        ▶
+                    </div>
+
+
+                    <div class="video-label">
+                        YOUTUBE VIDEO
+                    </div>
+
+
+                    <h2>
+                        SAT Math Strategies
+                    </h2>
+
+
+                    <p>
+                        Explore different approaches and
+                        strategies for SAT Math questions.
+                    </p>
+
+
+                    <a
+                        href="https://www.youtube.com/results?search_query=SAT+math+strategies"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Watch on YouTube →
+                    </a>
+
+                </article>
+
+
+
+                <article
+                    class="card video-card sat-content hidden"
+                    data-resource="sat"
+                >
+
+                    <div class="video-icon">
+                        ▶
+                    </div>
+
+
+                    <div class="video-label">
+                        YOUTUBE VIDEO
+                    </div>
+
+
+                    <h2>
+                        SAT Reading & Writing Strategies
+                    </h2>
+
+
+                    <p>
+                        Find explanations and strategies for
+                        Digital SAT Reading and Writing.
+                    </p>
+
+
+                    <a
+                        href="https://www.youtube.com/results?search_query=Digital+SAT+Reading+Writing+strategies"
+                        class="visit"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Watch on YouTube →
+                    </a>
+
+                </article>
+
+
+
+                <!-- ==========================================
+                     OTHER CATEGORIES
+                =========================================== -->
+
+
+                <article
+                    class="card hidden"
+                    data-placeholder="University"
+                >
+
+                    <span class="category">
+                        University
+                    </span>
+
+
+                    <h2>
+                        University Resources
+                    </h2>
+
+
+                    <p>
+                        Applications, scholarships, fee waivers,
+                        financial aid and essay resources will
+                        appear here.
+                    </p>
+
+                </article>
+
+
+
+                <article
+                    class="card hidden"
+                    data-placeholder="English"
+                >
 
                     <span class="category">
                         English
                     </span>
 
+
                     <h2>
-                        English Test Preparation
+                        English Resources
                     </h2>
 
+
                     <p>
-                        Free resources for IELTS, TOEFL and
-                        other English proficiency tests.
+                        IELTS, TOEFL, Duolingo English Test,
+                        practice platforms and videos.
                     </p>
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-                    <a
-                        href="https://www.britishcouncil.org/exam/ielts"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
 
                 </article>
 
 
-                <!-- =========================
-                     RESEARCH
-                ========================= -->
 
-                <article class="card" data-category="Research">
+                <article
+                    class="card hidden"
+                    data-placeholder="Research"
+                >
 
                     <span class="category">
                         Research
                     </span>
 
+
                     <h2>
                         Research Resources
                     </h2>
 
+
                     <p>
-                        Learn how to find research opportunities,
-                        papers and academic resources.
+                        Research opportunities, academic papers,
+                        journals and research tools.
                     </p>
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-                    <a
-                        href="https://scholar.google.com/"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
 
                 </article>
 
 
-                <!-- =========================
-                     COMPETITIONS
-                ========================= -->
 
-                <article class="card" data-category="Competitions">
+                <article
+                    class="card hidden"
+                    data-placeholder="Competitions"
+                >
 
                     <span class="category">
                         Competitions
                     </span>
 
+
                     <h2>
-                        Olympiads & Competitions
+                        Competitions
                     </h2>
 
+
                     <p>
-                        Discover resources for academic competitions
-                        and olympiads.
+                        Olympiads, academic competitions and
+                        essay competitions.
                     </p>
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-                    <a
-                        href="https://www.competitionsciences.org/"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
 
                 </article>
 
 
-                <!-- =========================
-                     SKILLS
-                ========================= -->
 
-                <article class="card" data-category="Skills">
+                <article
+                    class="card hidden"
+                    data-placeholder="Skills"
+                >
 
                     <span class="category">
                         Skills
                     </span>
 
+
                     <h2>
                         Skills & Projects
                     </h2>
 
+
                     <p>
-                        Free resources for learning useful skills
-                        and building meaningful projects.
+                        Programming, data analytics, AI,
+                        productivity and project resources.
                     </p>
-
-                    <div class="free">
-                        ✓ Free resource
-                    </div>
-
-                    <a
-                        href="https://www.freecodecamp.org/"
-                        class="visit"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        Visit Resource →
-                    </a>
 
                 </article>
 
 
-                <div class="empty" id="empty">
+
+                <div
+                    class="empty"
+                    id="empty"
+                >
                     No resources found.
                 </div>
+
 
             </div>
 
@@ -807,8 +1684,9 @@
 </main>
 
 
+
 <!-- =========================
-     SEARCH & FILTERS
+     SEARCH & CATEGORY LOGIC
 ========================= -->
 
 <script>
@@ -816,89 +1694,301 @@
     const searchInput =
         document.getElementById("search");
 
+
     const filters =
         document.querySelectorAll(".filter");
+
 
     const cards =
         document.querySelectorAll(".card");
 
+
+    const backButton =
+        document.getElementById("backButton");
+
+
     const empty =
         document.getElementById("empty");
+
+
+    const satContent =
+        document.querySelectorAll(".sat-content");
+
+
+    const landingCards =
+        document.querySelectorAll(
+            '[data-landing="true"]'
+        );
+
 
     let currentCategory = "all";
 
 
-    function updateResults() {
+    /*
+        Show the main category page.
+    */
 
-        const searchText =
-            searchInput.value.toLowerCase().trim();
+    function showCategories() {
 
-        let visible = 0;
+        currentCategory = "all";
 
-
-        cards.forEach(card => {
-
-            const category =
-                card.dataset.category;
-
-            const text =
-                card.innerText.toLowerCase();
-
-            const categoryMatch =
-                currentCategory === "all" ||
-                category === currentCategory;
-
-            const searchMatch =
-                text.includes(searchText);
+        searchInput.value = "";
 
 
-            if (categoryMatch && searchMatch) {
+        landingCards.forEach(card => {
 
-                card.style.display = "block";
-
-                visible++;
-
-            } else {
-
-                card.style.display = "none";
-
-            }
+            card.classList.remove("hidden");
 
         });
 
 
-        empty.style.display =
-            visible === 0 ? "block" : "none";
+        satContent.forEach(item => {
+
+            item.classList.add("hidden");
+
+        });
+
+
+        document
+            .querySelectorAll("[data-placeholder]")
+            .forEach(item => {
+
+                item.classList.add("hidden");
+
+            });
+
+
+        backButton.style.display = "none";
+
+
+        filters.forEach(filter => {
+
+            filter.classList.remove("active");
+
+        });
+
+
+        document
+            .querySelector('[data-category="all"]')
+            .classList.add("active");
+
+
+        empty.style.display = "none";
 
     }
 
 
-    filters.forEach(filter => {
 
-        filter.addEventListener("click", () => {
+    /*
+        Show SAT resource hub.
+    */
 
-            filters.forEach(item => {
-                item.classList.remove("active");
+    function showSAT() {
+
+        currentCategory = "SAT";
+
+        searchInput.value = "";
+
+
+        landingCards.forEach(card => {
+
+            card.classList.add("hidden");
+
+        });
+
+
+        satContent.forEach(item => {
+
+            item.classList.remove("hidden");
+
+        });
+
+
+        document
+            .querySelectorAll("[data-placeholder]")
+            .forEach(item => {
+
+                item.classList.add("hidden");
+
             });
 
-            filter.classList.add("active");
 
-            currentCategory =
-                filter.dataset.category;
+        backButton.style.display = "block";
 
-            updateResults();
+
+        filters.forEach(filter => {
+
+            filter.classList.remove("active");
+
+        });
+
+
+        document
+            .querySelector('[data-category="SAT"]')
+            .classList.add("active");
+
+
+        empty.style.display = "none";
+
+    }
+
+
+
+    /*
+        Category cards.
+    */
+
+    landingCards.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            const category =
+                card.dataset.category;
+
+
+            if (category === "SAT") {
+
+                showSAT();
+
+            }
+
+            else {
+
+                /*
+                    Other categories will be connected
+                    when their resource hubs are added.
+                */
+
+                alert(
+                    category +
+                    " resources are coming next."
+                );
+
+            }
 
         });
 
     });
 
 
+
+    /*
+        Filter buttons.
+    */
+
+    filters.forEach(filter => {
+
+        filter.addEventListener(
+            "click",
+            () => {
+
+                const category =
+                    filter.dataset.category;
+
+
+                if (category === "all") {
+
+                    showCategories();
+
+                }
+
+                else if (category === "SAT") {
+
+                    showSAT();
+
+                }
+
+                else {
+
+                    alert(
+                        category +
+                        " resources are coming next."
+                    );
+
+                }
+
+            }
+        );
+
+    });
+
+
+
+    /*
+        Back button.
+    */
+
+    backButton.addEventListener(
+        "click",
+        showCategories
+    );
+
+
+
+    /*
+        Search inside SAT hub.
+    */
+
     searchInput.addEventListener(
         "input",
-        updateResults
+        () => {
+
+            if (currentCategory !== "SAT") {
+
+                return;
+
+            }
+
+
+            const searchText =
+                searchInput.value
+                    .toLowerCase()
+                    .trim();
+
+
+            let visible = 0;
+
+
+            satContent.forEach(item => {
+
+                const text =
+                    item.innerText
+                        .toLowerCase();
+
+
+                if (
+                    text.includes(searchText)
+                ) {
+
+                    item.classList.remove(
+                        "hidden"
+                    );
+
+                    visible++;
+
+                }
+
+                else {
+
+                    item.classList.add(
+                        "hidden"
+                    );
+
+                }
+
+            });
+
+
+            empty.style.display =
+                visible === 0
+                    ? "block"
+                    : "none";
+
+        }
     );
 
 </script>
+
 
 
 <!-- =========================
@@ -908,14 +1998,24 @@
 <script>
 
     const savedTheme =
-        localStorage.getItem("prepcomeback-theme");
+        localStorage.getItem(
+            "prepcomeback-theme"
+        );
 
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark");
+
+    if (
+        savedTheme === "dark"
+    ) {
+
+        document.body.classList.add(
+            "dark"
+        );
+
     }
 
 </script>
 
 
 </body>
+
 </html>
